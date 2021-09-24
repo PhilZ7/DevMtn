@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	<link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+	<nav>
+		<ol>
+	        <li class="crumb"><a href="./home.html">Home</a></li>
+	        <li class="crumb"><a href="./profile.html">Profile</a></li>
+	        <li class="crumb"><a href="./about.html">About</a></li>
+          <li class="crumb"><a href="./neighborhood.html">Neighborhood</a></li>
+	    </ol>
+	</nav>
+
+	<content>
+     <!-- Wanted hello world to maintain the current H1 size -->
+		<h1><p>Hello World</p></h1>
+
+		<img src="https://www.amsterdamduckstore.com/wp-content/uploads/2015/11/12509259_470429656477495_1677105170882005777_n.jpg" alt="The Ninja Duck" id="duckPic" onmouseover="duckPicComp(this)">
+
+    <p> Welcome to the Ninja Duck <br> where quacking kicks your...</p> 
+
+    <ul>
+      <li>The duck is power</li>
+      <li>Call him up when in peril</li>
+      <li>And you shall not cower</li>
+    </ul>
+
+		<h2>Contact Us</h2>
+		<form id="contact">
+			Your name:
+			<input type="text">
+
+			Message:
+			<input type="textarea">
+
+      <input type="submit">
+      <p>How did you hear about us?</p>
+
+    <div>
+      <input type="radio" id="duckDuckGo" name="hear" value="duckDuckGo" checked>
+      <label for="duckDuckGo">DuckDuckGo</label>
+    </div>
+
+    <div>
+      <input type="radio" id="aFriend" name="hear" value="aFriend">
+      <label for="aFriend">A Friend</label>
+    </div>
+
+    <div>
+      <input type="radio" id="other" name="hear" value="other">
+      <label for="other">Other</label>
+    </div>
+
+		</form>
+
+	</content>
+
+
+	<script src="about.js"></script>
+
+</body>
+</html>

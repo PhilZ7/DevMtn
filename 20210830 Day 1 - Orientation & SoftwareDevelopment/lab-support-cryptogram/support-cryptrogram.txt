@@ -1,0 +1,41 @@
+Original
+AJCJC | LZPD-LDYFDZIIPQF | ZEWPBYD ICCUPQFB | ICBBZFC PQBUDJKUYD YD ICQUYD
+
+Decoded Message
+----- | ---------------- | ------- -------- | ------- ---------- -- ------
+queue | pair-programming | advisor meetings | message instructor or mentor
+
+Key: 
+A = Q
+
+C = E
+
+I = M
+
+L = P
+
+Q = N
+
+Y = O
+
+U = T
+
+D = R
+
+P = I
+
+B = S
+
+J = U
+
+K = C
+
+Z = A
+
+F = G
+
+E = D
+
+W = V
+
+

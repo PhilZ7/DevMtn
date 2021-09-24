@@ -1,0 +1,87 @@
+
+body {
+    background-color: white;
+}
+
+.header {
+    border: solid 6px black;
+    display: inline-block;
+    height: 300px;
+    width: 90%;
+    margin: 20px;
+    position: relative
+}
+
+.purple {
+    background-color: purple;
+    height: 190px;
+    width: 70px;
+    margin: 15px;
+    margin-top: 80px;
+    position: absolute;
+}
+
+.green {
+    background-color: green;
+    height: 250px;
+    width: 400px;
+    margin-left: 200px;
+    margin-top: 20px;
+    flex-direction: row;
+    margin-bottom: 10px;
+    position: absolute;
+}
+
+.blue {
+    background-color: lightblue;
+    height: 250px;
+    width: 250px;
+    margin-left: 750px;
+    margin-top: 20px;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.dotted {
+    border: dotted 4px black;
+    display: inline-block;
+    height: 400px;
+    width: 90%;
+    margin: 20px;
+    position: relative
+}
+
+.rectangle-yellow {
+    background-color: lightyellow;
+    height: 250px;
+    width: 900px;
+    margin-left: 200px;
+    margin-top: 80px;
+    flex-direction: row;
+    margin-bottom: 10px;
+    position: absolute;
+    box-shadow: 10px 10px 10px 1px;
+}
+
+.footerbox {
+    border: solid 2px lightgray;
+    display: inline-block;
+    height: 300px;
+    width: 30%;
+    margin-top: auto;
+    margin-left: 30%;
+    position: relative;
+    box-shadow: 10px 10px 10px 1px lightgray;
+    
+}
+
+p {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 25%;
+    font-style: normal;
+    color: darkblue;
+    letter-spacing: 3px;
+}

@@ -1,0 +1,4091 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/
+Subject: SQL | Devmountain Foundations
+Date: Tue, 21 Sep 2021 16:34:19 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----"
+
+
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: text/html
+Content-ID: <frame-A03205E9D2630D438817D86A79DF6BE7@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/=
+css" href=3D"cid:css-5d445adf-723e-4a0a-aa2a-da33f874cc0a@mhtml.blink" />
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <title>SQL | Devmountain Foundations</title>
+
+    <link href=3D"https://ed.devmountain.com/materials/f9/lectures/sql-1/_s=
+tatic/pygments.css" rel=3D"stylesheet" type=3D"text/css">
+    <link href=3D"https://ed.devmountain.com/materials/f9/lectures/sql-1/_s=
+tatic/main.css" rel=3D"stylesheet" type=3D"text/css">
+        <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://ed.devmo=
+untain.com/materials/f9/lectures/sql-1/_static/graphviz.css">
+        <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://ed.devmo=
+untain.com/materials/f9/lectures/sql-1/_static/devmountain.css">
+
+   =20
+  </head>
+  <body>
+    <div id=3D"handouts-container">
+      <header id=3D"page-header">
+        <p id=3D"project-title">Devmountain Foundations</p>
+        <p id=3D"page-title">SQL</p>
+        <p id=3D"backlink">
+          <a href=3D"https://ed.devmountain.com/"> =C2=AB Back to Homepage =
+</a>
+        </p>
+      </header>
+
+      <nav id=3D"page-toc"><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#">SQL</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#introduction">Introduction</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#goals">Goals</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#what-we-ll-cover">What We=E2=80=99ll Cover</a></li=
+>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#relational-databases">Relational Databases</a></li=
+>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#non-relational-databases">Non-Relational Databases=
+</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id1">SQL</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id2">SQL</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#writing-sql">Writing SQL</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#creating-tables">Creating Tables</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#create-table">CREATE TABLE</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#serial-primary-key">SERIAL PRIMARY KEY</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#select-statements">SELECT Statements</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id3">SELECT Statements</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#example">Example</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#from">From</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#where">Where</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#group-by">Group By</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#select">Select</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#order-by">Order By</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#offset">Offset</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#limit">Limit</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#overview">Overview</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id4">FROM</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id5">FROM</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id6">WHERE</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id7">WHERE</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#types">Types</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#operators">Operators</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id8">GROUP BY</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id9">GROUP BY</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id10">SELECT</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id11">SELECT</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id12">SELECT</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#aggregates">Aggregates</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id13">ORDER BY</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id14">ORDER BY</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#offset-and-limit">OFFSET AND LIMIT</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#offset-limit">OFFSET / LIMIT</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id15">OFFSET</a></li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id16">LIMIT</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#insert">INSERT</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id17">Insert</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#update">UPDATE</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id18">UPDATE</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#delete">DELETE</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id19">DELETE</a></li>
+</ul>
+</li>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#coming-up">Coming Up</a><ul>
+<li><a class=3D"reference internal" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#sql-ii">SQL II</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+      <main id=3D"page-content">  <section class=3D"section" id=3D"sql">
+<h1>SQL<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materials=
+/f9/lectures/sql-1/#sql" title=3D"Permalink to this headline">=C2=B6</a></h=
+1>
+<section class=3D"section" id=3D"introduction">
+<h2>Introduction<a class=3D"headerlink" href=3D"https://ed.devmountain.com/=
+materials/f9/lectures/sql-1/#introduction" title=3D"Permalink to this headl=
+ine">=C2=B6</a></h2>
+<section class=3D"section" id=3D"goals">
+<h3>Goals<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materia=
+ls/f9/lectures/sql-1/#goals" title=3D"Permalink to this headline">=C2=B6</a=
+></h3>
+<p>We want to analyze data quickly and expertly.</p>
+</section>
+<section class=3D"section" id=3D"what-we-ll-cover">
+<h3>What We=E2=80=99ll Cover<a class=3D"headerlink" href=3D"https://ed.devm=
+ountain.com/materials/f9/lectures/sql-1/#what-we-ll-cover" title=3D"Permali=
+nk to this headline">=C2=B6</a></h3>
+<ul class=3D"simple">
+<li class=3D"fragment"><p>Introduction to relational databases</p></li>
+<li class=3D"fragment"><p>SQL: the =E2=80=9CStructured Query Language=E2=80=
+=9D</p></li>
+<li class=3D"fragment"><p>Creating Tables</p></li>
+<li class=3D"fragment"><p>SQL <cite>SELECT</cite> syntax</p></li>
+<li class=3D"fragment"><p>SQL <cite>INSERT</cite> syntax</p></li>
+<li class=3D"fragment"><p>SQL <cite>UPDATE</cite> syntax</p></li>
+<li class=3D"fragment"><p>SQL <cite>DELETE</cite> syntax</p></li>
+</ul>
+</section>
+<section class=3D"section" id=3D"relational-databases">
+<h3>Relational Databases<a class=3D"headerlink" href=3D"https://ed.devmount=
+ain.com/materials/f9/lectures/sql-1/#relational-databases" title=3D"Permali=
+nk to this headline">=C2=B6</a></h3>
+<p>Keep data in =E2=80=9Crelations=E2=80=9D (tables)</p>
+<div class=3D"compare docutils container">
+<div class=3D"docutils container">
+<p><strong>Customers</strong></p>
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 15%">
+<col style=3D"width: 42%">
+<col style=3D"width: 42%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>ID</p></th>
+<th class=3D"head"><p>Customer</p></th>
+<th class=3D"head"><p>Phone</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p>1</p></td>
+<td><p>Jessica</p></td>
+<td><p>555-1212</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>2</p></td>
+<td><p>Jada</p></td>
+<td><p>123-4567</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>3</p></td>
+<td><p>Jane</p></td>
+<td><p>999-0000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"docutils container">
+<p><strong>Orders</strong></p>
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 17%">
+<col style=3D"width: 37%">
+<col style=3D"width: 47%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>Date</p></th>
+<th class=3D"head"><p>Customer ID</p></th>
+<th class=3D"head"><p>Order Total</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p>1/1</p></td>
+<td><p>1</p></td>
+<td><p>$200</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>1/5</p></td>
+<td><p>1</p></td>
+<td><p>$35</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>2/12</p></td>
+<td><p>2</p></td>
+<td><p>$100</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>2/13</p></td>
+<td><p>3</p></td>
+<td><p>$900</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>2/13</p></td>
+<td><p>2</p></td>
+<td><p>$100</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul class=3D"simple">
+<li class=3D"fragment"><p>Terminology</p>
+<ul>
+<li class=3D"fragment"><p><strong>Table</strong>: base unit of information<=
+/p></li>
+<li class=3D"fragment"><p><strong>Record</strong> (row): individual item</p=
+></li>
+<li class=3D"fragment"><p><strong>Field</strong>: individual attribute</p><=
+/li>
+<li class=3D"fragment"><p><strong>Database</strong>: collection of tables</=
+p></li>
+</ul>
+</li>
+<li class=3D"fragment"><p>Relational databases are most useful:</p>
+<ul>
+<li class=3D"fragment"><p>When objects have similar kinds of information</p=
+></li>
+<li class=3D"fragment"><p>When you have complex questions to ask about data=
+</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section class=3D"section" id=3D"non-relational-databases">
+<h3>Non-Relational Databases<a class=3D"headerlink" href=3D"https://ed.devm=
+ountain.com/materials/f9/lectures/sql-1/#non-relational-databases" title=3D=
+"Permalink to this headline">=C2=B6</a></h3>
+<p>Relational DBs aren=E2=80=99t the only kind.</p>
+<div class=3D"fragment docutils container">
+<div class=3D"line-block">
+<div class=3D"line">But they=E2=80=99re the most common.</div>
+<div class=3D"line"><br></div>
+</div>
+</div>
+<p>For years, relational databases have been the most common
+way for programmers to persist data, though other strategies have always
+been also available. There=E2=80=99s a trend toward using =E2=80=9CNoSQL=E2=
+=80=9D databases
+(like MongoDB) for some applications but these are still a far less common
+choice that relational databases=E2=80=94so, here at Devmountain, we primar=
+ily
+talk about relational databases.</p>
+<p>In addition, there are also simple =E2=80=9Ckey-value stores=E2=80=9D fo=
+r storing
+very simple data. These kind of databases are often able to be
+even faster than relational data and use less memory =E2=80=93 but offer fa=
+r
+less sophisticated searching.</p>
+</section>
+</section>
+<section class=3D"section" id=3D"id1">
+<h2>SQL<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materials=
+/f9/lectures/sql-1/#id1" title=3D"Permalink to this headline">=C2=B6</a></h=
+2>
+<section class=3D"section" id=3D"id2">
+<ul class=3D"simple">
+<li class=3D"fragment"><p>Language for querying / creating / updating relat=
+ional databases</p></li>
+<li class=3D"fragment"><p>Standard across different database products</p>
+<ul>
+<li><p>Yay! Learn once and get to use with every database</p></li>
+</ul>
+</li>
+</ul>
+<p>(At least in theory. Though SQL is standardized, not all databases follo=
+w
+all parts, so as you get more advanced in your SQL, you may have to learn
+some small tweaks for different database products)</p>
+</section>
+<section class=3D"section" id=3D"writing-sql">
+<h3>Writing SQL<a class=3D"headerlink" href=3D"https://ed.devmountain.com/m=
+aterials/f9/lectures/sql-1/#writing-sql" title=3D"Permalink to this headlin=
+e">=C2=B6</a></h3>
+<ul>
+<li class=3D"fragment"><p>Plain text, English-like</p></li>
+<li class=3D"fragment"><p>Whitespace insignificant</p></li>
+<li class=3D"fragment"><p>Case-insensitive</p>
+<ul class=3D"simple">
+<li><p>Conventional: <code class=3D"docutils literal notranslate"><span cla=
+ss=3D"pre">SQL</span> <span class=3D"pre">KEYWORD</span></code>, <code clas=
+s=3D"docutils literal notranslate"><span class=3D"pre">tablename</span></co=
+de>, <code class=3D"docutils literal notranslate"><span class=3D"pre">field=
+name</span></code></p></li>
+</ul>
+</li>
+<li class=3D"fragment"><p>In interactive systems, statements end with a sem=
+icolon:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">SELECT</span> <span class=3D"n">melon_type</=
+span><span class=3D"p">,</span> <span class=3D"n">price</span> <span class=
+=3D"n">FROM</span> <span class=3D"n">melons</span><span class=3D"p">;</span=
+>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section class=3D"section" id=3D"creating-tables">
+<h2>Creating Tables<a class=3D"headerlink" href=3D"https://ed.devmountain.c=
+om/materials/f9/lectures/sql-1/#creating-tables" title=3D"Permalink to this=
+ headline">=C2=B6</a></h2>
+<section class=3D"section" id=3D"create-table">
+<h3>CREATE TABLE<a class=3D"headerlink" href=3D"https://ed.devmountain.com/=
+materials/f9/lectures/sql-1/#create-table" title=3D"Permalink to this headl=
+ine">=C2=B6</a></h3>
+<div class=3D"compare docutils container">
+<div class=3D"docutils container">
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 44%">
+<col style=3D"width: 56%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>Field</p></th>
+<th class=3D"head"><p>Info</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p>Employee ID</p></td>
+<td><p>Integer (Unique)</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>First Name</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Last Name</p></td>
+<td><p>String</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Salary</p></td>
+<td><p>Amount of money</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Full time?</p></td>
+<td><p>Yes or No</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Start Date</p></td>
+<td><p>Date</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Department Code</p></td>
+<td><p>=E2=80=9Clegal=E2=80=9D, =E2=80=9Cmktg=E2=80=9D</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"fragment docutils container">
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">CREATE</span> <span class=3D"n">TABLE</span>=
+ <span class=3D"n">employees</span><span class=3D"p">(</span>
+    <span class=3D"n">employee_id</span> <span class=3D"n">SERIAL</span> <s=
+pan class=3D"n">PRIMARY</span> <span class=3D"n">KEY</span><span class=3D"p=
+">,</span>
+    <span class=3D"n">fname</span> <span class=3D"n">VARCHAR</span><span cl=
+ass=3D"p">(</span><span class=3D"mi">20</span><span class=3D"p">),</span>
+    <span class=3D"n">lname</span> <span class=3D"n">VARCHAR</span><span cl=
+ass=3D"p">(</span><span class=3D"mi">20</span><span class=3D"p">),</span>
+    <span class=3D"n">salary</span> <span class=3D"n">INTEGER</span><span c=
+lass=3D"p">,</span>
+    <span class=3D"n">full_time</span> <span class=3D"n">BOOLEAN</span> <sp=
+an class=3D"n">DEFAULT</span> <span class=3D"kc">True</span><span class=3D"=
+p">,</span>
+    <span class=3D"n">start_date</span> <span class=3D"n">DATE</span><span =
+class=3D"p">,</span>
+    <span class=3D"n">dept_code</span> <span class=3D"n">VARCHAR</span><spa=
+n class=3D"p">(</span><span class=3D"mi">5</span><span class=3D"p">)</span>
+    <span class=3D"p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class=3D"section" id=3D"serial-primary-key">
+<h3>SERIAL PRIMARY KEY<a class=3D"headerlink" href=3D"https://ed.devmountai=
+n.com/materials/f9/lectures/sql-1/#serial-primary-key" title=3D"Permalink t=
+o this headline">=C2=B6</a></h3>
+<ul class=3D"simple">
+<li><p><code class=3D"docutils literal notranslate"><span class=3D"pre">Ser=
+ial</span></code> is like Integer, however, it is an automatically incremen=
+ting integer.</p></li>
+<li><p><code class=3D"docutils literal notranslate"><span class=3D"pre">Pri=
+mary</span> <span class=3D"pre">Key</span></code> sets the data type to be =
+a unique value, meaning no two rows can have the same value.</p></li>
+</ul>
+<p>Note: When inserting data into this table, you will not need to give a v=
+alue for employee_id because <code class=3D"docutils literal notranslate"><=
+span class=3D"pre">Serial</span></code> will handle that for you.</p>
+</section>
+</section>
+<section class=3D"section" id=3D"select-statements">
+<h2>SELECT Statements<a class=3D"headerlink" href=3D"https://ed.devmountain=
+.com/materials/f9/lectures/sql-1/#select-statements" title=3D"Permalink to =
+this headline">=C2=B6</a></h2>
+<section class=3D"section" id=3D"id3">
+<p>Query your database.</p>
+<p>Doesn=E2=80=99t change data.</p>
+<p>A <cite>SELECT</cite> statement returns a result but it doesn=E2=80=99t =
+create or
+edit any data =E2=80=93 it just answers a question.</p>
+</section>
+<section class=3D"section" id=3D"example">
+<h3>Example<a class=3D"headerlink" href=3D"https://ed.devmountain.com/mater=
+ials/f9/lectures/sql-1/#example" title=3D"Permalink to this headline">=C2=
+=B6</a></h3>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">SELECT</span> <span class=3D"nb">id</span><s=
+pan class=3D"p">,</span> <span class=3D"n">melon_type</span>
+<span class=3D"n">FROM</span> <span class=3D"n">melons</span>
+<span class=3D"n">WHERE</span> <span class=3D"n">price</span> <span class=
+=3D"o">&gt;=3D</span> <span class=3D"mi">3</span><span class=3D"p">;</span>
+</pre></div>
+</div>
+<ul class=3D"simple">
+<li class=3D"fragment"><p>Returns result of query</p></li>
+<li class=3D"fragment"><p>Let=E2=80=99s learn how to write interesting ques=
+tions!</p></li>
+</ul>
+</section>
+<section class=3D"section" id=3D"from">
+<h3>From<a class=3D"headerlink" href=3D"https://ed.devmountain.com/material=
+s/f9/lectures/sql-1/#from" title=3D"Permalink to this headline">=C2=B6</a><=
+/h3>
+<div class=3D"compare docutils container">
+<div class=3D"docutils container">
+<img alt=3D"_images/from.svg" src=3D"https://ed.devmountain.com/materials/f=
+9/lectures/sql-1/_images/from.svg" width=3D"60%"><p>Gets raw data from tabl=
+es</p>
+</div>
+<div class=3D"fragment docutils container">
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 52%">
+<col style=3D"width: 28%">
+<col style=3D"width: 20%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>Name</p></th>
+<th class=3D"head"><p>Color</p></th>
+<th class=3D"head"><p>Price</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p>Watermelon</p></td>
+<td><p>green</p></td>
+<td><p>$4</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Spring Melon</p></td>
+<td><p>green</p></td>
+<td><p>$2</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Zest Melon</p></td>
+<td><p>green</p></td>
+<td><p>$4</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Fresh Melon</p></td>
+<td><p>green</p></td>
+<td><p>$4</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Yum Melon</p></td>
+<td><p>green</p></td>
+<td><p>$5</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Honeydew</p></td>
+<td><p>brown</p></td>
+<td><p>$2</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Paper Melon</p></td>
+<td><p>brown</p></td>
+<td><p>$6</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Thin Melon</p></td>
+<td><p>brown</p></td>
+<td><p>$7</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Sad Melon</p></td>
+<td><p>brown</p></td>
+<td><p>$6</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Blue Melon</p></td>
+<td><p>blue</p></td>
+<td><p>$1</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Berry Melon</p></td>
+<td><p>blue</p></td>
+<td><p>$6</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Pink Melon</p></td>
+<td><p>pink</p></td>
+<td><p>$4</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Spice Melon</p></td>
+<td><p>pink</p></td>
+<td><p>$3</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Summer Melon</p></td>
+<td><p>pink</p></td>
+<td><p>$6</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Best Melon</p></td>
+<td><p>pink</p></td>
+<td><p>$9</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class=3D"section" id=3D"where">
+<h3>Where<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materia=
+ls/f9/lectures/sql-1/#where" title=3D"Permalink to this headline">=C2=B6</a=
+></h3>
+<div class=3D"compare docutils container">
+<div class=3D"docutils container">
+<img alt=3D"_images/where.svg" src=3D"https://ed.devmountain.com/materials/=
+f9/lectures/sql-1/_images/where.svg" width=3D"60%"><p>Throws out melons pri=
+ced less than $3</p>
+</div>
+<div class=3D"fragment docutils container">
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 46%">
+<col style=3D"width: 33%">
+<col style=3D"width: 22%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>Name</p></th>
+<th class=3D"head"><p>Color</p></th>
+<th class=3D"head"><p>Price</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p>Watermelon</p></td>
+<td><p>green</p></td>
+<td><p>$4</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p><span class=3D"gone">Spring Melon</span></p></=
+td>
+<td><p><span class=3D"gone">green</span></p></td>
+<td><p><span class=3D"gone">$2</span></p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Zest Melon</p></td>
+<td><p>green</p></td>
+<td><p>$4</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Fresh Melon</p></td>
+<td><p>green</p></td>
+<td><p>$4</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Yum Melon</p></td>
+<td><p>green</p></td>
+<td><p>$5</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p><span class=3D"gone">Honeydew</span></p></td>
+<td><p><span class=3D"gone">brown</span></p></td>
+<td><p><span class=3D"gone">$2</span></p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Paper Melon</p></td>
+<td><p>brown</p></td>
+<td><p>$6</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Thin Melon</p></td>
+<td><p>brown</p></td>
+<td><p>$7</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Sad Melon</p></td>
+<td><p>brown</p></td>
+<td><p>$6</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p><span class=3D"gone">Blue Melon</span></p></td=
+>
+<td><p><span class=3D"gone">blue</span></p></td>
+<td><p><span class=3D"gone">$1</span></p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Berry Melon</p></td>
+<td><p>blue</p></td>
+<td><p>$6</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Pink Melon</p></td>
+<td><p>pink</p></td>
+<td><p>$4</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Spice Melon</p></td>
+<td><p>pink</p></td>
+<td><p>$3</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>Summer Melon</p></td>
+<td><p>pink</p></td>
+<td><p>$6</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>Best Melon</p></td>
+<td><p>pink</p></td>
+<td><p>$9</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class=3D"section" id=3D"group-by">
+<h3>Group By<a class=3D"headerlink" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#group-by" title=3D"Permalink to this headline">=C2=
+=B6</a></h3>
+<div class=3D"compare docutils container">
+<div class=3D"docutils container">
+<img alt=3D"_images/groupby.svg" src=3D"https://ed.devmountain.com/material=
+s/f9/lectures/sql-1/_images/groupby.svg" width=3D"70%"><p>Cluster by color<=
+/p>
+</div>
+<div class=3D"fragment docutils container">
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 25%">
+<col style=3D"width: 75%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>Color</p></th>
+<th class=3D"head"><p>Melons</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p>green</p></td>
+<td><div class=3D"line-block">
+<div class=3D"line">Watermelon $4</div>
+<div class=3D"line">Zest $4</div>
+<div class=3D"line">Fresh $4</div>
+<div class=3D"line">Yum $5</div>
+</div>
+</td>
+</tr>
+<tr class=3D"row-odd"><td><p>brown</p></td>
+<td><div class=3D"line-block">
+<div class=3D"line">Paper $6</div>
+<div class=3D"line">Thin $7</div>
+<div class=3D"line">Sad $6</div>
+</div>
+</td>
+</tr>
+<tr class=3D"row-even"><td><p>blue</p></td>
+<td><div class=3D"line-block">
+<div class=3D"line">Berry $6</div>
+</div>
+</td>
+</tr>
+<tr class=3D"row-odd"><td><p>pink</p></td>
+<td><div class=3D"line-block">
+<div class=3D"line">Pink $4</div>
+<div class=3D"line">Spice $3</div>
+<div class=3D"line">Summer $6</div>
+<div class=3D"line">Best $9</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class=3D"section" id=3D"select">
+<h3>Select<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materi=
+als/f9/lectures/sql-1/#select" title=3D"Permalink to this headline">=C2=B6<=
+/a></h3>
+<div class=3D"compare docutils container">
+<div class=3D"docutils container">
+<img alt=3D"_images/select.svg" src=3D"https://ed.devmountain.com/materials=
+/f9/lectures/sql-1/_images/select.svg" width=3D"80%"><div class=3D"line-blo=
+ck">
+<div class=3D"line">Determines info to show</div>
+<div class=3D"line">(color, number-of-items)</div>
+<div class=3D"line"><br></div>
+</div>
+</div>
+<div class=3D"fragment docutils container">
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 54%">
+<col style=3D"width: 46%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>Color</p></th>
+<th class=3D"head"><p># Items</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p>green</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>brown</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>pink</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class=3D"section" id=3D"order-by">
+<h3>Order By<a class=3D"headerlink" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#order-by" title=3D"Permalink to this headline">=C2=
+=B6</a></h3>
+<div class=3D"compare docutils container">
+<div class=3D"docutils container">
+<img alt=3D"_images/orderby.svg" src=3D"https://ed.devmountain.com/material=
+s/f9/lectures/sql-1/_images/orderby.svg" width=3D"80%"><p>Order groups by n=
+umber-of-items.</p>
+</div>
+<div class=3D"fragment docutils container">
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 54%">
+<col style=3D"width: 46%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>Color</p></th>
+<th class=3D"head"><p># Items</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p>brown</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>pink</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>green</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class=3D"section" id=3D"offset">
+<h3>Offset<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materi=
+als/f9/lectures/sql-1/#offset" title=3D"Permalink to this headline">=C2=B6<=
+/a></h3>
+<div class=3D"compare docutils container">
+<div class=3D"docutils container">
+<img alt=3D"_images/offset.svg" src=3D"https://ed.devmountain.com/materials=
+/f9/lectures/sql-1/_images/offset.svg" width=3D"80%"><p>Skip the first grou=
+p.</p>
+</div>
+<div class=3D"fragment docutils container">
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 54%">
+<col style=3D"width: 46%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>Color</p></th>
+<th class=3D"head"><p># Items</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p><span class=3D"gone">brown</span></p></td>
+<td><p><span class=3D"gone">3</span></p></td>
+</tr>
+<tr class=3D"row-odd"><td><p>pink</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class=3D"row-even"><td><p>green</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class=3D"section" id=3D"limit">
+<h3>Limit<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materia=
+ls/f9/lectures/sql-1/#limit" title=3D"Permalink to this headline">=C2=B6</a=
+></h3>
+<div class=3D"compare docutils container">
+<div class=3D"docutils container">
+<img alt=3D"_images/limit.svg" src=3D"https://ed.devmountain.com/materials/=
+f9/lectures/sql-1/_images/limit.svg" width=3D"60%"><p>Only show one group.<=
+/p>
+</div>
+<div class=3D"fragment docutils container">
+<table class=3D"docutils align-default">
+<colgroup>
+<col style=3D"width: 54%">
+<col style=3D"width: 46%">
+</colgroup>
+<thead>
+<tr class=3D"row-odd"><th class=3D"head"><p>Color</p></th>
+<th class=3D"head"><p># Items</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"row-even"><td><p>pink</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class=3D"row-odd"><td><p><span class=3D"gone">green</span></p></td>
+<td><p><span class=3D"gone">5</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class=3D"section" id=3D"overview">
+<h3>Overview<a class=3D"headerlink" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#overview" title=3D"Permalink to this headline">=C2=
+=B6</a></h3>
+<div class=3D"compare docutils container">
+<div class=3D"fragment docutils container">
+<div class=3D"line-block">
+<div class=3D"line"><strong>From</strong> these tables get rows,</div>
+<div class=3D"line">throwing out <strong>where</strong> they fail this,</di=
+v>
+<div class=3D"line"><strong>group them up</strong> like so,</div>
+<div class=3D"line">removing groups not <strong>having</strong> this.</div>
+<div class=3D"line">Of surviving, <strong>select</strong> this info</div>
+<div class=3D"line">and put it this <strong>order</strong>,</div>
+<div class=3D"line"><strong>offset</strong> (skip) this many,</div>
+<div class=3D"line">and <strong>limit</strong> results to this many.</div>
+</div>
+</div>
+<div class=3D"fragment docutils container">
+<p>That=E2=80=99s the order it happens in.</p>
+<p>It=E2=80=99s not the order you write it, though.</p>
+</div>
+</div>
+</section>
+</section>
+<section class=3D"section" id=3D"id4">
+<h2>FROM<a class=3D"headerlink" href=3D"https://ed.devmountain.com/material=
+s/f9/lectures/sql-1/#id4" title=3D"Permalink to this headline">=C2=B6</a></=
+h2>
+<section class=3D"section" id=3D"id5">
+<img alt=3D"_images/from.svg" src=3D"https://ed.devmountain.com/materials/f=
+9/lectures/sql-1/_images/from.svg" width=3D"30%"><p>Gets all records from t=
+able(s).</p>
+<p><code class=3D"docutils literal notranslate"><span class=3D"pre">FROM</s=
+pan> <span class=3D"pre">melons</span></code></p>
+<div class=3D"highlight-sql notranslate"><div class=3D"highlight"><pre><spa=
+n></span><span class=3D"k">SELECT</span> <span class=3D"o">*</span> <span c=
+lass=3D"k">FROM</span> <span class=3D"n">melons</span><span class=3D"p">;</=
+span>
+</pre></div>
+</div>
+</section>
+</section>
+<section class=3D"section" id=3D"id6">
+<h2>WHERE<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materia=
+ls/f9/lectures/sql-1/#id6" title=3D"Permalink to this headline">=C2=B6</a><=
+/h2>
+<section class=3D"section" id=3D"id7">
+<img alt=3D"_images/where.svg" src=3D"https://ed.devmountain.com/materials/=
+f9/lectures/sql-1/_images/where.svg" width=3D"30%"><p>Throws out non-matchi=
+ng rows.</p>
+<p><code class=3D"docutils literal notranslate"><span class=3D"pre">WHERE</=
+span> <span class=3D"pre">price</span> <span class=3D"pre">&gt;=3D</span> <=
+span class=3D"pre">3</span></code></p>
+<div class=3D"highlight-sql notranslate"><div class=3D"highlight"><pre><spa=
+n></span><span class=3D"k">SELECT</span> <span class=3D"o">*</span> <span c=
+lass=3D"k">FROM</span> <span class=3D"n">melons</span> <span class=3D"k">WH=
+ERE</span> <span class=3D"n">melon_type</span> <span class=3D"o">=3D</span>=
+ <span class=3D"s1">'Musk'</span><span class=3D"p">;</span>
+
+<span class=3D"k">SELECT</span> <span class=3D"o">*</span> <span class=3D"k=
+">FROM</span> <span class=3D"n">melons</span> <span class=3D"k">WHERE</span=
+> <span class=3D"n">melon_type</span> <span class=3D"o">=3D</span> <span cl=
+ass=3D"s1">'Musk'</span> <span class=3D"k">AND</span> <span class=3D"n">pri=
+ce</span> <span class=3D"o">&gt;</span> <span class=3D"mi">5</span><span cl=
+ass=3D"p">;</span>
+
+<span class=3D"k">SELECT</span> <span class=3D"o">*</span> <span class=3D"k=
+">FROM</span> <span class=3D"n">melons</span> <span class=3D"k">WHERE</span=
+> <span class=3D"n">price</span> <span class=3D"o">&lt;&gt;</span> <span cl=
+ass=3D"mi">5</span> <span class=3D"k">AND</span> <span class=3D"n">price</s=
+pan> <span class=3D"o">&lt;&gt;</span> <span class=3D"mi">3</span><span cla=
+ss=3D"p">;</span>
+</pre></div>
+</div>
+</section>
+<section class=3D"section" id=3D"types">
+<h3>Types<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materia=
+ls/f9/lectures/sql-1/#types" title=3D"Permalink to this headline">=C2=B6</a=
+></h3>
+<ul class=3D"simple">
+<li><p>String: <code class=3D"docutils literal notranslate"><span class=3D"=
+pre">'this'</span></code> (<code class=3D"docutils literal notranslate"><sp=
+an class=3D"pre">"this"</span></code> is not legal)</p></li>
+<li><p>Int: <code class=3D"docutils literal notranslate"><span class=3D"pre=
+">5</span></code></p></li>
+<li><p>Float: <code class=3D"docutils literal notranslate"><span class=3D"p=
+re">5.0</span></code></p></li>
+<li><p>Date: <code class=3D"docutils literal notranslate"><span class=3D"pr=
+e">'2015-12-25'</span></code></p></li>
+</ul>
+</section>
+<section class=3D"section" id=3D"operators">
+<h3>Operators<a class=3D"headerlink" href=3D"https://ed.devmountain.com/mat=
+erials/f9/lectures/sql-1/#operators" title=3D"Permalink to this headline">=
+=C2=B6</a></h3>
+<ul>
+<li><p>Equal: <code class=3D"docutils literal notranslate"><span class=3D"p=
+re">=3D</span></code></p></li>
+<li><p>Not Equal: <code class=3D"docutils literal notranslate"><span class=
+=3D"pre">&lt;&gt;</span></code>  (or <code class=3D"docutils literal notran=
+slate"><span class=3D"pre">!=3D</span></code>)</p>
+<p>Some databases allow <code class=3D"docutils literal notranslate"><span =
+class=3D"pre">!=3D</span></code> to be used for inequality, but <code class=
+=3D"docutils literal notranslate"><span class=3D"pre">&lt;&gt;</span></code=
+> is
+standard.</p>
+</li>
+<li><p>Comparison: <code class=3D"docutils literal notranslate"><span class=
+=3D"pre">&gt;</span></code>, <code class=3D"docutils literal notranslate"><=
+span class=3D"pre">&lt;</span></code>, <code class=3D"docutils literal notr=
+anslate"><span class=3D"pre">&gt;=3D</span></code>, <code class=3D"docutils=
+ literal notranslate"><span class=3D"pre">&lt;=3D</span></code></p></li>
+<li><p>Match any string: <code class=3D"docutils literal notranslate"><span=
+ class=3D"pre">LIKE</span> <span class=3D"pre">'StartsWith%'</span></code><=
+/p></li>
+<li><p>Boolean: <code class=3D"docutils literal notranslate"><span class=3D=
+"pre">AND</span></code>, <code class=3D"docutils literal notranslate"><span=
+ class=3D"pre">OR</span></code>, <code class=3D"docutils literal notranslat=
+e"><span class=3D"pre">NOT</span></code>, <code class=3D"docutils literal n=
+otranslate"><span class=3D"pre">(</span></code>, <code class=3D"docutils li=
+teral notranslate"><span class=3D"pre">)</span></code></p></li>
+<li><p>Between (inclusive): <code class=3D"docutils literal notranslate"><s=
+pan class=3D"pre">BETWEEN</span> <span class=3D"pre">x</span> <span class=
+=3D"pre">AND</span> <span class=3D"pre">y</span></code></p></li>
+<li><p>In List: <code class=3D"docutils literal notranslate"><span class=3D=
+"pre">IN</span> <span class=3D"pre">(1,</span> <span class=3D"pre">2,</span=
+> <span class=3D"pre">3,</span> <span class=3D"pre">4)</span></code></p></l=
+i>
+</ul>
+<p>Many SQL databases are case-sensitive when searching strings with <code =
+class=3D"docutils literal notranslate"><span class=3D"pre">=3D</span></code=
+>,
+but some are not.</p>
+</section>
+</section>
+<section class=3D"section" id=3D"id8">
+<h2>GROUP BY<a class=3D"headerlink" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id8" title=3D"Permalink to this headline">=C2=B6</=
+a></h2>
+<section class=3D"section" id=3D"id9">
+<img alt=3D"_images/groupby.svg" src=3D"https://ed.devmountain.com/material=
+s/f9/lectures/sql-1/_images/groupby.svg" width=3D"50%"><p>Cluster by attrib=
+ute(s).</p>
+<p><code class=3D"docutils literal notranslate"><span class=3D"pre">GROUP</=
+span> <span class=3D"pre">BY</span> <span class=3D"pre">color</span></code>=
+</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">SELECT</span> <span class=3D"n">melon_type</=
+span>
+<span class=3D"n">FROM</span> <span class=3D"n">melons</span>
+<span class=3D"n">GROUP</span> <span class=3D"n">BY</span> <span class=3D"n=
+">melon_type</span><span class=3D"p">;</span>
+</pre></div>
+</div>
+<div class=3D"fragment docutils container">
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">SELECT</span> <span class=3D"n">melon_type</=
+span><span class=3D"p">,</span> <span class=3D"n">seedless</span>
+<span class=3D"n">FROM</span> <span class=3D"n">melons</span>
+<span class=3D"n">GROUP</span> <span class=3D"n">BY</span> <span class=3D"n=
+">melon_type</span><span class=3D"p">,</span> <span class=3D"n">seedless</s=
+pan><span class=3D"p">;</span>
+</pre></div>
+</div>
+</div>
+<p>If you don=E2=80=99t use <cite>GROUP BY</cite>, you=E2=80=99re working
+with individual melons.</p>
+</section>
+</section>
+<section class=3D"section" id=3D"id10">
+<h2>SELECT<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materi=
+als/f9/lectures/sql-1/#id10" title=3D"Permalink to this headline">=C2=B6</a=
+></h2>
+<section class=3D"section" id=3D"id11">
+<img alt=3D"_images/select.svg" src=3D"https://ed.devmountain.com/materials=
+/f9/lectures/sql-1/_images/select.svg" width=3D"50%"><p>Determine fields/ex=
+pressions to list.</p>
+<p><code class=3D"docutils literal notranslate"><span class=3D"pre">SELECT<=
+/span> <span class=3D"pre">color,</span> <span class=3D"pre">COUNT(*)</span=
+></code></p>
+</section>
+<section class=3D"section" id=3D"id12">
+<div class=3D"highlight-sql notranslate"><div class=3D"highlight"><pre><spa=
+n></span><span class=3D"k">SELECT</span> <span class=3D"o">*</span> <span c=
+lass=3D"k">FROM</span> <span class=3D"n">melons</span><span class=3D"p">;</=
+span>  <span class=3D"c1">-- "*" means all columns</span>
+
+<span class=3D"k">SELECT</span> <span class=3D"n">id</span><span class=3D"p=
+">,</span> <span class=3D"n">melon_type</span> <span class=3D"k">FROM</span=
+> <span class=3D"n">melons</span><span class=3D"p">;</span>
+</pre></div>
+</div>
+<div class=3D"fragment docutils container">
+<div class=3D"highlight-sql notranslate"><div class=3D"highlight"><pre><spa=
+n></span><span class=3D"k">SELECT</span> <span class=3D"n">price</span> <sp=
+an class=3D"o">/</span> <span class=3D"mi">2</span> <span class=3D"k">FROM<=
+/span> <span class=3D"n">melons</span><span class=3D"p">;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class=3D"section" id=3D"aggregates">
+<h3>Aggregates<a class=3D"headerlink" href=3D"https://ed.devmountain.com/ma=
+terials/f9/lectures/sql-1/#aggregates" title=3D"Permalink to this headline"=
+>=C2=B6</a></h3>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">SELECT</span> <span class=3D"n">COUNT</span>=
+<span class=3D"p">(</span><span class=3D"o">*</span><span class=3D"p">)</sp=
+an> <span class=3D"n">FROM</span> <span class=3D"n">melons</span><span clas=
+s=3D"p">;</span>
+
+<span class=3D"n">SELECT</span> <span class=3D"n">AVG</span><span class=3D"=
+p">(</span><span class=3D"n">price</span><span class=3D"p">)</span> <span c=
+lass=3D"n">FROM</span> <span class=3D"n">melons</span><span class=3D"p">;</=
+span>
+
+<span class=3D"n">SELECT</span> <span class=3D"n">SUM</span><span class=3D"=
+p">(</span><span class=3D"n">price</span><span class=3D"p">)</span> <span c=
+lass=3D"n">FROM</span> <span class=3D"n">melons</span><span class=3D"p">;</=
+span>
+
+<span class=3D"n">SELECT</span> <span class=3D"n">MIN</span><span class=3D"=
+p">(</span><span class=3D"n">price</span><span class=3D"p">)</span> <span c=
+lass=3D"n">FROM</span> <span class=3D"n">melons</span><span class=3D"p">;</=
+span>
+
+<span class=3D"n">SELECT</span> <span class=3D"n">MAX</span><span class=3D"=
+p">(</span><span class=3D"n">price</span><span class=3D"p">)</span> <span c=
+lass=3D"n">FROM</span> <span class=3D"n">melons</span><span class=3D"p">;</=
+span>
+</pre></div>
+</div>
+<p><code class=3D"docutils literal notranslate"><span class=3D"pre">COUNT(*=
+)</span></code> is =E2=80=9Ccount all the items in this group=E2=80=9D.</p>
+<p>Can use with <code class=3D"docutils literal notranslate"><span class=3D=
+"pre">GROUP</span> <span class=3D"pre">BY</span></code>:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">SELECT</span> <span class=3D"n">melon_type</=
+span><span class=3D"p">,</span> <span class=3D"n">COUNT</span><span class=
+=3D"p">(</span><span class=3D"o">*</span><span class=3D"p">)</span>
+<span class=3D"n">FROM</span> <span class=3D"n">melons</span>
+<span class=3D"n">GROUP</span> <span class=3D"n">BY</span> <span class=3D"n=
+">melon_type</span><span class=3D"p">;</span>
+</pre></div>
+</div>
+<p>Or without:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">SELECT</span> <span class=3D"n">COUNT</span>=
+<span class=3D"p">(</span><span class=3D"o">*</span><span class=3D"p">)</sp=
+an>
+<span class=3D"n">FROM</span> <span class=3D"n">melons</span>
+</pre></div>
+</div>
+<p>If you use an aggregate expression without an explicit <cite>GROUP BY</c=
+ite>
+clause, the entire result set is put into one group =E2=80=94 so the above
+query returns the total number of all melons.</p>
+</section>
+</section>
+<section class=3D"section" id=3D"id13">
+<h2>ORDER BY<a class=3D"headerlink" href=3D"https://ed.devmountain.com/mate=
+rials/f9/lectures/sql-1/#id13" title=3D"Permalink to this headline">=C2=B6<=
+/a></h2>
+<section class=3D"section" id=3D"id14">
+<img alt=3D"_images/orderby.svg" src=3D"https://ed.devmountain.com/material=
+s/f9/lectures/sql-1/_images/orderby.svg" width=3D"50%"><p>Order groups by f=
+ields/expressions.</p>
+<p><code class=3D"docutils literal notranslate"><span class=3D"pre">ORDER</=
+span> <span class=3D"pre">BY</span> <span class=3D"pre">COUNT(*)</span></co=
+de></p>
+<div class=3D"highlight-sql notranslate"><div class=3D"highlight"><pre><spa=
+n></span><span class=3D"k">SELECT</span> <span class=3D"o">*</span> <span c=
+lass=3D"k">FROM</span> <span class=3D"n">melons</span> <span class=3D"k">OR=
+DER</span> <span class=3D"k">BY</span> <span class=3D"n">melon_type</span><=
+span class=3D"p">;</span>
+</pre></div>
+</div>
+<p>If you don=E2=80=99t use <cite>ORDER BY</cite>, you can=E2=80=99t predic=
+t order.</p>
+<p>The SQL standard actually requires that, for expression, <cite>ORDER BY<=
+/cite> be given a number
+which refers to the column # in the select statement (so our example should
+be written <code class=3D"docutils literal notranslate"><span class=3D"pre"=
+>ORDER</span> <span class=3D"pre">BY</span> <span class=3D"pre">2</span> <s=
+pan class=3D"pre">DESC</span></code>. Almost all databases, however, allow =
+the
+<cite>ORDER BY</cite> clause to refer to expressions by name, as shown here=
+ =E2=80=93 including
+PostgreSQL.</p>
+</section>
+</section>
+<section class=3D"section" id=3D"offset-and-limit">
+<h2>OFFSET AND LIMIT<a class=3D"headerlink" href=3D"https://ed.devmountain.=
+com/materials/f9/lectures/sql-1/#offset-and-limit" title=3D"Permalink to th=
+is headline">=C2=B6</a></h2>
+<section class=3D"section" id=3D"offset-limit">
+<h3>OFFSET / LIMIT<a class=3D"headerlink" href=3D"https://ed.devmountain.co=
+m/materials/f9/lectures/sql-1/#offset-limit" title=3D"Permalink to this hea=
+dline">=C2=B6</a></h3>
+<div class=3D"fragment docutils container">
+<p>Often used to =E2=80=9Cbatch results=E2=80=9D:</p>
+<img alt=3D"_images/batching.png" src=3D"https://ed.devmountain.com/materia=
+ls/f9/lectures/sql-1/_images/batching.png" style=3D"width: 70%;">
+</div>
+</section>
+<section class=3D"section" id=3D"id15">
+<h3>OFFSET<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materi=
+als/f9/lectures/sql-1/#id15" title=3D"Permalink to this headline">=C2=B6</a=
+></h3>
+<img alt=3D"_images/offset.svg" src=3D"https://ed.devmountain.com/materials=
+/f9/lectures/sql-1/_images/offset.svg" width=3D"50%"><p>Number groups to sk=
+ip (default 0)</p>
+<p><code class=3D"docutils literal notranslate"><span class=3D"pre">OFFSET<=
+/span> <span class=3D"pre">1</span></code></p>
+<div class=3D"highlight-sql notranslate"><div class=3D"highlight"><pre><spa=
+n></span><span class=3D"k">SELECT</span> <span class=3D"o">*</span> <span c=
+lass=3D"k">FROM</span> <span class=3D"n">melons</span> <span class=3D"k">OR=
+DER</span> <span class=3D"k">BY</span> <span class=3D"n">melon_type</span> =
+<span class=3D"k">OFFSET</span> <span class=3D"mi">10</span><span class=3D"=
+p">;</span>
+</pre></div>
+</div>
+</section>
+<section class=3D"section" id=3D"id16">
+<h3>LIMIT<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materia=
+ls/f9/lectures/sql-1/#id16" title=3D"Permalink to this headline">=C2=B6</a>=
+</h3>
+<img alt=3D"_images/limit.svg" src=3D"https://ed.devmountain.com/materials/=
+f9/lectures/sql-1/_images/limit.svg" width=3D"35%"><p>Number groups to retu=
+rn (default all)</p>
+<p><code class=3D"docutils literal notranslate"><span class=3D"pre">LIMIT</=
+span> <span class=3D"pre">1</span></code></p>
+<div class=3D"highlight-sql notranslate"><div class=3D"highlight"><pre><spa=
+n></span><span class=3D"k">SELECT</span> <span class=3D"o">*</span> <span c=
+lass=3D"k">FROM</span> <span class=3D"n">melons</span> <span class=3D"k">OR=
+DER</span> <span class=3D"k">BY</span> <span class=3D"n">melon_type</span> =
+<span class=3D"k">LIMIT</span> <span class=3D"mi">10</span><span class=3D"p=
+">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section class=3D"section" id=3D"insert">
+<h2>INSERT<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materi=
+als/f9/lectures/sql-1/#insert" title=3D"Permalink to this headline">=C2=B6<=
+/a></h2>
+<section class=3D"section" id=3D"id17">
+<h3>Insert<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materi=
+als/f9/lectures/sql-1/#id17" title=3D"Permalink to this headline">=C2=B6</a=
+></h3>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">INSERT</span> <span class=3D"n">INTO</span> =
+<span class=3D"n">departments</span> <span class=3D"n">VALUES</span> <span =
+class=3D"p">(</span><span class=3D"s1">'mktg'</span><span class=3D"p">,</sp=
+an> <span class=3D"s1">'Marketing'</span><span class=3D"p">,</span> <span c=
+lass=3D"s1">'555-1212'</span><span class=3D"p">);</span>
+
+<span class=3D"n">INSERT</span> <span class=3D"n">INTO</span> <span class=
+=3D"n">departments</span> <span class=3D"n">VALUES</span> <span class=3D"p"=
+>(</span><span class=3D"s1">'legal'</span><span class=3D"p">,</span> <span =
+class=3D"s1">'Legal'</span><span class=3D"p">,</span> <span class=3D"s1">'5=
+55-1000'</span><span class=3D"p">);</span>
+</pre></div>
+</div>
+<p>Don=E2=80=99t do it this way:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">INSERT</span> <span class=3D"n">INTO</span> =
+<span class=3D"n">employees</span> <span class=3D"n">VALUES</span>
+<span class=3D"p">(</span><span class=3D"mi">1</span><span class=3D"p">,</s=
+pan>         <span class=3D"o">--</span> <span class=3D"nb">id</span>
+ <span class=3D"s1">'Liz'</span><span class=3D"p">,</span>     <span class=
+=3D"o">--</span> <span class=3D"n">fname</span>
+ <span class=3D"s1">'Lemon'</span><span class=3D"p">,</span>   <span class=
+=3D"o">--</span> <span class=3D"n">lname</span>
+ <span class=3D"mi">90000</span><span class=3D"p">,</span>     <span class=
+=3D"o">--</span> <span class=3D"n">salary</span>
+ <span class=3D"kc">True</span><span class=3D"p">,</span>      <span class=
+=3D"o">--</span> <span class=3D"n">full</span> <span class=3D"n">time</span=
+>
+ <span class=3D"n">NULL</span><span class=3D"p">,</span>      <span class=
+=3D"o">--</span> <span class=3D"n">start</span> <span class=3D"n">date</spa=
+n>
+ <span class=3D"s1">'legal'</span>    <span class=3D"o">--</span> <span cla=
+ss=3D"n">department</span> <span class=3D"n">code</span>
+<span class=3D"p">);</span>
+</pre></div>
+</div>
+<ul class=3D"simple">
+<li><p>Would have to provide <cite>id</cite> (that=E2=80=99s job of serial)=
+</p></li>
+<li><p>Had to provide <cite>full_time</cite> =3D <code class=3D"docutils li=
+teral notranslate"><span class=3D"pre">True</span></code> even though that=
+=E2=80=99s default</p></li>
+<li><p>Had to explicitly provide <code class=3D"docutils literal notranslat=
+e"><span class=3D"pre">NULL</span></code> for missing fields</p></li>
+</ul>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">INSERT</span> <span class=3D"n">INTO</span> =
+<span class=3D"n">employees</span> <span class=3D"p">(</span><span class=3D=
+"n">fname</span><span class=3D"p">,</span> <span class=3D"n">lname</span><s=
+pan class=3D"p">,</span> <span class=3D"n">dept_code</span><span class=3D"p=
+">,</span> <span class=3D"n">salary</span><span class=3D"p">)</span>
+  <span class=3D"n">VALUES</span> <span class=3D"p">(</span><span class=3D"=
+s1">'Liz'</span><span class=3D"p">,</span> <span class=3D"s1">'Lemon'</span=
+><span class=3D"p">,</span> <span class=3D"s1">'legal'</span><span class=3D=
+"p">,</span> <span class=3D"mi">90000</span><span class=3D"p">);</span>
+
+<span class=3D"n">INSERT</span> <span class=3D"n">INTO</span> <span class=
+=3D"n">employees</span> <span class=3D"p">(</span><span class=3D"n">fname</=
+span><span class=3D"p">,</span> <span class=3D"n">lname</span><span class=
+=3D"p">,</span> <span class=3D"n">dept_code</span><span class=3D"p">,</span=
+> <span class=3D"n">salary</span><span class=3D"p">)</span>
+  <span class=3D"n">VALUES</span> <span class=3D"p">(</span><span class=3D"=
+s1">'Maggie'</span><span class=3D"p">,</span> <span class=3D"s1">'McEnroe'<=
+/span><span class=3D"p">,</span> <span class=3D"s1">'mktg'</span><span clas=
+s=3D"p">,</span> <span class=3D"mi">70000</span><span class=3D"p">);</span>
+
+<span class=3D"n">INSERT</span> <span class=3D"n">INTO</span> <span class=
+=3D"n">employees</span> <span class=3D"p">(</span><span class=3D"n">fname</=
+span><span class=3D"p">,</span> <span class=3D"n">lname</span><span class=
+=3D"p">,</span> <span class=3D"n">salary</span><span class=3D"p">,</span> <=
+span class=3D"n">full_time</span><span class=3D"p">,</span> <span class=3D"=
+n">dept_code</span><span class=3D"p">)</span>
+  <span class=3D"n">VALUES</span> <span class=3D"p">(</span><span class=3D"=
+s1">'Leonard'</span><span class=3D"p">,</span> <span class=3D"s1">'Lancelot=
+'</span><span class=3D"p">,</span> <span class=3D"mi">90000</span><span cla=
+ss=3D"p">,</span> <span class=3D"kc">True</span><span class=3D"p">,</span> =
+<span class=3D"s1">'legal'</span><span class=3D"p">);</span>
+</pre></div>
+</div>
+<div class=3D"fragment docutils container">
+<p>We can still pass NULL stuff in explicitly:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">INSERT</span> <span class=3D"n">INTO</span> =
+<span class=3D"n">employees</span> <span class=3D"p">(</span><span class=3D=
+"n">fname</span><span class=3D"p">,</span> <span class=3D"n">lname</span><s=
+pan class=3D"p">,</span> <span class=3D"n">dept_code</span><span class=3D"p=
+">)</span>
+  <span class=3D"n">VALUES</span> <span class=3D"p">(</span><span class=3D"=
+s1">'Nadine'</span><span class=3D"p">,</span> <span class=3D"s1">'Nelson'</=
+span><span class=3D"p">,</span> <span class=3D"n">NULL</span><span class=3D=
+"p">);</span>
+</pre></div>
+</div>
+</div>
+<div class=3D"admonition note">
+<p class=3D"admonition-title">Inserting by Selecting</p>
+<div class=3D"admonition-body docutils container">
+<p>As a more intermediate aside, you can also insert by using a <cite>SELEC=
+T</cite>
+clause, rather than a <cite>VALUES</cite> clause:</p>
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span><span class=3D"n">INSERT</span> <span class=3D"n">INTO</span> =
+<span class=3D"n">employees</span> <span class=3D"p">(</span><span class=3D=
+"n">fname</span><span class=3D"p">,</span> <span class=3D"n">lname</span><s=
+pan class=3D"p">,</span> <span class=3D"n">salary</span><span class=3D"p">,=
+</span> <span class=3D"n">full_time</span><span class=3D"p">,</span> <span =
+class=3D"n">dept_code</span><span class=3D"p">)</span>
+  <span class=3D"n">SELECT</span> <span class=3D"s1">'Leon'</span><span cla=
+ss=3D"p">,</span> <span class=3D"s1">'Lansing'</span><span class=3D"p">,</s=
+pan> <span class=3D"n">salary</span><span class=3D"p">,</span> <span class=
+=3D"n">full_time</span><span class=3D"p">,</span> <span class=3D"n">dept_co=
+de</span>
+  <span class=3D"n">FROM</span> <span class=3D"n">Employees</span>
+  <span class=3D"n">WHERE</span> <span class=3D"nb">id</span><span class=3D=
+"o">=3D</span><span class=3D"mi">1</span><span class=3D"p">;</span>
+</pre></div>
+</div>
+<p>That inserts a new record for Leon that uses the same values as for Liz
+(who has ID 1). This can be useful when you want to =E2=80=9Cmake more data=
+ mostly
+like this.=E2=80=9D</p>
+</div>
+</div>
+</section>
+</section>
+<section class=3D"section" id=3D"update">
+<h2>UPDATE<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materi=
+als/f9/lectures/sql-1/#update" title=3D"Permalink to this headline">=C2=B6<=
+/a></h2>
+<section class=3D"section" id=3D"id18">
+<div class=3D"highlight-default notranslate"><div class=3D"highlight"><pre>=
+<span></span>UPDATE employees SET salary =3D 50000;  -- Danger!
+
+UPDATE employees SET salary =3D 60000 WHERE dept_code =3D 'legal';
+
+UPDATE employees SET salary =3D salary / 2, full_time =3D False;
+</pre></div>
+</div>
+</section>
+</section>
+<section class=3D"section" id=3D"delete">
+<h2>DELETE<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materi=
+als/f9/lectures/sql-1/#delete" title=3D"Permalink to this headline">=C2=B6<=
+/a></h2>
+<section class=3D"section" id=3D"id19">
+<div class=3D"highlight-sql notranslate"><div class=3D"highlight"><pre><spa=
+n></span><span class=3D"k">DELETE</span> <span class=3D"k">FROM</span> <spa=
+n class=3D"n">employees</span><span class=3D"p">;</span>  <span class=3D"c1=
+">-- Danger!</span>
+
+<span class=3D"k">DELETE</span> <span class=3D"k">FROM</span> <span class=
+=3D"n">employees</span> <span class=3D"k">WHERE</span> <span class=3D"n">sa=
+lary</span> <span class=3D"o">&gt;</span> <span class=3D"mi">100000</span><=
+span class=3D"p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section class=3D"section" id=3D"coming-up">
+<h2>Coming Up<a class=3D"headerlink" href=3D"https://ed.devmountain.com/mat=
+erials/f9/lectures/sql-1/#coming-up" title=3D"Permalink to this headline">=
+=C2=B6</a></h2>
+<section class=3D"section" id=3D"sql-ii">
+<h3>SQL II<a class=3D"headerlink" href=3D"https://ed.devmountain.com/materi=
+als/f9/lectures/sql-1/#sql-ii" title=3D"Permalink to this headline">=C2=B6<=
+/a></h3>
+<ul class=3D"simple">
+<li><p>PostgreSQL</p></li>
+<li><p>Creating tables</p></li>
+<li><p>NULLs</p></li>
+<li><p>Inserting, updating, and deleting</p></li>
+<li><p>Transactions</p></li>
+</ul>
+</section>
+</section>
+</section>
+=20
+      </main>
+
+      <footer id=3D"page-footer">
+        <p>=C2=A9 2021 Devmountain</p>
+      </footer>
+    </div>
+
+   =20
+     =20
+     =20
+     =20
+ =20
+</body></html>
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-5d445adf-723e-4a0a-aa2a-da33f874cc0a@mhtml.blink
+
+@charset "utf-8";
+
+body.swal2-shown:not(.swal2-no-backdrop) { overflow-y: hidden; }
+
+body.swal2-toast-shown { overflow-y: auto; }
+
+body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast { =
+-webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction=
+: column; }
+
+body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .s=
+wal2-icon { margin: 0px 0px 15px; }
+
+body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .s=
+wal2-buttonswrapper { -webkit-box-flex: 1; flex: 1 1 0%; align-self: stretc=
+h; -webkit-box-pack: end; justify-content: flex-end; }
+
+body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .s=
+wal2-loading { -webkit-box-pack: center; justify-content: center; }
+
+body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .s=
+wal2-input { height: 32px; font-size: 14px; margin: 5px auto; }
+
+body.swal2-toast-shown > .swal2-container { position: fixed; background-col=
+or: transparent; }
+
+body.swal2-toast-shown > .swal2-container.swal2-shown { background-color: t=
+ransparent; }
+
+body.swal2-toast-shown > .swal2-container.swal2-top { inset: 0px auto auto =
+50%; transform: translateX(-50%); }
+
+body.swal2-toast-shown > .swal2-container.swal2-top-right { inset: 0px 0px =
+auto auto; }
+
+body.swal2-toast-shown > .swal2-container.swal2-top-left { inset: 0px auto =
+auto 0px; }
+
+body.swal2-toast-shown > .swal2-container.swal2-center-left { inset: 50% au=
+to auto 0px; transform: translateY(-50%); }
+
+body.swal2-toast-shown > .swal2-container.swal2-center { inset: 50% auto au=
+to 50%; transform: translate(-50%, -50%); }
+
+body.swal2-toast-shown > .swal2-container.swal2-center-right { inset: 50% 0=
+px auto auto; transform: translateY(-50%); }
+
+body.swal2-toast-shown > .swal2-container.swal2-bottom-left { inset: auto a=
+uto 0px 0px; }
+
+body.swal2-toast-shown > .swal2-container.swal2-bottom { inset: auto auto 0=
+px 50%; transform: translateX(-50%); }
+
+body.swal2-toast-shown > .swal2-container.swal2-bottom-right { inset: auto =
+0px 0px auto; }
+
+body.swal2-iosfix { position: fixed; left: 0px; right: 0px; }
+
+body.swal2-no-backdrop > .swal2-shown { inset: auto; background-color: tran=
+sparent; }
+
+body.swal2-no-backdrop > .swal2-shown > .swal2-modal { box-shadow: rgba(0, =
+0, 0, 0.4) 0px 0px 10px; }
+
+body.swal2-no-backdrop > .swal2-shown.swal2-top { top: 0px; left: 50%; tran=
+sform: translateX(-50%); }
+
+body.swal2-no-backdrop > .swal2-shown.swal2-top-left { top: 0px; left: 0px;=
+ }
+
+body.swal2-no-backdrop > .swal2-shown.swal2-top-right { top: 0px; right: 0p=
+x; }
+
+body.swal2-no-backdrop > .swal2-shown.swal2-center { top: 50%; left: 50%; t=
+ransform: translate(-50%, -50%); }
+
+body.swal2-no-backdrop > .swal2-shown.swal2-center-left { top: 50%; left: 0=
+px; transform: translateY(-50%); }
+
+body.swal2-no-backdrop > .swal2-shown.swal2-center-right { top: 50%; right:=
+ 0px; transform: translateY(-50%); }
+
+body.swal2-no-backdrop > .swal2-shown.swal2-bottom { bottom: 0px; left: 50%=
+; transform: translateX(-50%); }
+
+body.swal2-no-backdrop > .swal2-shown.swal2-bottom-left { bottom: 0px; left=
+: 0px; }
+
+body.swal2-no-backdrop > .swal2-shown.swal2-bottom-right { bottom: 0px; rig=
+ht: 0px; }
+
+.swal2-container { display: flex; -webkit-box-orient: horizontal; -webkit-b=
+ox-direction: normal; flex-direction: row; -webkit-box-align: center; align=
+-items: center; -webkit-box-pack: center; justify-content: center; position=
+: fixed; padding: 10px; inset: 0px; background-color: transparent; z-index:=
+ 1060; }
+
+.swal2-container.swal2-top { -webkit-box-align: start; align-items: flex-st=
+art; }
+
+.swal2-container.swal2-top-left { -webkit-box-align: start; align-items: fl=
+ex-start; -webkit-box-pack: start; justify-content: flex-start; }
+
+.swal2-container.swal2-top-right { -webkit-box-align: start; align-items: f=
+lex-start; -webkit-box-pack: end; justify-content: flex-end; }
+
+.swal2-container.swal2-center { -webkit-box-align: center; align-items: cen=
+ter; }
+
+.swal2-container.swal2-center-left { -webkit-box-align: center; align-items=
+: center; -webkit-box-pack: start; justify-content: flex-start; }
+
+.swal2-container.swal2-center-right { -webkit-box-align: center; align-item=
+s: center; -webkit-box-pack: end; justify-content: flex-end; }
+
+.swal2-container.swal2-bottom { -webkit-box-align: end; align-items: flex-e=
+nd; }
+
+.swal2-container.swal2-bottom-left { -webkit-box-align: end; align-items: f=
+lex-end; -webkit-box-pack: start; justify-content: flex-start; }
+
+.swal2-container.swal2-bottom-right { -webkit-box-align: end; align-items: =
+flex-end; -webkit-box-pack: end; justify-content: flex-end; }
+
+.swal2-container.swal2-grow-fullscreen > .swal2-modal { -webkit-box-flex: 1=
+; flex: 1 1 0%; align-self: stretch; -webkit-box-pack: center; justify-cont=
+ent: center; display: flex !important; }
+
+.swal2-container.swal2-grow-row > .swal2-modal { -webkit-box-flex: 1; flex:=
+ 1 1 0%; place-content: center; -webkit-box-pack: center; display: flex !im=
+portant; }
+
+.swal2-container.swal2-grow-column { -webkit-box-flex: 1; flex: 1 1 0%; -we=
+bkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: c=
+olumn; }
+
+.swal2-container.swal2-grow-column.swal2-top, .swal2-container.swal2-grow-c=
+olumn.swal2-center, .swal2-container.swal2-grow-column.swal2-bottom { -webk=
+it-box-align: center; align-items: center; }
+
+.swal2-container.swal2-grow-column.swal2-top-left, .swal2-container.swal2-g=
+row-column.swal2-center-left, .swal2-container.swal2-grow-column.swal2-bott=
+om-left { -webkit-box-align: start; align-items: flex-start; }
+
+.swal2-container.swal2-grow-column.swal2-top-right, .swal2-container.swal2-=
+grow-column.swal2-center-right, .swal2-container.swal2-grow-column.swal2-bo=
+ttom-right { -webkit-box-align: end; align-items: flex-end; }
+
+.swal2-container.swal2-grow-column > .swal2-modal { -webkit-box-flex: 1; fl=
+ex: 1 1 0%; place-content: center; -webkit-box-pack: center; display: flex =
+!important; }
+
+.swal2-container:not(.swal2-top):not(.swal2-top-left):not(.swal2-top-right)=
+:not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.s=
+wal2-bottom-left):not(.swal2-bottom-right) > .swal2-modal { margin: auto; }
+
+@media not all, not all {
+  .swal2-container .swal2-modal { margin: 0px !important; }
+}
+
+.swal2-container.swal2-fade { transition: background-color 0.1s ease 0s; }
+
+.swal2-container.swal2-shown { background-color: rgba(0, 0, 0, 0.4); }
+
+.swal2-popup { -webkit-box-orient: vertical; -webkit-box-direction: normal;=
+ flex-direction: column; background-color: rgb(255, 255, 255); font-family:=
+ "Helvetica Neue", Helvetica, Arial, sans-serif; border-radius: 5px; box-si=
+zing: border-box; text-align: center; overflow: hidden auto; display: none;=
+ position: relative; max-width: 100%; }
+
+.swal2-popup.swal2-toast { width: 300px; padding: 0px 15px; -webkit-box-ori=
+ent: horizontal; -webkit-box-direction: normal; flex-direction: row; -webki=
+t-box-align: center; align-items: center; overflow-y: hidden; box-shadow: r=
+gb(217, 217, 217) 0px 0px 10px; }
+
+.swal2-popup.swal2-toast .swal2-title { max-width: 300px; font-size: 16px; =
+text-align: left; }
+
+.swal2-popup.swal2-toast .swal2-content { font-size: 14px; text-align: left=
+; }
+
+.swal2-popup.swal2-toast .swal2-icon { width: 32px; height: 32px; margin: 0=
+px 15px 0px 0px; }
+
+.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring { wi=
+dth: 32px; height: 32px; }
+
+.swal2-popup.swal2-toast .swal2-icon.swal2-info, .swal2-popup.swal2-toast .=
+swal2-icon.swal2-warning, .swal2-popup.swal2-toast .swal2-icon.swal2-questi=
+on { font-size: 26px; line-height: 32px; }
+
+.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=3D"swal2-x-mark-li=
+ne"] { top: 14px; width: 22px; }
+
+.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=3D"swal2-x-mark-li=
+ne"][class$=3D"left"] { left: 5px; }
+
+.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=3D"swal2-x-mark-li=
+ne"][class$=3D"right"] { right: 5px; }
+
+.swal2-popup.swal2-toast .swal2-buttonswrapper { margin: 0px 0px 0px 5px; }
+
+.swal2-popup.swal2-toast .swal2-styled { margin: 0px 0px 0px 5px; padding: =
+5px 10px; }
+
+.swal2-popup.swal2-toast .swal2-styled:focus { box-shadow: rgb(255, 255, 25=
+5) 0px 0px 0px 1px, rgba(50, 100, 150, 0.4) 0px 0px 0px 2px; }
+
+.swal2-popup.swal2-toast .swal2-validationerror { width: 100%; margin: 5px =
+-20px; }
+
+.swal2-popup.swal2-toast .swal2-success { border-color: rgb(165, 220, 134);=
+ }
+
+.swal2-popup.swal2-toast .swal2-success [class^=3D"swal2-success-circular-l=
+ine"] { border-radius: 50%; position: absolute; width: 32px; height: 64px; =
+transform: rotate(45deg); }
+
+.swal2-popup.swal2-toast .swal2-success [class^=3D"swal2-success-circular-l=
+ine"][class$=3D"left"] { border-radius: 64px 0px 0px 64px; top: -4px; left:=
+ -15px; transform: rotate(-45deg); transform-origin: 32px 32px; }
+
+.swal2-popup.swal2-toast .swal2-success [class^=3D"swal2-success-circular-l=
+ine"][class$=3D"right"] { border-radius: 0px 64px 64px 0px; top: -5px; left=
+: 14px; transform-origin: 0px 32px; }
+
+.swal2-popup.swal2-toast .swal2-success .swal2-success-ring { width: 32px; =
+height: 32px; }
+
+.swal2-popup.swal2-toast .swal2-success .swal2-success-fix { width: 7px; he=
+ight: 90px; left: 28px; top: 8px; }
+
+.swal2-popup.swal2-toast .swal2-success [class^=3D"swal2-success-line"] { h=
+eight: 5px; }
+
+.swal2-popup.swal2-toast .swal2-success [class^=3D"swal2-success-line"][cla=
+ss$=3D"tip"] { width: 12px; left: 3px; top: 18px; }
+
+.swal2-popup.swal2-toast .swal2-success [class^=3D"swal2-success-line"][cla=
+ss$=3D"long"] { width: 22px; right: 3px; top: 15px; }
+
+.swal2-popup.swal2-toast .swal2-animate-success-line-tip { animation: 0.75s=
+ ease 0s 1 normal none running animate-toast-success-tip; }
+
+.swal2-popup.swal2-toast .swal2-animate-success-line-long { animation: 0.75=
+s ease 0s 1 normal none running animate-toast-success-long; }
+
+.swal2-popup:focus { outline: none; }
+
+.swal2-popup.swal2-loading { overflow-y: hidden; }
+
+.swal2-popup .swal2-title { color: rgb(89, 89, 89); font-size: 30px; text-a=
+lign: center; font-weight: 600; text-transform: none; position: relative; m=
+argin: 0px 0px 0.4em; padding: 0px; display: block; overflow-wrap: break-wo=
+rd; }
+
+.swal2-popup .swal2-buttonswrapper { -webkit-box-align: center; align-items=
+: center; -webkit-box-pack: center; justify-content: center; margin-top: 15=
+px; }
+
+.swal2-popup .swal2-buttonswrapper:not(.swal2-loading) .swal2-styled[disabl=
+ed] { opacity: 0.4; cursor: no-drop; }
+
+.swal2-popup .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-confir=
+m { box-sizing: border-box; border: 4px solid transparent; width: 40px; hei=
+ght: 40px; padding: 0px; margin: 7.5px; vertical-align: top; color: transpa=
+rent; cursor: default; border-radius: 100%; animation: 1.5s linear 0s infin=
+ite normal none running rotate-loading; user-select: none; background-color=
+: transparent !important; }
+
+.swal2-popup .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-cancel=
+ { margin-left: 30px; margin-right: 30px; }
+
+.swal2-popup .swal2-buttonswrapper.swal2-loading :not(.swal2-styled).swal2-=
+confirm::after { display: inline-block; content: ""; margin-left: 5px; vert=
+ical-align: -1px; height: 15px; width: 15px; border-width: 3px; border-styl=
+e: solid; border-color: rgb(153, 153, 153) transparent rgb(153, 153, 153) r=
+gb(153, 153, 153); border-image: initial; box-shadow: rgb(255, 255, 255) 1p=
+x 1px 1px; border-radius: 50%; animation: 1.5s linear 0s infinite normal no=
+ne running rotate-loading; }
+
+.swal2-popup .swal2-styled { border: 0px; border-radius: 3px; box-shadow: n=
+one; color: rgb(255, 255, 255); cursor: pointer; font-size: 17px; font-weig=
+ht: 500; margin: 15px 5px 0px; padding: 10px 32px; }
+
+.swal2-popup .swal2-styled:focus { outline: none; box-shadow: rgb(255, 255,=
+ 255) 0px 0px 0px 2px, rgba(50, 100, 150, 0.4) 0px 0px 0px 4px; }
+
+.swal2-popup .swal2-image { margin: 20px auto; max-width: 100%; }
+
+.swal2-popup .swal2-close { background: transparent; border: 0px; margin: 0=
+px; padding: 0px; width: 38px; height: 40px; font-size: 36px; line-height: =
+40px; font-family: serif; position: absolute; top: 5px; right: 8px; cursor:=
+ pointer; color: rgb(204, 204, 204); transition: color 0.1s ease 0s; }
+
+.swal2-popup .swal2-close:hover { color: rgb(221, 85, 85); }
+
+.swal2-popup > .swal2-input, .swal2-popup > .swal2-file, .swal2-popup > .sw=
+al2-textarea, .swal2-popup > .swal2-select, .swal2-popup > .swal2-radio, .s=
+wal2-popup > .swal2-checkbox { display: none; }
+
+.swal2-popup .swal2-content { font-size: 18px; text-align: center; font-wei=
+ght: 300; position: relative; float: none; margin: 0px; padding: 0px; line-=
+height: normal; color: rgb(84, 84, 84); overflow-wrap: break-word; }
+
+.swal2-popup .swal2-input, .swal2-popup .swal2-file, .swal2-popup .swal2-te=
+xtarea, .swal2-popup .swal2-select, .swal2-popup .swal2-radio, .swal2-popup=
+ .swal2-checkbox { margin: 20px auto; }
+
+.swal2-popup .swal2-input, .swal2-popup .swal2-file, .swal2-popup .swal2-te=
+xtarea { width: 100%; box-sizing: border-box; font-size: 18px; border-radiu=
+s: 3px; border: 1px solid rgb(217, 217, 217); box-shadow: rgba(0, 0, 0, 0.0=
+6) 0px 1px 1px inset; transition: border-color 0.3s ease 0s, box-shadow 0.3=
+s ease 0s, -webkit-box-shadow 0.3s ease 0s; }
+
+.swal2-popup .swal2-input.swal2-inputerror, .swal2-popup .swal2-file.swal2-=
+inputerror, .swal2-popup .swal2-textarea.swal2-inputerror { border-color: r=
+gb(242, 116, 116) !important; box-shadow: rgb(242, 116, 116) 0px 0px 2px !i=
+mportant; }
+
+.swal2-popup .swal2-input:focus, .swal2-popup .swal2-file:focus, .swal2-pop=
+up .swal2-textarea:focus { outline: none; border: 1px solid rgb(180, 219, 2=
+37); box-shadow: rgb(196, 230, 245) 0px 0px 3px; }
+
+.swal2-popup .swal2-input::-webkit-input-placeholder, .swal2-popup .swal2-f=
+ile::-webkit-input-placeholder, .swal2-popup .swal2-textarea::-webkit-input=
+-placeholder { color: rgb(204, 204, 204); }
+
+.swal2-popup .swal2-input::placeholder, .swal2-popup .swal2-file::placehold=
+er, .swal2-popup .swal2-textarea::placeholder { color: rgb(204, 204, 204); =
+}
+
+.swal2-popup .swal2-range input { float: left; width: 80%; }
+
+.swal2-popup .swal2-range output { float: right; width: 20%; font-size: 20p=
+x; font-weight: 600; text-align: center; }
+
+.swal2-popup .swal2-range input, .swal2-popup .swal2-range output { height:=
+ 43px; line-height: 43px; vertical-align: middle; margin: 20px auto; paddin=
+g: 0px; }
+
+.swal2-popup .swal2-input { height: 43px; padding: 0px 12px; }
+
+.swal2-popup .swal2-input[type=3D"number"] { max-width: 150px; }
+
+.swal2-popup .swal2-file { font-size: 20px; }
+
+.swal2-popup .swal2-textarea { height: 108px; padding: 12px; }
+
+.swal2-popup .swal2-select { color: rgb(84, 84, 84); font-size: inherit; pa=
+dding: 5px 10px; min-width: 40%; max-width: 100%; }
+
+.swal2-popup .swal2-radio { border: 0px; }
+
+.swal2-popup .swal2-radio label:not(:first-child) { margin-left: 20px; }
+
+.swal2-popup .swal2-radio input, .swal2-popup .swal2-radio span { vertical-=
+align: middle; }
+
+.swal2-popup .swal2-radio input { margin: 0px 3px 0px 0px; }
+
+.swal2-popup .swal2-checkbox { color: rgb(84, 84, 84); }
+
+.swal2-popup .swal2-checkbox input, .swal2-popup .swal2-checkbox span { ver=
+tical-align: middle; }
+
+.swal2-popup .swal2-validationerror { background-color: rgb(240, 240, 240);=
+ margin: 0px -20px; overflow: hidden; padding: 10px; color: gray; font-size=
+: 16px; font-weight: 300; display: none; }
+
+.swal2-popup .swal2-validationerror::before { content: "!"; display: inline=
+-block; width: 24px; height: 24px; border-radius: 50%; background-color: rg=
+b(234, 125, 125); color: rgb(255, 255, 255); line-height: 24px; text-align:=
+ center; margin-right: 10px; }
+
+@supports (-ms-accelerator: true) {
+  .swal2-range input { width: 100% !important; }
+  .swal2-range output { display: none; }
+}
+
+@media not all, not all {
+  .swal2-range input { width: 100% !important; }
+  .swal2-range output { display: none; }
+}
+
+.swal2-icon { width: 80px; height: 80px; border: 4px solid transparent; bor=
+der-radius: 50%; margin: 20px auto 30px; padding: 0px; position: relative; =
+box-sizing: content-box; cursor: default; user-select: none; }
+
+.swal2-icon.swal2-error { border-color: rgb(242, 116, 116); }
+
+.swal2-icon.swal2-error .swal2-x-mark { position: relative; display: block;=
+ }
+
+.swal2-icon.swal2-error [class^=3D"swal2-x-mark-line"] { position: absolute=
+; height: 5px; width: 47px; background-color: rgb(242, 116, 116); display: =
+block; top: 37px; border-radius: 2px; }
+
+.swal2-icon.swal2-error [class^=3D"swal2-x-mark-line"][class$=3D"left"] { t=
+ransform: rotate(45deg); left: 17px; }
+
+.swal2-icon.swal2-error [class^=3D"swal2-x-mark-line"][class$=3D"right"] { =
+transform: rotate(-45deg); right: 16px; }
+
+.swal2-icon.swal2-warning { font-family: "Helvetica Neue", Helvetica, Arial=
+, sans-serif; color: rgb(248, 187, 134); border-color: rgb(250, 206, 168); =
+font-size: 60px; line-height: 80px; text-align: center; }
+
+.swal2-icon.swal2-info { font-family: "Open Sans", sans-serif; color: rgb(6=
+3, 195, 238); border-color: rgb(157, 224, 246); font-size: 60px; line-heigh=
+t: 80px; text-align: center; }
+
+.swal2-icon.swal2-question { font-family: "Helvetica Neue", Helvetica, Aria=
+l, sans-serif; color: rgb(135, 173, 189); border-color: rgb(201, 218, 225);=
+ font-size: 60px; line-height: 80px; text-align: center; }
+
+.swal2-icon.swal2-success { border-color: rgb(165, 220, 134); }
+
+.swal2-icon.swal2-success [class^=3D"swal2-success-circular-line"] { border=
+-radius: 50%; position: absolute; width: 60px; height: 120px; transform: ro=
+tate(45deg); }
+
+.swal2-icon.swal2-success [class^=3D"swal2-success-circular-line"][class$=
+=3D"left"] { border-radius: 120px 0px 0px 120px; top: -7px; left: -33px; tr=
+ansform: rotate(-45deg); transform-origin: 60px 60px; }
+
+.swal2-icon.swal2-success [class^=3D"swal2-success-circular-line"][class$=
+=3D"right"] { border-radius: 0px 120px 120px 0px; top: -11px; left: 30px; t=
+ransform: rotate(-45deg); transform-origin: 0px 60px; }
+
+.swal2-icon.swal2-success .swal2-success-ring { width: 80px; height: 80px; =
+border: 4px solid rgba(165, 220, 134, 0.2); border-radius: 50%; box-sizing:=
+ content-box; position: absolute; left: -4px; top: -4px; z-index: 2; }
+
+.swal2-icon.swal2-success .swal2-success-fix { width: 7px; height: 90px; po=
+sition: absolute; left: 28px; top: 8px; z-index: 1; transform: rotate(-45de=
+g); }
+
+.swal2-icon.swal2-success [class^=3D"swal2-success-line"] { height: 5px; ba=
+ckground-color: rgb(165, 220, 134); display: block; border-radius: 2px; pos=
+ition: absolute; z-index: 2; }
+
+.swal2-icon.swal2-success [class^=3D"swal2-success-line"][class$=3D"tip"] {=
+ width: 25px; left: 14px; top: 46px; transform: rotate(45deg); }
+
+.swal2-icon.swal2-success [class^=3D"swal2-success-line"][class$=3D"long"] =
+{ width: 47px; right: 8px; top: 38px; transform: rotate(-45deg); }
+
+.swal2-progresssteps { font-weight: 600; margin: 0px 0px 20px; padding: 0px=
+; }
+
+.swal2-progresssteps li { display: inline-block; position: relative; }
+
+.swal2-progresssteps .swal2-progresscircle { background: rgb(48, 133, 214);=
+ border-radius: 2em; color: rgb(255, 255, 255); height: 2em; line-height: 2=
+em; text-align: center; width: 2em; z-index: 20; }
+
+.swal2-progresssteps .swal2-progresscircle:first-child { margin-left: 0px; =
+}
+
+.swal2-progresssteps .swal2-progresscircle:last-child { margin-right: 0px; =
+}
+
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep { backg=
+round: rgb(48, 133, 214); }
+
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal=
+2-progresscircle { background: rgb(173, 216, 230); }
+
+.swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal=
+2-progressline { background: rgb(173, 216, 230); }
+
+.swal2-progresssteps .swal2-progressline { background: rgb(48, 133, 214); h=
+eight: 0.4em; margin: 0px -1px; z-index: 10; }
+
+[class^=3D"swal2"] { -webkit-tap-highlight-color: transparent; }
+
+@-webkit-keyframes showSweetToast {=20
+  0% { transform: translateY(-10px) rotateZ(2deg); opacity: 0; }
+  33% { transform: translateY(0px) rotateZ(-2deg); opacity: 0.5; }
+  66% { transform: translateY(5px) rotateZ(2deg); opacity: 0.7; }
+  100% { transform: translateY(0px) rotateZ(0deg); opacity: 1; }
+}
+
+@keyframes showSweetToast {=20
+  0% { transform: translateY(-10px) rotateZ(2deg); opacity: 0; }
+  33% { transform: translateY(0px) rotateZ(-2deg); opacity: 0.5; }
+  66% { transform: translateY(5px) rotateZ(2deg); opacity: 0.7; }
+  100% { transform: translateY(0px) rotateZ(0deg); opacity: 1; }
+}
+
+@-webkit-keyframes hideSweetToast {=20
+  0% { opacity: 1; }
+  33% { opacity: 0.5; }
+  100% { transform: rotateZ(1deg); opacity: 0; }
+}
+
+@keyframes hideSweetToast {=20
+  0% { opacity: 1; }
+  33% { opacity: 0.5; }
+  100% { transform: rotateZ(1deg); opacity: 0; }
+}
+
+@-webkit-keyframes showSweetAlert {=20
+  0% { transform: scale(0.7); }
+  45% { transform: scale(1.05); }
+  80% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+@keyframes showSweetAlert {=20
+  0% { transform: scale(0.7); }
+  45% { transform: scale(1.05); }
+  80% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+@-webkit-keyframes hideSweetAlert {=20
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.5); opacity: 0; }
+}
+
+@keyframes hideSweetAlert {=20
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.5); opacity: 0; }
+}
+
+.swal2-show { animation: 0.3s ease 0s 1 normal none running showSweetAlert;=
+ }
+
+.swal2-show.swal2-toast { animation: 0.5s ease 0s 1 normal none running sho=
+wSweetToast; }
+
+.swal2-show.swal2-noanimation { animation: 0s ease 0s 1 normal none running=
+ none; }
+
+.swal2-hide { animation: 0.15s ease 0s 1 normal forwards running hideSweetA=
+lert; }
+
+.swal2-hide.swal2-toast { animation: 0.2s ease 0s 1 normal forwards running=
+ hideSweetToast; }
+
+.swal2-hide.swal2-noanimation { animation: 0s ease 0s 1 normal none running=
+ none; }
+
+@-webkit-keyframes animate-success-tip {=20
+  0% { width: 0px; left: 1px; top: 19px; }
+  54% { width: 0px; left: 1px; top: 19px; }
+  70% { width: 50px; left: -8px; top: 37px; }
+  84% { width: 17px; left: 21px; top: 48px; }
+  100% { width: 25px; left: 14px; top: 45px; }
+}
+
+@keyframes animate-success-tip {=20
+  0% { width: 0px; left: 1px; top: 19px; }
+  54% { width: 0px; left: 1px; top: 19px; }
+  70% { width: 50px; left: -8px; top: 37px; }
+  84% { width: 17px; left: 21px; top: 48px; }
+  100% { width: 25px; left: 14px; top: 45px; }
+}
+
+@-webkit-keyframes animate-success-long {=20
+  0% { width: 0px; right: 46px; top: 54px; }
+  65% { width: 0px; right: 46px; top: 54px; }
+  84% { width: 55px; right: 0px; top: 35px; }
+  100% { width: 47px; right: 8px; top: 38px; }
+}
+
+@keyframes animate-success-long {=20
+  0% { width: 0px; right: 46px; top: 54px; }
+  65% { width: 0px; right: 46px; top: 54px; }
+  84% { width: 55px; right: 0px; top: 35px; }
+  100% { width: 47px; right: 8px; top: 38px; }
+}
+
+@-webkit-keyframes animate-toast-success-tip {=20
+  0% { width: 0px; left: 1px; top: 9px; }
+  54% { width: 0px; left: 1px; top: 9px; }
+  70% { width: 24px; left: -4px; top: 17px; }
+  84% { width: 8px; left: 10px; top: 20px; }
+  100% { width: 12px; left: 3px; top: 18px; }
+}
+
+@keyframes animate-toast-success-tip {=20
+  0% { width: 0px; left: 1px; top: 9px; }
+  54% { width: 0px; left: 1px; top: 9px; }
+  70% { width: 24px; left: -4px; top: 17px; }
+  84% { width: 8px; left: 10px; top: 20px; }
+  100% { width: 12px; left: 3px; top: 18px; }
+}
+
+@-webkit-keyframes animate-toast-success-long {=20
+  0% { width: 0px; right: 22px; top: 26px; }
+  65% { width: 0px; right: 22px; top: 26px; }
+  84% { width: 26px; right: 0px; top: 15px; }
+  100% { width: 22px; right: 3px; top: 15px; }
+}
+
+@keyframes animate-toast-success-long {=20
+  0% { width: 0px; right: 22px; top: 26px; }
+  65% { width: 0px; right: 22px; top: 26px; }
+  84% { width: 26px; right: 0px; top: 15px; }
+  100% { width: 22px; right: 3px; top: 15px; }
+}
+
+@-webkit-keyframes rotatePlaceholder {=20
+  0% { transform: rotate(-45deg); }
+  5% { transform: rotate(-45deg); }
+  12% { transform: rotate(-405deg); }
+  100% { transform: rotate(-405deg); }
+}
+
+@keyframes rotatePlaceholder {=20
+  0% { transform: rotate(-45deg); }
+  5% { transform: rotate(-45deg); }
+  12% { transform: rotate(-405deg); }
+  100% { transform: rotate(-405deg); }
+}
+
+.swal2-animate-success-line-tip { animation: 0.75s ease 0s 1 normal none ru=
+nning animate-success-tip; }
+
+.swal2-animate-success-line-long { animation: 0.75s ease 0s 1 normal none r=
+unning animate-success-long; }
+
+.swal2-success.swal2-animate-success-icon .swal2-success-circular-line-righ=
+t { animation: 4.25s ease-in 0s 1 normal none running rotatePlaceholder; }
+
+@-webkit-keyframes animate-error-icon {=20
+  0% { transform: rotateX(100deg); opacity: 0; }
+  100% { transform: rotateX(0deg); opacity: 1; }
+}
+
+@keyframes animate-error-icon {=20
+  0% { transform: rotateX(100deg); opacity: 0; }
+  100% { transform: rotateX(0deg); opacity: 1; }
+}
+
+.swal2-animate-error-icon { animation: 0.5s ease 0s 1 normal none running a=
+nimate-error-icon; }
+
+@-webkit-keyframes animate-x-mark {=20
+  0% { transform: scale(0.4); margin-top: 26px; opacity: 0; }
+  50% { transform: scale(0.4); margin-top: 26px; opacity: 0; }
+  80% { transform: scale(1.15); margin-top: -6px; }
+  100% { transform: scale(1); margin-top: 0px; opacity: 1; }
+}
+
+@keyframes animate-x-mark {=20
+  0% { transform: scale(0.4); margin-top: 26px; opacity: 0; }
+  50% { transform: scale(0.4); margin-top: 26px; opacity: 0; }
+  80% { transform: scale(1.15); margin-top: -6px; }
+  100% { transform: scale(1); margin-top: 0px; opacity: 1; }
+}
+
+.swal2-animate-x-mark { animation: 0.5s ease 0s 1 normal none running anima=
+te-x-mark; }
+
+@-webkit-keyframes rotate-loading {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate-loading {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_static/pygments.css
+
+@charset "utf-8";
+
+pre { line-height: 125%; }
+
+td.linenos .normal { color: inherit; background-color: transparent; padding=
+-left: 5px; padding-right: 5px; }
+
+span.linenos { color: inherit; background-color: transparent; padding-left:=
+ 5px; padding-right: 5px; }
+
+td.linenos .special { color: rgb(0, 0, 0); background-color: rgb(255, 255, =
+192); padding-left: 5px; padding-right: 5px; }
+
+span.linenos.special { color: rgb(0, 0, 0); background-color: rgb(255, 255,=
+ 192); padding-left: 5px; padding-right: 5px; }
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+.highlight { background: rgb(238, 255, 204); }
+
+.highlight .c { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .err { border: 1px solid rgb(255, 0, 0); }
+
+.highlight .k { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .o { color: rgb(102, 102, 102); }
+
+.highlight .ch { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cm { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cp { color: rgb(0, 112, 32); }
+
+.highlight .cpf { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .c1 { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cs { color: rgb(64, 128, 144); background-color: rgb(255, 240, =
+240); }
+
+.highlight .gd { color: rgb(160, 0, 0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gr { color: rgb(255, 0, 0); }
+
+.highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gi { color: rgb(0, 160, 0); }
+
+.highlight .go { color: rgb(51, 51, 51); }
+
+.highlight .gp { color: rgb(198, 93, 9); font-weight: bold; }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+
+.highlight .gt { color: rgb(0, 68, 221); }
+
+.highlight .kc { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kd { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kn { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kp { color: rgb(0, 112, 32); }
+
+.highlight .kr { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kt { color: rgb(144, 32, 0); }
+
+.highlight .m { color: rgb(32, 128, 80); }
+
+.highlight .s { color: rgb(64, 112, 160); }
+
+.highlight .na { color: rgb(64, 112, 160); }
+
+.highlight .nb { color: rgb(0, 112, 32); }
+
+.highlight .nc { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .no { color: rgb(96, 173, 213); }
+
+.highlight .nd { color: rgb(85, 85, 85); font-weight: bold; }
+
+.highlight .ni { color: rgb(213, 85, 55); font-weight: bold; }
+
+.highlight .ne { color: rgb(0, 112, 32); }
+
+.highlight .nf { color: rgb(6, 40, 126); }
+
+.highlight .nl { color: rgb(0, 32, 112); font-weight: bold; }
+
+.highlight .nn { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .nt { color: rgb(6, 40, 115); font-weight: bold; }
+
+.highlight .nv { color: rgb(187, 96, 213); }
+
+.highlight .ow { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mb { color: rgb(32, 128, 80); }
+
+.highlight .mf { color: rgb(32, 128, 80); }
+
+.highlight .mh { color: rgb(32, 128, 80); }
+
+.highlight .mi { color: rgb(32, 128, 80); }
+
+.highlight .mo { color: rgb(32, 128, 80); }
+
+.highlight .sa { color: rgb(64, 112, 160); }
+
+.highlight .sb { color: rgb(64, 112, 160); }
+
+.highlight .sc { color: rgb(64, 112, 160); }
+
+.highlight .dl { color: rgb(64, 112, 160); }
+
+.highlight .sd { color: rgb(64, 112, 160); font-style: italic; }
+
+.highlight .s2 { color: rgb(64, 112, 160); }
+
+.highlight .se { color: rgb(64, 112, 160); font-weight: bold; }
+
+.highlight .sh { color: rgb(64, 112, 160); }
+
+.highlight .si { color: rgb(112, 160, 208); font-style: italic; }
+
+.highlight .sx { color: rgb(198, 93, 9); }
+
+.highlight .sr { color: rgb(35, 83, 136); }
+
+.highlight .s1 { color: rgb(64, 112, 160); }
+
+.highlight .ss { color: rgb(81, 121, 24); }
+
+.highlight .bp { color: rgb(0, 112, 32); }
+
+.highlight .fm { color: rgb(6, 40, 126); }
+
+.highlight .vc { color: rgb(187, 96, 213); }
+
+.highlight .vg { color: rgb(187, 96, 213); }
+
+.highlight .vi { color: rgb(187, 96, 213); }
+
+.highlight .vm { color: rgb(187, 96, 213); }
+
+.highlight .il { color: rgb(32, 128, 80); }
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_static/main.css
+
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css?family=3DInconsolata:400,700|=
+Source+Sans+Pro:400,400i,700,700i,600,600i&display=3Dswap");
+
+:root { --fontSans:"Source Sans Pro",sans-serif; --fontMono:"Inconsolata",m=
+onospace; --borderRadius:3px; --lightGray:#f5f5f5; --gray:#ddd; --darkGray:=
+#58595b; --brandColor:#ee1431; --hllBg:#fff5a3; --warning:#d73a4f; --green:=
+#007020; --lightGreen:#66ca66; --red:var(--brandColor); --lightRed:#ff8686;=
+ --orange:#f07100; --lightOrange:orange; --tan:#997319; --lightTan:tan; --b=
+lue:#1743aa; --lightBlue:#88bcff; --purple:#a22de4; --lightPurple:#d995ff; =
+--yellow:#ecbc00; --lightYellow:#ffe553; --textGray:#8b909b; --titleBg:var(=
+--darkGray); --titleColor:#fff; --titlePrefix:""; --listCounterStyle:decima=
+l; }
+
+.upperalpha { --listCounterStyle:upper-alpha; }
+
+.loweralpha { --listCounterStyle:lower-alpha; }
+
+* { box-sizing: border-box; }
+
+body { margin: 0px; font-family: var(--fontSans); }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+
+h1:hover a.headerlink, h2:hover a.headerlink, h3:hover a.headerlink, h4:hov=
+er a.headerlink, h5:hover a.headerlink, h6:hover a.headerlink { display: in=
+line; }
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: unset; }
+
+a { text-decoration: none; }
+
+a:hover { color: var(--brandColor); }
+
+a.headerlink { display: none; opacity: 0.5; }
+
+dd, ol, ul { padding-left: 1.5em; }
+
+ul { list-style-type: disc; }
+
+ol { list-style: none; padding: 0px; counter-reset: lictr 0; }
+
+ol ol { padding-left: 1.2em; }
+
+ol ul { padding-left: 2.25em; }
+
+ol li { counter-increment: lictr 1; padding-left: 0.5em; }
+
+ol li::before { float: left; content: counter(lictr,var(--listCounterStyle)=
+) "."; margin-right: 0.25em; font-weight: 700; }
+
+ol li > :not(ul):not(ol) { margin-left: 1em !important; }
+
+dt { font-weight: 700; }
+
+dt code { font-size: 1.1em; border: inherit; color: inherit; padding: inher=
+it; font-weight: inherit; }
+
+dd > :first-child, li > :first-child { margin-top: 0px; }
+
+dd > :last-child, li > :last-child { margin-bottom: 0px; }
+
+dd p, li p { margin: 0px; }
+
+dd p + p, li, li p + p { margin: 0.5em 0px; }
+
+dd { margin: 0px 0px 0.5em; }
+
+.cmd, cite { font-weight: 700; font-style: italic; }
+
+blockquote { font-style: italic; margin-left: 0px; margin-right: 0px; paddi=
+ng-left: 1.25em; }
+
+blockquote p { margin: 0.5em 0px; font-size: 1.2em; }
+
+blockquote .attribution { font-size: 1rem; color: var(--darkGray); }
+
+details { margin: 1em 0px; }
+
+summary { cursor: pointer; }
+
+table { border-collapse: collapse; }
+
+table thead { background: var(--darkGray); color: rgb(255, 255, 255); font-=
+weight: 700; }
+
+table thead th p { text-align: center; }
+
+table tr:nth-child(2n) { background: var(--lightGray); }
+
+td, th { padding: 0.25em; border: 0px; }
+
+td p, th p { margin: 0px; text-align: left; }
+
+.td-center td:not(:first-child) p, .td-center th:not(:first-child) p { text=
+-align: center; }
+
+.td-right td:not(:first-child) p, .td-right th:not(:first-child) p { text-a=
+lign: right; }
+
+.simple, .simple p { margin-top: 0px !important; margin-bottom: 0px !import=
+ant; }
+
+code, pre { font-family: var(--fontMono); font-size: 0.9em; }
+
+pre { white-space: pre-wrap; line-height: 1.2em; }
+
+pre .cmd { font-style: normal; color: rgb(255, 255, 0) !important; }
+
+.highlight, .highlight-default, .literal-block, code { border: 1px solid va=
+r(--gray); }
+
+code { padding: 0px 5px; color: var(--brandColor); }
+
+.highlight, .literal-block, div[class*=3D"highlight-"] { padding: 0.5rem; b=
+ackground: rgb(255, 255, 255); margin: 1rem 0px; border: 1px solid var(--gr=
+ay); }
+
+.highlight .highlight, .highlight .literal-block, .highlight div[class*=3D"=
+highlight-"], .literal-block .highlight, .literal-block .literal-block, .li=
+teral-block div[class*=3D"highlight-"], div[class*=3D"highlight-"] .highlig=
+ht, div[class*=3D"highlight-"] .literal-block, div[class*=3D"highlight-"] d=
+iv[class*=3D"highlight-"] { padding: 0px; margin: 0px; background: none; bo=
+rder: 0px; }
+
+.highlight pre { margin: 0px; }
+
+.highlight .hll { background: var(--hllBg); }
+
+.console { color: var(--color); border-radius: calc(var(--borderRadius)*2);=
+ line-height: 1.5em; background: var(--bg) !important; padding: 1em !import=
+ant; }
+
+.code-block-caption { margin: 1rem 0px 0px; font-size: 0.9em; font-style: i=
+talic; }
+
+.code-block-caption + * { margin-top: 0px !important; }
+
+.image-border { border: 1px solid rgb(0, 0, 0); }
+
+.compare { display: grid; grid-auto-columns: 1fr; grid-auto-flow: column; g=
+ap: 0.75em; }
+
+.compare :first-child, .compare > :not(.container) { margin-top: 0px; }
+
+dl.function dt, dl.py dt { font-size: 1.1em; }
+
+dl.function dd, dl.py dd { margin-top: 0.5em; }
+
+.field-list { border-top: 1px solid var(--gray); width: 20em; }
+
+.field-list dt { float: left; clear: left; width: 90px; margin-top: 0.5em; =
+}
+
+.field-list dd { border-bottom: 1px solid var(--gray); margin: 0.5em 0px 0p=
+x !important; padding: 0px 0px 0.5em !important; }
+
+.graphviz { width: 100%; height: 100%; }
+
+.resizer { min-width: unset !important; max-width: unset !important; min-he=
+ight: unset !important; max-height: unset !important; }
+
+.blue, .gone, .gray, .green, .inv-red, .orange, .purple, .red, .tan, .yello=
+w { font-weight: 600; }
+
+pre .blue, pre .gone, pre .gray, pre .green, pre .inv-red, pre .orange, pre=
+ .purple, pre .red, pre .tan, pre .yellow { font-weight: 700; }
+
+.inv-red { color: rgb(255, 255, 255) !important; background: var(--red) !im=
+portant; }
+
+.gone { color: var(--textGray) !important; }
+
+.red { color: var(--red) !important; }
+
+.console .red { color: var(--lightRed) !important; }
+
+.green { color: var(--green) !important; }
+
+.console .green { color: var(--lightGreen) !important; }
+
+.orange { color: var(--orange) !important; }
+
+.console .orange { color: var(--lightOrange) !important; }
+
+.tan { color: var(--tan) !important; }
+
+.console .tan { color: var(--lightTan) !important; }
+
+.blue { color: var(--blue) !important; }
+
+.console .blue { color: var(--lightBlue) !important; }
+
+.purple { color: var(--purple) !important; }
+
+.console .purple { color: var(--lightPurple) !important; }
+
+.yellow { color: var(--yellow) !important; }
+
+.console .yellow { color: var(--lightYellow) !important; }
+
+table.hlist { width: 100%; table-layout: fixed; }
+
+button, table.hlist td { vertical-align: top; }
+
+button { margin: 0.5em 0px; border: 1px solid rgb(219, 219, 219); backgroun=
+d-color: rgb(255, 255, 255); color: rgb(54, 54, 54); cursor: pointer; justi=
+fy-content: center; padding: calc(0.375em - 1px) 0.75em; text-align: center=
+; white-space: nowrap; box-shadow: none; display: inline-flex; height: 2.25=
+em; line-height: 1.5; position: relative; border-radius: 2px; font-family: =
+var(--fontSans); align-items: center; }
+
+button:hover { background-color: rgb(249, 249, 249); }
+
+button:active { background-color: rgb(242, 242, 242); }
+
+button:focus:not(:active) { box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 0=
+px 0.125em; }
+
+@media print {
+  main { margin: 1in; }
+  .section > .section, table { break-inside: avoid; }
+}
+
+.note { --titleBg:#1e81c4; --titleColor:#fff; --titlePrefix:"Note: "; }
+
+.topic { --titlePrefix:""; }
+
+.hint, .topic { --titleBg:#0e993e; --titleColor:#fff; }
+
+.hint { --titlePrefix:"Hint: "; }
+
+.warning { --titleBg:#f14668; --titleColor:#fff; --titlePrefix:"Warning: ";=
+ }
+
+.knowledge_check { --titleBg:var(--purple); --titleColor:#fff; --titlePrefi=
+x:"Check Your Knowledge"; }
+
+.togglereveal { --titleBg:var(--darkGray); }
+
+.console { --bg:#333; --color:var(--lightGray); }
+
+.hover-reveal.topic { --titlePrefix:"Hint: "; }
+
+.admonition, .hint, .knowledge_check, .note, .sidebar, .topic, .warning { b=
+order: 1px solid var(--titleBg); }
+
+.admonition > p:first-child, .hint > p:first-child, .knowledge_check > p:fi=
+rst-child, .note > p:first-child, .sidebar > p:first-child, .topic > p:firs=
+t-child, .warning > p:first-child { background: var(--titleBg); color: var(=
+--titleColor); }
+
+.admonition > p:first-child::before, .hint > p:first-child::before, .knowle=
+dge_check > p:first-child::before, .note > p:first-child::before, .sidebar =
+> p:first-child::before, .topic > p:first-child::before, .warning > p:first=
+-child::before { content: var(--titlePrefix); }
+
+.togglereveal { border: 1px solid var(--titleBg); }
+
+.admonition, .togglereveal, .topic { margin: 1em 0.5em; padding-bottom: 0.2=
+5em; border-radius: var(--borderRadius); }
+
+.admonition-body { padding: 0px 1em; }
+
+.admonition > p:first-child, .topic > p:first-child { font-weight: 700; pad=
+ding: 0.25em 0.5em; margin: 0px; }
+
+.admonition > p:first-child code, .topic > p:first-child code { color: inhe=
+rit; }
+
+.hover-reveal::before { content: "Hover to reveal"; position: absolute; fon=
+t-size: 0.9em; font-style: italic; }
+
+.hover-reveal:hover::before { content: ""; }
+
+.hover-reveal > :not(.topic-title) { visibility: hidden; }
+
+.hover-reveal:hover > :not(.topic-title) { visibility: visible !important; =
+}
+
+.hover-reveal.topic::before { transform: translate(1em, 40px); }
+
+.hint > details, .togglereveal > details { margin-top: 0.5rem; margin-botto=
+m: 0.25rem; }
+
+.hint > details > summary::after, .togglereveal > details > summary::after =
+{ content: "Click to expand"; font-size: 0.9em; font-style: italic; }
+
+.hint > details[open] > summary::after, .togglereveal > details[open] > sum=
+mary::after { content: "Click to hide"; }
+
+input.fillin { font-family: inherit; font-size: inherit; color: inherit; pa=
+dding: 0px; background: transparent; border-width: 0px 0px 1px; border-top-=
+style: initial; border-right-style: initial; border-left-style: initial; bo=
+rder-top-color: initial; border-right-color: initial; border-left-color: in=
+itial; border-image: initial; border-bottom-style: solid; border-bottom-col=
+or: rgb(0, 0, 0); }
+
+input.fillin:hover { border-top: 1px solid var(--gray); border-left: 1px so=
+lid var(--gray); border-right: 1px solid var(--gray); }
+
+input.fillin:focus { box-shadow: 0 0 1px 1px var(--lightBlue) inset; border=
+-top: 0px; border-left: 0px; border-right: 0px; }
+
+.mcq { padding: 0px 1em; margin: 1em 0px; border-radius: var(--borderRadius=
+); border: 1px solid var(--gray); }
+
+.mcq > p:first-child { margin-bottom: 0.25em; }
+
+.mcq ol { margin: 0px 0px 1em; }
+
+.mcq.numbered { counter-increment: mcqcounter 1; }
+
+.mcq.numbered > .mcq-body > :first-child::before { content: counter(mcqcoun=
+ter) ") "; font-weight: 700; font-size: 1.3em; }
+
+.mcq-answer-group { display: flex; align-items: center; }
+
+.show-feedback .mcq-answer-group:hover { background-color: var(--hllBg); }
+
+.mcq-answer-group li { width: 100%; }
+
+.mcq-answer-group input[type=3D"radio"] { margin-top: 0px; margin-bottom: 0=
+px; }
+
+.mcq-answer-group input[type=3D"radio"] + label { display: block; width: 10=
+0%; cursor: pointer; }
+
+.mcq-answer-group input[type=3D"radio"] + label > li { padding-left: 0.5em;=
+ }
+
+.mcq-answer-group input[type=3D"radio"] + label > li::before { float: left;=
+ content: counter(lictr,var(--listCounterStyle)) "."; margin-right: 0.25em;=
+ font-weight: 700; }
+
+.mcq-answer-group input[type=3D"radio"] + label > li > * { margin-left: 1em=
+ !important; }
+
+.mcq-correct { --mcqAlertBg:#bdecd0; --mcqAlertColor:var(--green); --mcqAle=
+rtPrefix:"=E2=9C=94=EF=B8=8E "; }
+
+.mcq-incorrect { --mcqAlertBg:#ffeaea; --mcqAlertColor:var(--red); --mcqAle=
+rtPrefix:"=E2=9C=98 "; }
+
+.mcq-alert { margin: 0.5em 0px 1em; padding: 0.5em; border-radius: var(--bo=
+rderRadius); background-color: var(--mcqAlertBg); color: var(--mcqAlertColo=
+r); display: flex; align-items: center; line-height: 1.2em; font-size: 90%;=
+ }
+
+.mcq-alert::before { content: var(--mcqAlertPrefix); margin-right: 0.5em; }
+
+.mcq-alert dd { margin: 0px !important; padding: 0px !important; }
+
+#page-toc { --bg:var(--darkGray); --color:var(--gray); }
+
+#page-header { --bg:var(--brandColor); --color:#fff; }
+
+#page-footer { --bg:var(--darkGray); --color:var(--gray); }
+
+#handouts-container { display: grid; grid-template-rows: 150px minmax(100vh=
+, auto) auto; grid-template-columns: 100%; grid-template-areas: "sidebar-he=
+ad" "content" "footer"; }
+
+@media only print {
+  #handouts-container { grid-template-rows: minmax(100vh, auto) auto; grid-=
+template-columns: 100%; grid-template-areas: "content" "footer"; }
+}
+
+@media (min-width: 1135px) {
+  #handouts-container { grid-template-rows: 150px minmax(100vh, auto) 10px;=
+ grid-template-columns: 275px 860px; grid-template-areas: "sidebar-head con=
+tent" "sidebar content" "footer content"; }
+}
+
+#page-header, #page-toc { padding: 1em; }
+
+#page-header { grid-area: sidebar-head / sidebar-head / sidebar-head / side=
+bar-head; text-align: center; color: var(--color); background: var(--bg); }
+
+@media only print {
+  #page-header { display: none; }
+}
+
+#page-header a { color: inherit; }
+
+#page-header #project-title { font-size: 0.9em; }
+
+#page-header #page-title { font-size: 1.1em; }
+
+#page-header #backlink { font-size: 0.7em; }
+
+#page-footer { font-size: 10px; display: flex; align-items: flex-end; }
+
+#page-footer p { margin: 5px; }
+
+@media (min-width: 1135px) {
+  #page-footer { background: var(--bg); color: var(--color); }
+}
+
+#page-toc { display: none; background: var(--bg); color: var(--color); }
+
+@media (min-width: 1135px) {
+  #page-toc { display: block; grid-area: sidebar / sidebar / sidebar / side=
+bar; }
+}
+
+#page-toc ul { list-style: none; margin-left: 0px; padding-left: 0px; }
+
+#page-toc a { color: inherit; }
+
+#page-toc li { margin: 0.5rem 0px; }
+
+#page-toc > ul > li > ul > li > ul { margin-bottom: 1em; padding-left: 1em;=
+ font-size: 0.8em; }
+
+#page-toc > ul > li > a { display: none; }
+
+#page-content { background: url("hb-logo.png") 100% 1em / 2em no-repeat; ma=
+rgin: 3%; line-height: 1.4em; grid-area: content / content / content / cont=
+ent; }
+
+@media (min-width: 768px) {
+  #page-content { margin: 2em 7%; }
+}
+
+@media (min-width: 1135px) {
+  #page-content { margin: 2em 80px; }
+}
+
+#page-content > .section, #page-content > .section > .section { margin: 2em=
+ 0px; }
+
+#page-footer { grid-area: footer / footer / footer / footer; height: 4rem; =
+}
+
+.raw-revealjs { display: none !important; }
+
+.chapter-nav { display: grid; grid-template-rows: auto; grid-template-colum=
+ns: none; grid-template-areas: "1 2 3"; }
+
+.chapter-nav .chapter-nav-title { text-align: center; }
+
+.chapter-nav .chapter-next { text-align: right; }
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Inconsolata:400,700|Source+Sans+Pro:400,400i,700,700i,600,600i&display=swap
+
+@charset "utf-8";
+
+@font-face { font-family: Inconsolata; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/inconsolata/v21/QlddNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLyxq15IDhunJ_o.w=
+off2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+1=
+68-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inconsolata; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/inconsolata/v21/QlddNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLyx615IDhunJ_o.w=
+off2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+202=
+0, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inconsolata; font-style: normal; font-weight: 400=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/inconsolata/v21/QlddNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLyya15IDhunA.wof=
+f2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U=
++2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+=
+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inconsolata; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/inconsolata/v21/QlddNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLyxq15IDhunJ_o.w=
+off2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+1=
+68-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inconsolata; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/inconsolata/v21/QlddNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLyx615IDhunJ_o.w=
+off2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+202=
+0, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inconsolata; font-style: normal; font-weight: 700=
+; font-stretch: 100%; font-display: swap; src: url("https://fonts.gstatic.c=
+om/s/inconsolata/v21/QlddNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLyya15IDhunA.wof=
+f2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U=
++2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+=
+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7qsDJB9cme_xc.woff2") format("woff2"=
+); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,=
+ U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7jsDJB9cme_xc.woff2") format("woff2"=
+); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7rsDJB9cme_xc.woff2") format("woff2"=
+); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7ksDJB9cme_xc.woff2") format("woff2"=
+); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7osDJB9cme_xc.woff2") format("woff2"=
+); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+=
+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDJB9cme_xc.woff2") format("woff2"=
+); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20A=
+D-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDJB9cme.woff2") format("woff2"); =
+unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+=
+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, =
+U+FFFD; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdh18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A=
+69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdo18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdg18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdv18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdj18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1=
+, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdi18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U=
++20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCds18S0xR41.woff2") format("woff2=
+"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC=
+, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FE=
+FF, U+FFFD; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdh18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A=
+69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdo18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdg18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdv18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdj18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1=
+, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdi18S0xR41YDw.woff2") format("wo=
+ff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U=
++20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: italic; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSds18S0xR41.woff2") format("woff2=
+"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC=
+, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FE=
+FF, U+FFFD; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lujVj9_mf.woff2") format("woff2"); =
+unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+=
+FE2E-FE2F; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lujVj9_mf.woff2") format("woff2"); =
+unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lujVj9_mf.woff2") format("woff2"); =
+unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lujVj9_mf.woff2") format("woff2"); =
+unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lujVj9_mf.woff2") format("woff2"); =
+unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF=
+-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lujVj9_mf.woff2") format("woff2"); =
+unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-2=
+0CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2") format("woff2"); un=
+icode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+20=
+00-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+=
+FFFD; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmhdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F=
+, U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwkxdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmxdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlBdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmBdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U=
++1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmRdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20=
+AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu3cOWxw.woff2") format("woff2")=
+; unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, =
+U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF=
+, U+FFFD; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmhdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F=
+, U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwkxdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmxdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlBdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmBdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U=
++1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRdu3cOWxy40.woff2") format("woff2=
+"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20=
+AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Sans Pro"; font-style: normal; font-weigh=
+t: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/sourcesan=
+spro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2") format("woff2")=
+; unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, =
+U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF=
+, U+FFFD; }
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_static/graphviz.css
+
+@charset "utf-8";
+
+img.graphviz { border: 0px; max-width: 100%; }
+
+object.graphviz { max-width: 100%; }
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_static/devmountain.css
+
+@charset "utf-8";
+
+:root { --fontSans: "Source Sans Pro", sans-serif; --fontMono: "Inconsolata=
+", monospace; --borderRadius: 3px; --lightGray: #f5f5f5; --gray: #ddd; --da=
+rkGray: #58595b; --brandColor: #19B6FA; --hllBg: #fff5a3; --warning: #d73a4=
+f; --green: #007020; --lightGreen: #66ca66; --red: var(--brandColor); --lig=
+htRed: #FF8686; --orange: #f07100; --lightOrange: orange; --tan: #997319; -=
+-lightTan: tan; --blue: #1743aa; --lightBlue: #88bcff; --purple: #a22de4; -=
+-lightPurple: #d995ff; --yellow: #ecbc00; --lightYellow: #ffe553; --textGra=
+y: #8b909b; --titleBg: var(--darkGray); --titleColor: white; --titlePrefix:=
+ ""; --listCounterStyle: decimal; }
+
+#page-content { background: url("dm.png") 100% 4em / 4em no-repeat; margin:=
+ 3%; line-height: 1.4em; grid-area: content / content / content / content; =
+}
+
+#slide-footer { background: url("dm.png") center center / 8vw no-repeat; po=
+sition: absolute; width: 8vw; height: 8vw; bottom: 0px; margin: 12px; }
+
+.console { --bg: #333; --color: var(--lightGray); }
+
+.upperalpha { --listCounterStyle: upper-alpha; }
+
+.loweralpha { --listCounterStyle: lower-alpha; }
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_static/dm.png
+
+iVBORw0KGgoAAAANSUhEUgAAApoAAAKWCAYAAADpzjmEAAAACXBIWXMAAAsSAAALEgHS3X78AAAg
+AElEQVR4nO3dP29jWbbe/3MvJjBwDaj9AgiVnRKwaiJHhnQDx9IAzKV6BcV+BUW9gqZeQUs5gZEC
+w+FIwE2NW8IFY5fAyFkzsTO3caoXp0+ppdLh+bOftfb+foDCjP37eURR5DnPWXvvtf7h119/rQAA
+AICh/SPvKAAAAMZA0AQAAMAoCJoAAAAYBUETAAAAoyBoAgAAYBQETQAAAIyCoAkAAIBR/Im3FUBu
+pqvN+6qqfmj8Wu/s33MnI//qX+zfc/fN//N6Nrl/8f81AARHw3YA7k1Xm2ZQ3IXDOki+b/z3o0z+
+kk+NcNoMqp+rqvql/reeTT4LXx8AtEbQBCA3XW124fH5f9ZB8oC/0KseLXzuQugumH5ezya/OH3N
+AApC0ASQhIXJXRXyfeO/EyTHswui941A+mU9m7y0nA8AgyNoAhjMdLVpBsl3jf9OmPTnoVEBvSeA
+AhgDQRNAJ3bgZhcmT+y/H/Juhvewq3zaEjwHlQB0RtAE8CYLlc1/x7xrRXm08PmZ8AlgHwRNAN+w
+5e+TRqWSpW+85NGW3Hfhk5PwAP6AoAkUzloHnTT+sfyNLraN4HlP1RNARdAEymPL4M1gSbUSY3mw
+8EnwBApF0AQy16hYnhEsIUbwBApD0AQy09hjuQuWLIXDo91Se/3vltZKQJ4ImkAGbDn8zP7lMooR
+ZXnahU6reDLZCMgAQRMI6FnV8ozlcGTojmonEB9BEwji2V7LU/5uKMiuldI1bZSAWAiagGMWLutg
+ecGSOPDVky2v33KgCPCPoAk4Q7gEWts2QuctbxvgD0ETcIBwCfS2C51LltcBPwiagIgd6KnD5Zxw
+CQxqt7zOnk5AjKAJJDZdbS440AMkUx8kuub0OqBB0AQSsD6Xc1oRAVJ3Fjiv+TMAaRA0gZHY0viF
+BUym8wB+sJ8TSISgCQxsutrsmqif894C7tVL60urdDKNCBgYQRMYgFUv51bBpHoJxHRDlRMYFkET
+6GG62pxYuKR6CeSDKicwEIImsKdGW6IF1Usga1s7sb7kxDrQDUETaMmaqu+Wxzk5HkddnWpWpb7Y
+v5f0HWlYdxf44YX/+x/s/9vz/3/5HMVxZ4GTsZfAHgiawBtYHndnFxzrf7u9dM3w+CVa9cmq5Lsg
+2vzv7+xf7Vj08vCtuhn8ghZJQDsETeAV1lj9ght8UlsLj788+8+KStJvrLL+2j+2cqSztX2cS/Zx
+Aq8jaAIN7L9M5qFRhfwaLAmSw7DhAPXn+KRRHWWZflw3VuVkHyfwDEET+LY90Zwb8qCagfI+4rJ2
+TmwbyK4aekIAHRztkYBnCJoomi1DXhAwe9sted/bf37hZhtDY3/oLnjW34mj0t+Xnh6swkmVHsUj
+aKJIFjAXHPDp5Hmo/EyVMj9W/TxpLL2zlWR/BE4Uj6CJohAwO3myUHlvoZJKZYGs8nnSqH5ySK49
+AieKRdBEEQiYe3lsBMt7TtTiNc+qnidsP3kTgRPFIWgiawTMVgiWGISdeD+xzg1UPF9H4EQxCJrI
+UuMU+Sf+wn/QXApnljNG06h4nnHA6EUETmSPoIms0KboVXeNiiV7LJFco0ftLnjy/fxdHTgvOFSH
+HBE0kY3pajO3ZXJuYL9XLW9ZDodHtsx+RrXzGzR+R3YImgjPRkUyyee3cFkHy2uqlojE9lLvqp2n
+/PGqS0ZbIhcETYRl+78WhR86qA/yXNteS6ogCK+xxH5WeOjcWthcOHgtQGcETYRj1Y9lwTchwiWK
+QOj8ql6pmK9nk1sHrwXYG0ETYRR+kpxwiaIROr8eGJqzLQbREDQRgu3DXBZ20Ic9l8ALGqFzXuBB
+ohsLnOzfRAgETbhm+zCXBd1Mto1wSW894A22lebC/pVyIHBrp9OXDl4L8F0ETbhkFYtlQRN9HhpL
+41QqgA7swfSioD6dj1bd5KEUbhE04U5B/TC3Fi6X7LsEhlPg0vqdNXznIRXuEDThRkHL5A+2NH7t
+4LUAWbPG8PMCqpwsp8MlgibkrPpQVzA/ZvzXoHoJCBVU5Xy06iYHCOECQRNS09XmzAJYrpWGRwuX
+VC8BJxp7OXPeA35lFU6W0yFF0IREAU3Xbzg5DvjWOLE+z/Rhl2bvkCNoIrmMD/tsLTxfszwOxGK9
+eheZtkjisBBkCJpIxqoH1xnOJn9qBEwu5EBgtqy+yPA6tbWwSXUTSRE0kcR0tVlkuDzF/ksgU43T
+6rnt46S6iaQImhiVXayvMzvl+WCb7Nl/CWTOVmIWmQVOqptIhqCJ0WS4F5OACRTK2iPNM1uZobqJ
+0RE0MbgM92Le2RI5ARMoXIaBk+omRkXQxKAyq2LeWAWTE+QAvpFh4KS6iVEQNDEIu+heZ9IXkyVy
+AK1kFjifLGxy7cNgCJrozdqB3GZwkSVgAuikETg/ZfAOXq1nk7mD14EMEDTRy3S1WWYwo5yACWAQ
+GZ1SZ2Y6BkHQRCeZtC1iPBuAUWQyZndr10h6BaMzgib2ZqPaloGXyrl4Akgik0lDHBRCZwRNtGZ7
+kJaBl4R2s8iXXDABpDRdbc7s+hN1lnq9AnTGUjr2RdBEKxksldOqCIBcBi3gflzPJksHrwNBEDTx
+puBL5Rz0AeCKrQ4tAh+kZCkdrRE08argS+VPFjDZhwnApeBT1FhKRysETbwo+FL5JfswAUQReP8m
+ByvxJoIm/sAuetcBl8ofbDmHfZgAQgne8P1mPZtcOHgdcIigiW8EbcBOP0wAWQi8nP5oS+k86OMb
+BE18ZU/TtwEvble2F5NlcgDZCLqytLWwyeFL/B1BE7v9mLfB9gcxHg1A1gKfTqcFEv6OoFm4gE/N
+W6tgchEDUASbLrQMdjiTfZv4iqBZsOlqswi28ZzDPgCKFfCaXa88nbC1qWwEzQIF7I9JCw0AiNl6
+bmthk21OhSJoFsZC5n2gixQTKADgmWDVTYoFBSNoFsSehO+D7MfcWsCkZREAvCBgdZNDQgUiaBYi
+2KGfB2uRQRUTAN4QrLrJIaHCEDQLMF1t6i/1zwF+U06UA0AHwaqbFBMKQtDM3HS1uQ5y6IepEgDQ
+U6DpblzzC0HQzFSwk+WX69lk4eB1AEB41nfzOsAQDk6kF4CgmaFAJ8uf7ImWiwwADMjuA3XYPHX+
+vjK2MnMEzcxMV5t3Nk7Se8i8sXYX7NEBgJHYHv1lgIOgH2h/lCeCZkaCtC+inxoAJBTooBDtjzL0
+j6W/AbkIEjJ348gImQCQiG1PqvdtXjl/z3+yA6zICBXNDARZGmGpHADEgvRUptdmRgiawQXokclS
+OQA4EmQvP8WJTBA0AwsQMh9tjCSnygHAkSAt8HbbrQibgRE0g5quNvN6P4vjV8/TKAA4F2DrFWEz
+OIJmQAGm/XByEACCsMOkt44bvBM2AyNoBuM8ZDLlAQACsqX0OmweO331hM2gCJqBOA+ZXAQAIDjn
+s9KZjx4QQTMI5yGTVhQAkAnn+zZZOQuGoBmA85DJfkwAyIzzISCEzUAIms45DplbW8K4d/BaAAAD
+s32b9077bRI2g2AEpWOOQ+ZuPyYhEwAyZXvuT6xdnTd1pfXeKq9wjIqmUwFCJod+AKAQ09VmUVXV
+J4e/LZVN5wiaDjkOmRz6AYBCOZ5GV4fN95xG94mlc2cch8xLQiYAlGs9m9T3pz9bsPOkXka/tT2l
+cIag6YjjkPlhPZssHLwOAICQLVGf2DYqT45szyZh0xmWzp1wGjI5WQ4A+APHJ9I5R+AMFU0HbN+L
+x5DJyXIAwB80TqTfOXt3qGw6Q0VTzOnmasZ8AQBacboiR2XTCSqaQo5D5gkhEwDQhh0UvXL2Zh3Z
+GE2IUdEUma42Z1VV/dXZy3qwSiZPgACAvTgtntCWT4ygKeB0hixfRgBAL4RNPMfSeWKETABArqzX
+5gdnvTbPLQBDgIpmQnYK7gshEwCQM6dFlQ8WhJEQFc1EGj3HPH3pmPYDABhco7G7p8rmz9PV5sTB
+6ygKQTMdb41tmfYDABiN07B5a9VWJELQTMB6jHkLmSwfAABG5TBsHlhD93cOXksRCJojm642S2eN
+bAmZAIBknIbNW6YHpUHQHJGdcvvo6CURMgEAyTkMm/Uq462D15E9guZIbMOxp15ihEwAgIzDsHls
+W9swIoLmCGyjsacnJUImAEDOYdise2zOHbyObNFHc2CNNkZeDv8QMgEArjjss/mX9WzCUvoIqGgO
+75aQCQDA6xxWNq9pezQOguaAbK/HsZOXQ8gEALjlLGxyEn0kBM2B2AlzL22MbgiZAADvnIXNQ1vO
+x4AImgNwdsKc2eUAgDAaYdODI06iD4ug2ZNNF/CygZiQCQAIx8LmByev+9xWKTEATp334OyEOSET
+ABCaBTwvK4T/vJ5NWErviYpmP0snIfOxqir6gAEAQrPzBV4qm7fMRO+PoNmRNXj1cPinDpkn69nk
+FwevBQCAXixsXjl4Fw8YU9kfS+cd2OGfvzl4KU9VVb0nZAIAcmOHcjwUdNia1gNBc0+2L/OLg2kG
+W6tkfha/DgAARjFdbeqK4qmDd5fe1B2xdL6/W0ImAABJXNgWMbUlk4O6IWjuYbraLJ1M/rkgZAIA
+cmdbw05sq5gSk4M6Imi2NF1tzqqq+ujgpXxg8D8AoBQWNs8cTA+qJwexfL4n9mi2YO0NPjtYMmdD
+MgCgSLZ0/a8Ofvcf17PJ0sHrCIGKZjse9mXeETIBAKVyND3oJ/ZrtkfQfIPty1Q3ZX+0DdEAABTL
+Tn5fOvj92a/ZEkHzO6xfpnpf5paG7AAA/GY9myzqrWTit4P9mi2xR/MVTvpl0sYIodn3qH5ge2//
+ufPZvl+369nkC39lAPuwa8u9gxVH+mu+gaD5iulqc++glREfYIRkqwHzlo2W660hSz7rAPZBQSgG
+guYLbI75T+KXcWnLA0AYduFfdNxy8lCHUy7YANpychL9cT2bcDjoFQTNZ5x8aOsT5mfi1wDsxb47
+1z2XsrY2kIBesQBama429WHZn8XvFsWhV3AYqMGqMerlO06YIxzrNTvEfql6CeyvNiABAN5k226u
+xO/UJ9syhGcImt9aiDcW76o5nDBHGPaANnSv2Wv61AFoaz2bzG37jdI1LY/+iKBpnLQyYoY5IpqP
+8IB2QOsQAHs6E89Ep+XRC9ij+XtF5rN9SFTY34FwbMn8f434uum8AKA1J+cs/sI+899R0fzNtThk
+PhAyEdTYIZDvBYDWnIypZAm9ofigaYcO2vT6G8vWyv1AKLbdZOxes4d2ohQAWrFVEOXkILb+NBQd
+NJ2cMme8JKJK9d1ZUh0AsKe5dXFROaV7xm9Kr2heiycK/MjhH0RkQw1SbTc5sJsGALRiBZwLWzVU
+KX4JvSo5aDpYMq+bsi+FPx/opDH9J6U5F2wA+7BCjvIhtfgl9KrUoOlgyfyJpuwIbClYCaCqCWBv
+DvZrFr+EXmpFU3GjbDpjXyYistYh56KXTlUTQBfq/ZpFL6EXFzTtpKzqRllZv0z2ZSIq5XaPA/HP
+BxCQg/2aRS+hF9Ww3UFj9rpfJrNQEZIt//zVwWv/j+vZ5IuD1wEgEDvE+JPwFf/zeja5L+0zU1pF
+cyEMmVv2ZSI4L9VEmrgD2JsdwL0TvnNFLqEXEzRtb5lylvkFVRhENV1tlA9pz53b6EsA2JdyCf2w
+xAflkiqayv0RN8w9RVQW6ryd+GavJoC92X5N5Snwj1b4KkYRQdP2ZRyJfvwTbVkQ3ELcpeElp3aw
+DwD2Yvskr4TvWlEHg7IPmqLm0k0XtDJCVA66NHwPezUBdLUQtjw6sgJYEUqoaCrHTF6WeMIMWfEc
+5o6pagLootHySGVRysGgrIOm3YRUYyYf17MJFReENV1t6ovwsfPXz3cMQCfW0/pS9O4V0xc494qm
+ch8ErYwQloMtJ20dlz7eDUB3VhBSLaGfl7Aqk23QFLdjYfoPops7amf0Fk6gA+hDWRjK/vqV5WQg
+q8Z8Ee3NrJfMi2pdgLxYO6P/FeyX+rCeTYod8QagHytOfRK9jT9aM/ks5VrRXAoPALFkjugiXvDY
+qwmgM/ESetYHg7ILmuJ2LCyZIzTxAbo+DktqFwJgFKpCUdYHg3KsaKoqG0+cMkcGIl/simkXAmB4
+4lPo57lODMoqaIrbsbBkjtDEE7SGcMAULgA9LW2in0KWVc1sDgNZJeOz6KTs1Xo24QaHsMQH6Ia0
+rarqHdO4AHRlW4j+JnoD/7KeTW5z+uPlVNFUtWPZchABGfA4z7wLqpoAerGJfjeidzG7qmYWQdOq
+MaqbC7PMEZq1M/qY0V9xbr8TAHS+jlghKbXsDjbmUtFUtTN6yK3EjSLl1n/ygFUGAH1YAUkV+LI6
+2Bg+aFrlQtHOaMsBIERne5G8zzPv4pyqJoA+bAjEg+BNzGoLUA4VTVU1ZrmeTb6IfjYwlJyn6VDV
+BNCXKvB9yuVhOXTQFFZj6JmJ8GzkWpR55l1Q1QTQi/XWvBK9i1nkjOgVTdUfgSVzhCY+QJcS888B
+9LUQHQzK4mE5bNAUVjMfrPUBEJnqAF1qx3atAIBOxAeDwrc7ilzRVFUqqGYiNBtzpjhAV4kmbrDN
+BUAvwoNBp9EflkMGTRs1qdhbdskBIGRA9YR8KQp9VDUBDEHW7ijyXy9qRVPxpm9znUOKckxXmzPV
+ATrr1HBNVRNARHYwSDExKPTDcrigKaxmzpkAhMjsAJDqYWnR+P4oqgLHdu0AgD5UE4PCPixHrGgq
+3uxHq8QAkc1FD2kPze+PTdNS7HWiqgmgF3tgVjywh61qhgqaymqm4GcCg7EWGZ72FylC3yFVTQB9
+WR9ttgC1FK2iqXiT72hnhAwsRO2Mbl76/tj/HVVNAFFxsLGlMEGTaibQjV2YFO2Mtm9cjFVVTcIm
+gF6E7Y7CXb8iVTQVb+4N7YyQAdWFafm9749VNRUnOOd2MAoA+qCq2UKIoCmqZm6pZiI6++5I2hnZ
+Pqa3KC7UB3y3AfTFFqB2olQ0FW/qknZGiEzczqhVkLOKJ1VNAFGp2rWFqWq6D5rCaibN2RHdXHQA
+6MFaGLVFVRNASMIm7mGqmhEqmop2JFQzEZq1M/ok+h32CnBW1bwa7+W86pO9TwDQh2qvZojrl+ug
+aaXh1PvLnqhmIgOqz/CNPeHva8G0DQARCbcAhbh+ea9oKt7EBdVMRGYPaKeCX6HzATrhtI1zqpoA
+BqDIKyGuX26D5nS1ea+oZjJqEhlQfYb7PqQtqWoCiEi4Bcj99ctzRVOxUZ8bDkKbrjaqeeb1Q1qv
+iqS4qvle8HMB5EWxBejMewcNl0HTSsGpJ5lQzURodrFRPSwNcmhPOEOYfdkAehE9LLvvoOG1okk1
+E9ifap75w0vzzHtg2gaAqBRbgAia+7CqTOqWRlQzEZqtAnwU/Q6Dfl/tu6ioavKwCaAXq2qmzhMH
+1nPcJY8VzQtBVYYbDKJTPShdfm+eeQ9UNQFEpdiK4zbHeAyaqUvAVDMR2nS1ORPNMx9tgpZ9Jx/H
++N9+A3s1AfQi6qt56PVB2VXQtBtm6hOzhExEJ5tnPnLPWcW+oyPPS1AAwlBUGF3u1fRW0Uz9JjHT
+HKFNV5uFqJ3R49grAXbA6GHMn/EKttIA6EVU1Tz12MDdTdC0Nyf18h8zzRGWHZxTPcGm+rmK0HdI
+VRPAAIqvalbOKpqp/yBUMxHdUtTO6G7gdkavUlY1vTdBBuCbVTXvEr9Idw/JLoKmXdDPEv/YW6qZ
+iMom2aQealD1mWfeg+IJ/dB7bzoAISRv4O5tRcZLRfOMlkbAXlTV+OVI7YxetZ5NPgv2OtXmVDUB
+9CFalXH1kOwlaKZ+U25S3yyBodjTqqKd0ZMw4CoeDN2PdgMQQuruNke26uWCPGha36ejxD+WlkYI
+STzPfKHabiI6wVlR1QTQl2jamZuHZA8VzdR7CYaeywykNBe1M3pwMNhgIZghfMA2GwADSL0adObl
+IVkaNO1NSH2ggWomQrIWYKqnVHnYsqqmYun+o8fedABCuU78oHwgOGT9InVFM/WbwLhJRKZqZ3Tj
+aBVgKahqVlQ1AfRh245S5w8Xy+fqoJn6TSBkIiTby3wqeO2Kdkavsou1oqp5TlUTQE+pr10uDgXJ
+gqb98qkPAdGgHVEp2xl56zdLVRNAOKU2cFdWNFP/8jc0aEdE1s4o9UNZZVtN3IUr+x4rXte5VZYB
+oKvUK6sEzYSoZiIcOzCn+uy67SG5nk2WgnYhFVVNAH2sZ5PbxNcu+aQgSdCcrjapJwE92nQRIJq5
+6ADQg10QPVOEvmOqmgB6St7qSPkHU1U0qWYCb7DDJ59E75OrWbkvETVBrqhqAugp9fL5qfIwY/Kg
+aUuBKU/P1ocGvFdmgJeouiRcBRrRqljep6oJoDPbZ5560pmsqqmoaKaulNxyCAjRWJBRzDPfRqrY
+2fL+g+BH0yoNQB/FHAoqIWiybI6IVEFGNs+8B0UwPlRvsAcQlw3BSLn150i1fJ40aNovmbJNC4eA
+EM50tVHNM3+y09yh2AVbUdVkryaAPlJfbyWdRFJXNFPvEaCaiVBsD7MqwESu0FHVBBBN6pUryT7N
+1EEzdZrmEBCiWYjaGd05mme+N3vtqSdu1Bb2cAAAe7FtSimvW4eKkZTJgqb9cimXA5kEhFDsO/JR
+9JrdNmffg+J3OMzkvQOgkf2hoJQVzdS/HKdCEY1qq8dloHZGr7LfIXXLkNqcqiaALqxzxjbhm5d8
++Txl0Ez5yz1FXgZEeWxalqqdUU57mRV7NQ+oagLoIWVhLPnyeZKgKVg2Z28mopHNM89piwlVTQAB
+Zb18nqqiSe9M4BXT1WYhamf0aGMcczNPvBRVWVWT6w6AvVkbxseE71zS5fNUQTPlL/WYw34zlMGq
+YKpl1yyXe61Cqwh958p5wgBCy3b5fPSgKVg25xAQIlmK2hndZL6PeSmoalY0cQfQUeotf8lWmlNU
+NE8S/Iwm9mciBJtnfi54raHmmXdBVRNAJLYSm+XyeYqgmXJ/JsvmiEQV9paFfE+WiWcJN38uAHi+
+diRbPv/TmP/jgtnmXOARgo0uVLQzeirle1JXNe2g1c+Jf/RpXa2mxdp4bDWgvkk+P+lfH6r4TMEB
+Qd0mvl6d2XdmVP/w66+/jva/P11t6sMGP439SzT8B6YBwTs7APRZdNL8L9YguBjT1eaL4L1+WM8m
+qbcNZc2qL3O7Ob61r3n3QHXNPQGRTFeb+vp8mugl16vAo1c1x146T3mhveOCgiDmopD5UFrINIot
+CsdWdUNP9YPZdLWpD3n+q+1pbnN47tCKHF9sGAIQRcpr9FGKPeWjBU2r2qRK5RWHgBCBfak/iV5q
+kdNrrFeoYq8mJ9B7sirmlx6H5upQ+lcLqkAEqbPM6A/EY1Y0OW0O/JFqf+SNNQUuVeqhEZVVNamm
+dWQh836g9l/nhE1EYCuzdwlf6ujXqDGDZuom7SybwzVbSk1Z5d/Zlj6L2w7mPAh+NAcUO7AVsduB
+e8ye2+EwwLuUBwlHvyflUtHkSRURqELHkgexrxQh49A6DGA/Y41l/USfUwSQdIV27JWXUYKmYBoQ
+y+ZwzcJGylZfO0/r2YQqjraqyfu/B7t/fBzxR1CYgGuC5u2jFgbHqmimrGbSpB2u2TKgqppJNe1b
+ii0EVDX3M/Z3hY4AiCDlA1G8imbi/ZlUM+HdQjTP/IGm4d+yA1E3gh+9tAcOfIct4aUYZEBVE96l
+vHYfjrmlZPCgaRfTlBNPCJpwy768Yy4Dfg9VtJcplrIPSj+Q1VKqyv8hB4PgmT0Up2zLNlqBcIyK
+ZsoliafCW7bAP1Xl5IotJS+z90VR1ZxT1XydBb+Ue/v5e8C7lIW00bJb9KDJsiDcsn1ginnmWw6g
+vImqpiNW+U/93hzQfgrOpcw4BM1XsGwOz1TVzAXtjL7PqpqXgh89p73Oi1T7mM/tlDvgjo0M3iZ6
+XQdjfRcGDZp2AU3ZwoWKJlyarjaqeeZ1FwaqNO0sE17Edw6oNn/LKv9dR0wOge8LPEuZc0bZpzl0
+RTNlNfOBqg08sn1fqjDB0mxLdv1QhIxzqprfUAdvRoXCs/D7NCMHTZbN4dVStAx4RzujvSmqmhVV
+zd9Yf1HFPubnaD8Fr1Je00f5LkYOmtxQ4Y7tcVEtA1LN3JNVNRWhr/iqpniQwXOHfH/gke0nT9bm
+aIxhBoMFTbtoptqTtqWtEZxS3TgvaWfUje1pTdmvbqf0puFzUeX/NRzUglehl8+HrGiybI6iJZxq
+8tyWAw29KaqaxY5CtED3ycFLaeKgFrwK3eYoatBk2RweqcLenINx/axnk2tRVbPUYOP1weicOehw
+KPQ+zSGDZspeZARNuCKYarLzYCEJ/VHVTMB+31PHL5HVAbhihYTHVK9p6GvSIEHTNnWn6p/5xF40
+eCKaarLDUt9ALLA/CH50aX9D70HuyE7DA56kLLANWjgcqqLJsjlKpppqckM7o8GpqppFBBsbZJBy
+qEdXtDuCN2EPBA0VNFk2R5GEU02YZz4CC+5UNUcgHmSwL+bSw5XERQWXQZOKJkqlunEu2UIyGsXf
+9LCAqqaq8t/VJ9odwZlUD8EHQ372hwqaqVq6sD8TbginmtTfA6qZI6GqOTy7aX0M+NI5GARPUvYP
+H6yA2Dto2iSUVKhmwgXxVBOW9ManqC4e2h7GHEXtjHBKuyM4EvJA0BAVTZbNUSLVVJO6nREDC0Zm
+Kyc3gh+9yO0QigU1D/PMu6J9GLwoNmimrGgydhJy4qkmVDPTUSxl53gIJXpQy7nSjEAS99Mc7OEw
+UtBkvjm8UC2Z3/AdSEdY1ZznUtUUDjIYWnaVZoSV7B4w1LaRIYJmqp5o3GAhJ5xqsqWaKTG39z6l
+LKqaFsxy+cwyBx1ehFs+7xU0E2+SZn8mPFBVMxfMM0/P3nPF33yeQWudZbB2Rm/5SLsjOJCy6KYP
+mjRqR0mEU03qdka0WdFZiqqaYSto1o1EMchgbBwMgpRtn0p1PSouaLJ0DhnxVEshEUUAACAASURB
+VBPmLgsJq5rngStouT4Y1eNCzxy8DpQtVR4apLASJWg+sWwIMdVUkwfmmbugqGpWEauaFsQitzN6
+C6sLUEt2TxiiV3rfoMlBIGRPPNWEaqYD9qCrONhynngoRi/iQQapHNppekAl1D7NzkEz8cWPoAkl
+1b6sK0au+rGeTerPwZPgBUU6uT3PpJ3RW7JpQYWQygiaHARCCYRTTba0U3FJ8Tc5jxBqrPJfSguu
+A5bQoWIFiDAHgvoEzZSb1KloQkVVzZyzL9kfYVUzwgEU2T5m0f7Zc+agQyhVLpIGzVRfMA4CQUI4
+1eTRAg18UuybdX363AKXop3R1kK4rL+t6OcCqVZ6D/quqESoaFLNRHLiqSZMAHLMugA8JH6F3itn
+qsC1bLSfUlSa63ZHHNiDQph9mn2CZqpKD0ETCqqpJne0MwqBSpaxoKXYx1yvdn39Owi7AlTMQYdI
+yoOivR50OwXNxPtSCJpISjjVhHnmQYiqmu6I2xl9811Zzya3or/JId9bpGYTglLptYLdtaLJQSDk
+THXjXNLOKJSUVU2vn4u5cJDB7SuvRyGH2fSIJ9WDVd5BkxsvUhJONXmiXUosVtW8SfSi3T1wW7D6
+JPrxL+6LtCpPqr9JE+2OoJAqH0n2aKZaOi9+aQrpiJcBF3RXCClVVdPjvl3Vd+WtQQZzUbujU9od
+IbFUQbPXyfOuQTPVxmeqmUhJNdXkgXZGMVngGbuC9pR4P9abLFCdCn70m4MM7IFNdgpe9HNRppQP
+oJ2rml2DZqoZ5wRNJCGeasIJ5tjG/vt5/HyoHoxaVf7Xs4mq3dER7Y6QUMqM1HnL5N5BM/GGZ9q8
+IBXVVJMb2hnFZlXNy5F+iSdv1e7paqOq/D9ZgGxLFfiWtDtCConPsKQLmolPnLNnDaMTTzWhLUoe
+6gD0OMJv4mr0pAUoVYV1r+AobEF1wPcaCaX6jCddOu8997Itb/uSkC1lOyMepjJgf8eLgQ+hfHB4
+DVRV/rsOMlBVNT/R7giJpLqHJD0MlGpJYIzqAPAN20+Vas9x09+nmiAPFgpPBgqbHxwumdfB6aPo
+x3eqENrS4tXwL6cVDvghhVQPo53b/nUJmqnaN1Dpwag8TTVBHixs1oHsruMvVB9g+bPTLgSq13TZ
+cy/aQtTu6Jh2R0gg2T7NrnuP+8w6HxsHJDA2b1NNkIF6GX09m9R7K/95j/1TT1bFfOdxy5BwkMG2
+78OgeA46VU2MLeWBoE5bJ//U4f9NqosNFU2MRjzVhGpmAWxP4Yl91s7sIt3ct/eLLXvdBtiPLqv8
+D7GPua4Q22n51NtkDuufu+dpeWAfKa8dnSqaXYJmKhwEwpiUU034bBfEln3DBo3parMQtTN6HHgL
+QR00/zbg/15bi+lqc83BP4yh/lxNV5tU7239sLz3atxeS+eJ95vwpcQoPE81ATyxPVmqCvygP9cq
+zF33zvbBHHSMzfW4brd7NKn6YESup5oAjiwzG2SgCs3n09UmWWtAYCSdio37Bs1UFU3FCUEUINBU
+E0DKgpFqkMEolf+Rpzi9he8/xuL68LTXiibVTAwu0lQTwAHlIIMxT9Kq5qAf2+l9IKpOh8H3DZqp
+Jh2wvIgxqKaaPDDPHJHYIANFO6OnsQOubV9RPXBS1cQYsqpopgqaVDQxKPFUE6qZCENc+U+yj9lO
+sysOUBzaKX4gpC6jVfcNmqnGTwJDizrVBEhNtY/5IfFEJFXgmzMHHQNLWZwbPWimanbLMiMGE3mq
+CZCSBaAs2hm9xbaz3KT8meaANmcYkvduJp5HUAJDCT3VBEhItY/5RtTSbi7qcnLOHHQMLNXneO/P
+beugmbjUz1IjBpHRVBNgVBZ8VO2MJFVUexBUPYhS1cSQ3J5t2aeimSxosqcNQ8hpqgmQgLKdkazy
+v55NFsJ2RxwURDR7n9Vh6Rw5y22qCTAKCzyp9uA3PVnQU1M9GC7sgRjoK1VFc+8JVx4rmo+Jfg4y
+luNUE2AMFnRk+5g9/FHXs8mtqt0Rqx8YiNvzAB6DJocnMIRcp5oAQ5sLBxncOvprqgLfJ9odIRCW
+zoGcp5oAQ7KA80n0prran2in3q9EP57rBvpKtV1r7y02+wTNVPtImAqEzkqYagIMSNUZ4cpp5X8h
+and0Srsj5GqfoLn3BtCOuFGjj1KmmgC9WLBRDTJwuY+ZOejA8Fg6RzZKmmoCDED1YOS68r+eTZai
+dkdH09WG6wi6SrYabIdtW/MYNDlIga6U7YzY8oEwLNAoKv9PFuS8U+0fpd0ROkn88LbXZ9TjqXOC
+JvZmy4CngndONtUE6EK8jzlEg3Lrg6tod8QcdGRnn6CpePoF2ipyqgnQgWqe+V2wQQaqUPyRdkfI
+CXs0ER5TTYB2bG/VR9HbFaryb6fiL0U/noOF6CJVFX6vByH2aCI0ppoAe1F9Vy6DDjJYitodHdPu
+CI7FDppMVcGemGoCtDBdbc6E7YxCtu6xbTGqB0qqmshCq6DJfhF4xFQTYC+yyn/kfczWH/dR8KMP
+p6sNW3MQXtuKJkETHjHVBGjBAguDDLqT9eel3RGi4zAQQmKqCdCOBRVVUMriu2Kn5e8EP/qAiUHY
+g8uuDgRNRMVUE6Ad5SCDSO2M3jIXHQw633cSCzCy0IeBFPtgEIxwqsljkKkmwFdW+T8XvBvZVf5t
+u4ysX6/o5wIvCR00qRThu8RTTWhnhGhU35VlpvuYVXPQj61rABAOS+eIhqkmQAs2yECxj/kp1wqc
+bZuRhXcOBiEigibCYKoJ0I668p/zPmY7Ra+Yg37IdQgR0d4IkTDVBGhHtY+5lEEGynZH3I8RCkET
+ITDVBGjHgogsCJXwZ1rPJp/rU/WCH31AezVEw9I5omCqCdCOsp3R54L+Rsp2R8xBx0tcrrwRNOEe
+U02AdiyAnArerm1p+wftAVT1AExVEy8haAL7YqoJsBdZn8cSK//r2WQhbHd0Ifi5wN4ImvCOqSZA
+CxY8jgTv1ZMFrlKpHoRpd4QQCJpwi6kmQDsWOFTVzKIra3bKXtHu6IB2R4iAoAnPmGoCtDMXVf4f
+qPx/pQrbn2h3BO8ImnCJqSZAOxY0PoneLvYJ/j4H/Ur047lewTWCJtxhqgmwF1VnhCsq/99YiNod
+ndLuCJ4RNOERU02AFixgqAYZsI+5QTwHnTZscIugCVfEy4BsrEc0qoCxoPL/R+vZZClqd3Q4XW24
+fsFlZZugCW9U+41Km2qC4CxYKCr/jxao8DLVvtUF7Y7gUdugyalCjI6pJkA76n3M/JleZ6fw7wQ/
+mjnocImKJjxhqgnQjmqQwR3tjFpRhfGPtDuCNwRNuMBUE6Cd6WrzXjTIoKKa2Y6dxr8U/XgOBsEV
+gibkmGoC7EX1XbmkndFelqJ2R/Uc9DPBzwVe5C1oUvIv04KpJsDbLECo2hlxAGgPth1HNgdd9HOB
+P/AWNBUnKCFk+4k+il4B1UxEowoQDDLoYD2bXIvmoNftjtgShLHsVaBh6RxqTDUBWrDgoBpkwL6/
+7mTdAWh3VByXf2+CJmSYagK0Y5V/1TIs35UebHvOjeBHH7CEXpz3Hn/hVkGTfWwYiapKwjIgolHt
+Y77h+j8I1Rz0c+tSAMhQ0YSEeKoJy4AIwyr/inZGVP4HYtt0ZH2CRT8X+Mpd0LSLKjLGVBNgL6rv
+ypJ9zINSzUE/tj7FgAQVTSgw1QRowQKCYh8zgwwGJm53xBz0MqRqEcmpc/jFVBOgHSr/+VnPJreq
+dkf8TYvgskXkPkFT8eVAfphqArSj2sf8YIEI41AFvjlz0KHgsaLJHs1MCaeaPLEhHpFYIPgkeslU
+vka0nk0+0+4IJWHpHCmpLnIL2hkhGNV35caCEMY1F7U7OuXAbZ4St7Ha6xqxT9DkRo3OmGoCtGNB
+4FTwdm2pZqZhD760O8KQkh322rdws0/QTPWUyx6SzDDVBNgLlf8C2Kl+RbujI9odISWPS+cEzfww
+1QRowQLAkeC9qtsZUelKTxX4lrQ7yk6q7LT3lg/2aGJUTDUB2rEbvyrsUeESsAdhRUeXA7ZJZCdV
+0Nx7ddvj0jlzWfPCVBOgHVXl/4HKv5Qq5H+i3RFS8HgYSHGhxQiYagK0Yzf8j6K3i2qmkD0QX4le
+AQcl85GqSLd3FmTpHKMQLwOyJIRoVDf8Kyr/LixE7Y6OaXeUjVR7bsdbOk+5tMIHPwtz4TIgU00Q
+hl3vFJV/9jE7IZ6DTlUTo6KiicEx1QTYi+pGP6edkR/W7/dR8IIOp6sN1834Uj2s7r0Csm/QTFXa
+Z4NybKol8yummiAS4SCDRwYZuCTrN0y7I7Q0etCkaTu+SzzVhGVAhGE3dlWwoILlkG1RuxO8sgOu
+n3ElHj+5N69L5zxZxcVUE6CdpWgf8x3tjFxTPQR89B5Y8KqU4yf3vnZ4rWjyYQ/I9vkw1QR4g93Q
+FYMMKqqZvlkXgEvRi+Q6GpPrVeB9g2aqihEVzWBsGVC19EIfQESjuqFf0s4ohKVoDnrd7ugs4PtV
+ulRBs9Nnct+gmeoCpaiKoR+mmgAt2I1cMsiAilUMtg1INlUt2vuFZEGzUwb0GjQrTsDFwVQToB3x
+IAP2MQdiXQEUc9APrRsC4iBodsQ+zThUbVJYBkQ0c1E7owfaGYWkCnxz5qCHkk/QTHxTp6IZgHiq
+CUs8CMNu3LI+iXxS4rFtQTeCF067o1hSPbx2WhHp0t4o1QZlKpoxMNUEaEe1j/mGfcyhqeagnzMO
+2r/ELak6dR7qEjRTVTUp2zvHVBOgHbthK9oZMcggOFtJlO3rzeaNzFfK1d9kFU2CJphqAuxHdoKY
+fczxrWeThbDdEQcufUtWde464tlz0GTp3DemmgAt2I1a0s7IAgrywBx0vCTV36bzg06XoJlqOpAi
+xKAF4VSTLdVMRCJuZ8R3JSPr2eRW1e6Iz5JrqYpynYuMXYJmsgMYbER2S3XjZBkQ0cyFgwxu+bRk
+RxX4PtHuyK1Uf5fORUbPFc2KfZr+MNUEaMduzJ9EbxcVqAzZHrkr0W/G9dcn162Nqi5B01rKpGq1
+QNB0hKkmwF5U35Wbrpv2EYKq3dEpq4y+JP57dD4b0aWiWSWsavKh9oWpJkALdgM4FbxX7GPOHHPQ
+0ZCyGJeuomlocVQY8VQTbpyIhso/RrOeTZaidkdHtDtyJVlG6rNK4j1oKqpneJlyqgnLgAhjutrU
+D0ZHgtf7ZAEEZVAFviXtjtxIter72Of/cdegmayPIXtC9MRTTahmIgy7AauWNak0FcT6CSvaHTEH
+3Y9UFc1eqyTeK5oVjdtdULYzYhkQkagq/w8MMiiS6uHiI+2OtOyhNtWqb69rS6egmbiXIR9mIduP
+o1oG5KkZYdiN96Po9VLNLJDdiy9FvzkHNLVSFuF6Zb6uFc0qYcmeiqYIU02AvahuvJcMMijaUtTu
+6JitbVJFBM1UFzZFc3D8hqkmQAt2w1Vcq7a0nCmbbS9SPZhT1dRJFjT7bsuJEDQr9oKkJ55qwjIg
+olHdcOfsY4b1Ge51Mrijw+lqwxYnjVRBs/fnqk/QTLnxnOXz9FRVkiuWARGJ3WgVrdgeGWSABlmf
+Y9odSaQ6O9H7ftwnaKbsbUjQTEg81YSnY4RhN1gGGUDOljfvBK/jgO0baSXeG9s763UOmolnnrPh
+OC1VlYSpJohmKdrHfEc7I7xgLjoYdD5dbSgIpZPyve59nelT0awSVjU5EJSITTVRLAMy1QSh2I2V
+QQZww7Ydyfoe80lIJsyJ82qAoJlyQhBPSyNjqgmwF+UgA/Yx4zWqOeh1u6Mz/ipJpMpD2yGuNVEq
+mhX7NJNQTTVhGRCh2CADxUrLE5UjfI9tP1IVDJiDPjJ7f1MdBBok40UKmuzTHJF4qgnLgAhDXPln
+HzPeZN0IFHPQD7mejy7U/syqb9C0kmqqjcdUNMfFVBOgHdU+5gfaGWEPqoehOb2vRxXqxHk1QEWz
+SljVPKIkPw7bV8NUE+ANdgNVVWxo/YXWbDvSjeAdO+CzOqoigyaN2+OTzTNnGRDBqPYx37CPGR0o
+2x2x3W0cqXLQ01CrjZEqmhX7NIfHVBOgHbtx0s4IYdiDvKqQQFVzYNZ9J9WD7mDZLlpFk6A5IKaa
+AHtRtjOi8o9O1rPJQtjuiLZ1wwq3bF4NETTtApjqQ0zj9mGpppqwDIhQ7IaZqqVI05MFBaAP1YM9
+7Y6GFe7EeTVQRbNK3LidquYAxFNNuHEiDLtRyvYx80lBX+vZ5FbU7uiAz/CgkuWfIYtBQwVN9mnG
+w1QToJ25qPL/YAEBGIJqGfsT7Y76s/cw1XmKxyH/x8JVNAma/THVBGjHLu6fRG8XlSAMxh7wr0Tv
+KNf9/lJmn0Ez3SBBcz2bfE7YQoF9mj2Ip5rQzgjRqG6QV3ZdBYa0ELU7OmXbW29lB02T7KLIB7YX
+5VQTlgERhl1nTgWvl33MGIV4Djrt7Po5S/izBs1zQwZNls+dE081YRkQ0ahujMwzx2jWs8lS1O7o
+cLracB/oIHH/zMEate9EDZopk31OlO2MWAZEGHZDVFT+nywIAGNSHQxa0O6ok7DL5tWQQTNxX0Tm
+nu9JvAzIUyzCEO9jpsE1Rmf36zvBO80c9G4Img0p+3SxfL4fppoA7ajmmT8wyAAJqQoAH2l3tLeU
+RSL3QZPlc4eYagK0YzfAj6K3i2omkrF9eJeid5yDQS0lPvw8+P7MKnjQpKLZgniqCTdORKO6AV4y
+yAACS1G7o3oOOsWidlK+T6NkuEGDZuJln0M7iYXvU041YRkQYdiNT9Gnd0tDayjYtibZHHT+6K2E
+3p9ZjVDRrBJvMKaq+R3iqSZUMxGNbJ45+5ihsp5NroceOdhSXSxia9V32D085ba3MEGTfZp+qJYB
+r1gGRCR2w1O0M3q0Gz2gJOuvTAeZ70pZTHsc674dPWge8yF9mW0gVi0D8pSKMOwawiADFMu2Od0I
+fv8DltC/K/z+zGqMoGmNuVNOHaCq+TKmmgDtqAYZ3LGPGY6o5qCfc97iVaHbGu2MUdGsOH2uJZxq
+8shUE0Rilf9zwUtmkAFcsWVTWb9lPg3fSn0qfz2b3I71v51D0KSi2SCeasKNE9GovitL9jHDIdUc
+9GPr94zfpcw2ox7iHitojpaMX3BAP65vqKaasAyIUOzGptjH/EQFBx6J2x0xB/1bWezPrMYKmvZh
+TdkugaD5243zvXCqCdVMhCGu/LOPGW7ZEmrKcdI7h9xHfmNbelIWjEYtDo5V0awSH0Zhn+ZvVFUS
+ppogGtU+5gfaGSEAZbsj5qCnLZ6NMnayacygyZSghIRTTVgGRCh2I6OdEfAK6x5DuyOdlEFz9K2O
+owVNQZuj0jcSq76cLAMiGlU7oxu7LgIRzEXtjk5t6bhIVjRLudoyelFwzIpmlfhQULH7NIVTTVgG
+RCh2A0vZm26HdkYIxQoItDtKL2XRbDtmW6OdsYMmy+cjEy8DMgEI0chunFT+Ec16NlmI2h0dFdzu
+KKtl82rsoGlJOWXpvcQPpqqd0Q3tjBCJ3biOBC/5yW7YQESq++qytHZHOS6bVwkqmhXL5+MRTzXh
+xokw7IalqmayZI6wrKCgaHd0UOB3J3Woj1/RNKmXz0sKm0w1AdqZiyr/Dyn2QAEjU1U1PxXW7ijl
++3yXajtPbhXNqpSqpnKqCcuAiMRuVJ9EL7n0bhjIgBUWrkS/SREHTq1Ilk2T9qbRg6Yl5lHnaD6T
+fdBknjmwF9WN6orKPzKyELU7Oi6k3VHq7JIsaP4p0c+5TdhSpJ59fpF52x3VVJPKJjcQNjGEf1dV
+1Q/2n/800vWo/t/894K/Vuh9zHYo4cT+Pu/tPwGV+n6e7RK6FY9SBs3HlF0wUgbNnxP9rMr+YFkG
+TfEyYCVargeiCTfIwG52c1vuVz3IAi+pz1/M17NJrv01Uy+bJ81HKfZoKpbPTzNui8B4LsC3p2g3
+RNsf9sUeYgmZ8GiR8X0922XzKlXQNKkPBWW3CV841QRAe6GuPdPVpg7FfxWdygfaOsixrZ6tUqa8
+rz+k3jtO0IyFaibg212kQQbT1aZeQvvo4KUAbXzMcAJg6mpm8m2FyYKmYPn8KKcPpHCqCYD2whyU
+s0N9ioEPQB+5FVxSXzOS9/VNWdGsBEk6i9PR4qkmANq5jNLOyJbr6IeLiI5zGcxi2+FS7olO1qS9
+KWnQFMw+z6WnpmqqCYB2tsEeBhdcUxBYLoWXLEdOPpe6olkl/kUPbMk5OvpWAr7No7QzsmomS+aI
+7DD6vd1WKlN+D7clBc3Uy+fRP4yp+2sB2M9jsAERRYzpRfaif46TtzRSPQwnD5p2IvMp4Y88Dj6U
+v4TRW0Bk0VYcCJrIQfR7Y+o90pJqZiWqaFaCXzjy0nNurRyAnNxEamdkuKYgBwdRi0iCQ0BPdkZG
+QhU0U2/kvQg8UYAZw4BPUeeZsxUHuYi6WlnEIaAdSdC0FiCPCX/kQeDlInpnAj4to7QzAuCD4BBQ
+pT6lr6poVoJfPOry+YOD1wDgW0/0tgXQQeos8qh+IFYGzdQ9NY9sXwQA9LWI0s7oBSmvu8CYPgd8
+d1Mvm8sfiGVB0y7SzD9/W7SDBkDuPgdrZ/Qc1xTkYBvtYc96f6Y8BCTrndmkrGhWgp6a5wFPqUV8
+YgNy9iH470bQRA7kAaqD5IeAPIRxadAU9NSsolU1rSVB6vcIwMv+93o2if7wF7kaC+yE+hxPV5u6
+rdhx4h/rYh+5uqJZKQ4FBWx1xI0B8OG/Rf87WIXjxsFLAbp6CNi/NvUhoCcvD8UegmbqEBWu1dF6
+NllQ1QTk/m09m/xbJn+GOYeCEFio/rW2ZS91SyM375E8aIqeriM2WT7jxgDI/N/1bPKfc3n77bob
+8XAkcBmwmpn6u+biENCOh4pmJahqHtrprzCsBB55lCYQ1f+rquq/5PbXs/3f0Q82oSw3tsIXhm3V
+S33vdnEIaMdF0LSnk5STgqqIT/PWUuWfqWwCyfyfqqr+U0ZL5t+wawphExFcrWeTiFX4C8HYV1fD
+JLxUNCvBG3McsYG7hfJ6v8edg5cD5Oxf1rPJP61nk6z3R1vY/DNTyOBU/f37y3o2ibqil/p1P3jr
+jOEpaKaeFFQF3av5dX/VejY5s+rmDRVOYDD1Mvn/rB/m1rPJfy3lba1vTOvZ5MSuKTzEwoN6lfPD
+ejZ5Z9s8whE0aK88dqn5h19//dXBy/jNdLWpq5ofE//YP2fQF6+y6uw7+wdEUX9ef7B/KT3/ef+j
+qqr/vp5N/oVPzm/smvJe8LdB2e5t+lbUEa9/N11t6hnjKYNm3dLIXQb4k4PX0KQImvMcTl8GPIUH
+wDG7pnBdATqgmvk7T0vn9YXti6DVUcSxlAAAwC/FnlJXh4B2XAVNo0jkIfdqAgAAX2zbyVHiF3Xj
+dbuBu6ApanVEVRMAAAxBUbxyWzDzWNGsROVfqpoAAKAzq2YeJ34HH2zroUsug6b1dUvdu46qJgAA
+6INq5jNeK5oVVU0AABCFqJr55L3rjOegeS1oRE5VEwAAdEE18wVug6adnqKqCQAAXJuuNmeiaqbL
+3plNniualShoUtUEAAD7UOQVl30zn3MdNK2qmbqBe+W1uz4AAPBFNAVoGyWreK9oVqKl7GPb1AsA
+APA9ipyyjDIP3n3QFI2lrNirCQAAvkdYzQyxbF4FqWhWVDUBAIAn09XmB9XezCjVzCpK0BRWNdmr
+CQAAXjKvquog8TsTqppZBapoVqKq5qGVxQEAAL6yauZc8G6EqmZWkYKmsKq5tA8UAABAZVVFqpkt
+RKpoVqKq5oHoqQUAADgzXW3e1z23Ba8qXDWzihY0hVXNOU3cAQCAqKoYsppZBaxoVsKqJu2OAAAo
+mHWjST1qsopazawiBk1hVfOcdkcAABRN0Y0mbDWzClrRrITVRaqaAAAUaLraLATN2avI1cwqatAU
+VjWPaXcEAEBZhO2MQlczq8AVzcqqi1vBz6XdEQAAZVG0M6qiVzOryEHTqpqKlM/BIAAACmHnMxTt
+jJ7Ws0n4vBG5ollZ0FRUNT9aHy0AAJA31dJ1FkWt0EHTysmqD0DoPRMAAOD7pqtNvS/zSPA21dVM
+xQn3wUWvaFZWVn4S/GgOBgEAkCk7j6GqKmaTL8IHTaP6IHAwCACAPF2LDgA9rGeT+1ze0SyCppWX
+HwQ/+oAldAAA8mIHgE5Fv5SijdJocqloVsKqJhODAADIhK1UqvZH3qxnk885fZayCZpWZr4T/fhr
+ltABAMiCagLQNrdqZpVZRbMS/oEOc/xwAABQEmtd+FH0K4dvzv6SrIKmNXG/FP34T/TWBAAgNNWS
+eRbN2V+SW0WzEjZxr4QfUAAA0MN0tVmIemZWOa+KZhc0reys+oMd2QcVAAAEYSuSn0Svtm5ndJvr
+ZyXHiqay3VHFEjoAAOEoVySzPuORZdA0yj8cS+gAAAQgXjK/yq2d0XPZBk37w12JfjxL6AAAOCde
+Mt8Ke4Ank3NFs7I/oOpgEEvoAAD4Jl0yz7Gd0XNZB03xwaCKJXQAAHwSL5k/2HmS7OVe0VQfDKqX
+0JmFDgCAI+Il89pFKZ+H7IOmUf5BPzILHQAAH2xktLKd0KUNmClCEUFTPDGoYhY6AABuqGaZ155s
+sEwxSqloVvaHfRL97EP2awIAoDVdbc6Es8xrFyUcAGoqJmjaH1a5hH46XW2K2ZMBAIAntrKoLPrc
+rGeT+9I+FCVVNCv7A98IX8Jyutq8E/58AABKVe/LPBD97tvcJwC9pqigaebC3poH4g3IAAAUx1oZ
+HQt/7+KWzHeKC5oOltBpeQQAQCIOWhndrWeTYotMJVY0K/uD3wlfwkfbkAwAAEbioJVRsUvmO0UG
+TXMhXEKvrOUR+zUBABjPtbCVUW1RUs/MlxQbNB0sobNfEwCAkUxXm7qSeCp8f+sxk8VvlSu5oulh
+CZ39mgAADMz2Zf4kfF+3JY2Z/J6ig6ZRL6GzXxMAgIHYvkx1v8ril8x3NxoWNwAADuNJREFUig+a
+DpbQK9uv+V78GgAAyIGyX2Zlp8xZrTTFB83q9yV0ZSP3A+ahAwDQj21HU/bLZMn8GYLm7+bCWei1
+I+ahAwDQjY15Vs4xr0puzP4agqZxsoR+aqfkAABAS7b9TL1cfVNyY/bXEDQbbBb6lfhl/DRdbU7E
+rwEAgBAaTdmV+zKfSm/M/hqC5jPr2aT+oDyKX8Yth4MAAGjlVtyUvXbGkvnLCJovU7c84nAQAABv
+cHD4p3a5nk0+i1+DWwTNF9gHZiF+GRwOAgDgFU4O/9TTf9R5wTWC5iusB5ZyalBlh4PoxQUAQINt
+L/tZ/J7QyqgFgub3XYhbHlU2OYgPMgAAv4XMdw4m/1TWyojpP28gaH6Hbez1MB7yZ06iAwBK5+SE
+ee2KVkbtEDTfYPs1f3TwUjiJDgAo3a2dYVB6tA41aIGg2YKT/ZoHFjY5iQ4AKM50tbl2cMJ862Sl
+MwyCZnse9mvWfcLuCZsAgJLY1LxzB78y+zL3RNBsydF+zSMHY7YAAEjCDsT+5ODdZl9mB//w66+/
+hnvRSvZU5eEDX89U5TQ6ACBbdhD2bw5+v3pfJuckOqCiuSfbr3nj4KWcW+gFACA7dgDWQwWx3pdJ
+55eOCJrdeJiHXvuJHpsAgNw0emWq2xhVzDHvh6DZQWO/pnIe+s7PhE0AQC4c9cqs/bieTTw0hw+L
+PZo9TFebOmz+1cFL+VrWZ6g/ACAyC5n3DnplVpyFGAYVzR7s9Nmlg5dyYG2P2KgMAAjJWch8tG1y
+6Img2dN6Nlk4aOZeETYBAMEtnYTMLfsyh0PQHMaFk8NBBzR0BwBEY1N/PDRkryxk0pR9IATNATg7
+HETYBACE4SxkfuDwz7AImgOxpx8vfbaOCJsAAO+chcz68M+1g9eRFYLmgOzU9wcnL4ewCQBwy1nI
+fOCE+TgImgOzp6ErJy+HsAkAcMdZyHy07W8YAX00RzJdberWR6dOXs6j9dnkBB0AQMpZyKQP9cio
+aI7Hy0n0isomAMADZyGzImSOj6A5Eqsenjg5iV4RNgEASg5D5gdC5vgImiMibAIA4DJkXnLCPA32
+aCYwXW3qsPk3Ry+JPZsAgCQchkxmmCdERTMBa/7qpe1RRWUTAJCCw5BJG6PECJqJWIn+R0cvibAJ
+ABiNw5BJGyMBls4Tc/jFo7UDAGBQTkMmW8YECJoChE0AQI5slazuI33s6NfjHidE0BSZrjafbfna
+C76IAIDOLGTec29DE3s0dU4cNXSvHdieTTZJAwD2QsjEawiaIo0em97C5s+ETQBAW9PV5n1VVd5W
+6WpzQqYeS+di9hRYfxEOnb20H9ezydLB6wAAOGUh894KFZ58oCG7D1Q0xayyeeZoetDOT3ZoCQCA
+P5iuNmeETLyFiqYTjp8Kb2z5gZYQAICvbIvVzw7fDUKmM1Q0nbB9JJ7mou+c09gdALAzXW2WTkMm
+88sdoqLpjOPK5lO9xM/GagAol8M+0DvML3eKoOmQ47C5tbB57+C1AAAScdq+aIeQ6RhL5w45Xkav
+g+/faH8EAOVw3L6oImT6R9B0ynHYrKzXJq2PACBzjZPl3lrwVYTMGFg6d87xMnrtrqqqC06kA0B+
+pqvNvG515/QXI2QGQdAMwHnYfLSwySEhAMiE40M/FSEzFoJmEM7D5tbC5q2D1wIA6Mj5oZ+KkBkP
+ezSDcL5nsw6/f7VlFgBAQFbQ+ELIxJCoaAbjvLJZsW8TAOJxPOlnh4k/QRE0AwoQNtm3CQAB2FL5
+0vF+zIqQGRtBMygLm7dOW05U7NsEAN+mq807u494XSqvCJnxsUczKKsWvrfqoUe7fZv02wQAZ6w/
+ptcm7DuEzAxQ0QwuwAnBysJwPbryi4PXAgBFswLAR8fvAStiGSFoZsDCZv2FPHb823DhAAChIEvl
+9b3ihD3++SBoZsR5g92dq/VsQhskAEjIlsqvHR8irQiZeSJoZiZI2GQpHQASCbBUXtl94YTWePkh
+aGbI+XzanfrJdc5GbwAYh3UnuXa+VF4RMvNG0MxUgOa7OzR4B4CBWcFh4XypvHZjRQfuAZkiaGZs
+utqc2MZv7xeaJwub9w5eCwCEZYdD6yrmaYDfgZGSBaCPZsYsuHmdj95UN53/Gz03AaA7O/DzJUjI
+/EDILAMVzQIE6bW5w/hKANhDkDGSO+zPLwwVzQLY3pcT2w/pXR2G/3W62ixK/7sBwFtsi9TnQCHz
+hJBZFiqahQnS5mKH6iYAvMCqmItg13NOlheIimZhrFn6hyC/NdVNAHimUcWMEjLvCJnloqJZKOuv
+dh/gRPoO1U0ARQtYxayYBgeCZsGCzL197rLe9M6TMYCSBBkh2cShH3xF0CxcsNOKO/TdBFAEKwgs
+g7Qs2nmyMcOsQIGgid/YPshPwd4OJkoAyFag6T5NHPrBNwia+LuASzOVLc8s1rMJzd4BZCHQjPLn
+2I+JPyBo4htB923WHqy6yVINgJCCHvap2I+J7yFo4g+C7tvcubIKJ8s2AMKYrjYXdt2NtKJUsR8T
+byFo4lV24fs54DvE0zWAEGyZvA6YxwH/Ynd2MJMHe7yKoInvsotgvZR+GPCderTAyel0AK4EXzmq
+/cjeeLRB0MSb7IJ4Hay9RtONLad/8fOSAJTKunzMAy6TV7ZidMYDPNoiaKI1a7XxU9B3bGvVA5q9
+A5Cwzh7LoCtElR26POMain0QNLGX4EvpFfs3AaRms8kXQfdh7rBUjk4ImthbBkvplZ2UrAPnrYPX
+AiBD1i5uEXgfZsWpcvRF0ERngdtxND3Y/k32GwEYRAYHfXY4VY7eCJroJfAEi+do+A6gFwuY88AH
+fXbYYoTBEDQxiKCz0l/CCXUAe8koYFbWFu6MayCGQtDEYGzD+3Xgg0JNBE4A35VZwKxdrmeThYPX
+gYwQNDGojPYm7RA4AXwjw4D5aHsx2TqEwRE0MQrrF3edyUW4InACyDBg1q7s2saBH4yCoInRZNIG
+6bk6cF5zSh0oR6YB88mqmFzLMCqCJkaXYXWzoi0SkL9GH8yzzK5fVDGRDEETSWRa3axsb9OSNiBA
+Pqxt2zyjveY7VDGRHEETSWVa3azsAr60ZXWqBEBAmYyKfA1VTEgQNJGcVTfri/nHDN/9rQXpJQeH
+AP/senRm16QcWrM9x4lySBE0IZNZ382X3FngZJkKcMb2X15kdsDnOfpiQo6gCbmMpgq95smqJbcs
+WwFa9oA7z3C/eNODVTFZVYEcQRMuWHXhOtO9UTv1svqtVTlZxgISseXxXfUy1xWUihnl8IigCVem
+q82FHarJdSlr59F+T6qcwEisenmR4enxl3DYBy4RNOFO5oeFnqPKCQzIVkfOCqhe7jxYFZPrB1wi
+aMIt62W3zHw5vempUeVkbxWwB2uddpH53ssmlskRAkET7tlyeq6tR15zZ4GTmwjwikZj9dwm97yF
+ZXKEQdBECI1ZwzmfTn/Jbmm9Dp23/l4ekJYtje/CZUkPnxWnyRERQROhNGYPl7C5/7ld6LymNydK
+0th3Wa9uHBX4x2d0JMIiaCKkzEfFtfFkofOeSidyRLj8amtL5EsHrwXohKCJ0Ardv/kcy+vIgu25
+PLN/pYbLnUvrRsE+TIRG0EQWpqvN3AJnSQcCXlKHzvtG8OQmBddsdeKs0D2XL7mxKib7MJEFgiay
+0TgwlPPs4n092sSle/rswQP7nu6C5Qnf1b+jHyayRNBEduxGtiz0wND3PFm1855qJ1JqVC1PWBL/
+gwerYHLQB1kiaCJbhZ9Qb+OxETq5yWEwttfypPGPquUfETBRBIImskfgbO1hV/Hk5od9ECz38mQB
+k2EMKAJBE8UgcO5tFzw/W/hkqR1f2VL4e4LlXgiYKBJBE8UhcHb29Cx4cmihAPZ92YXK9wX3ru2K
+gImiETRRLALnIB4seH79R/iMzb4T7xqVyvdUKztjDyaKVxE0gW8C5xk31UHUN9gvzwIoy+7O2L7K
+941gSagcBgETaCBoAoY+nKPaNoLnFwJoOraf8gcLkrtgSYuh4dWN1q8JmMC3CJrAM42G0qWPtkyl
+rgD90gihX/8xGaW9Z2Hyh0ag5PM7Pib5AN9B0AS+w2apX3AAQuapGT4bgbQqpSJqIbKy4PiuESQr
+PpcyWxsKwSxy4A0ETaAFu9lfcHDIrYfGC2suXe4C6s4vqgNLVil//+z/+qTx33dBsqIa6RYnyIE9
+ETSBPdjBoQv2cWbn6Vkg7eMH9kBm586ql+y/BPZE0AQ6smX1OaECyNJuefya/ZdAdwRNoCdrEzOn
+PRKQhQcLlyyPAwMgaAIDsT14u8NDVDmBOOrq5bUtj1O9BAZE0ARGQJUTCIHqJTAygiYwokZPTlok
+AT7UB79uqV4CaRA0gUQaJ9YvaF0DJLW1cHm7nk1ueeuBdAiagECjLydL68B47hoBk8bqgABBExCb
+rjZnFjhpBg/092gHe25ZGgf0CJqAE439nPW/U/4uQGuES8ApgibgEKETeBPhEgiAoAkE0FheZ08n
+SvbQ2HNJuAQCIGgCwdhBol3o5PQ6clafFr/nQA8QF0ETCMwaw++CJ306kYNdn8t7WhEB8RE0gUzY
+vs5d6Dyh2olA7naVS5bEgbwQNIFMWYP4Xeg8YW8nHHlsVC3v+cMA+SJoAoVgmR1Cj1axvLdwyV5L
+oBAETaBQdqjoPRVPjKA+Hf6ZYAmAoAngK6t47oJn/Z9HvDNoYXcy/DNL4QCeI2gCeJEdLmoGT6qe
+qBrVyl2w5PAOgFcRNAG0ZgeMmpXPd5xuz1ozVH5ezyafS39DAOyHoAmgl0blc/fvHYeNwqkP63x5
+FiqpVALojaAJYBRW/Xxnlc9mGGX5XaeuUP7SCJRfqFICGBNBE0ByduJ9Fz5/aFRCWYbvZ2sBchcm
+v+wqlZz8BqBA0ATgSmMpfveflVVFq8LD6C5EVo0wuQuSv1CZBOARQRNASNaO6Qd77c3/vluyrxr/
+Z2/htBkaq0YFcufvLYJoFwQgMoImgOI0qqZvaQbYl+wqi99DtRFAsQiaAAAAGMU/8rYCAABgDARN
+AAAAjIKgCQAAgFEQNAEAADAKgiYAAABGQdAEAADAKAiaAAAAGF5VVf8fIxfUmpMCBmUAAAAASUVO
+RK5CYII=
+
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_images/from.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version:=
+ 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/=
+SVG/1.1/DTD/svg11.dtd">
+<svg version=3D"1.1" id=3D"Layer_1" xmlns=3D"http://www.w3.org/2000/svg" xm=
+lns:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+	 viewBox=3D"0 0 128.2 135.8" enable-background=3D"new 0 0 128.2 135.8" xml=
+:space=3D"preserve">
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+48.8" cy=3D"88" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+37.5" cy=3D"27.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+11.8" cy=3D"43" r=3D"11.2"/>
+<circle fill=3D"#8E96CB" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+60" cy=3D"39" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+87.2" cy=3D"39" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+20.2" cy=3D"76.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+26.2" cy=3D"107.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+39.8" cy=3D"56.5" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+98.5" cy=3D"70" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+109.8" cy=3D"99.2" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+90" cy=3D"124" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+56.2" cy=3D"119" r=3D"11.2"/>
+<circle fill=3D"#8E96CB" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+71.2" cy=3D"65.5" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+78.8" cy=3D"96.5" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+116.5" cy=3D"50.2" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+71.2" cy=3D"11.8" r=3D"11.2"/>
+</svg>=0A
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_images/where.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version:=
+ 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/=
+SVG/1.1/DTD/svg11.dtd">
+<svg version=3D"1.1" id=3D"Layer_1" xmlns=3D"http://www.w3.org/2000/svg" xm=
+lns:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+	 viewBox=3D"0 0 129.4 135.8" enable-background=3D"new 0 0 129.4 135.8" xml=
+:space=3D"preserve">
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+48.8" cy=3D"88" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+37.6" cy=3D"27.8" r=3D"11.2"/>
+<circle opacity=3D"0.36" fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterli=
+mit=3D"10" cx=3D"11.8" cy=3D"43" r=3D"11.2"/>
+<circle fill=3D"#8E96CB" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+60.1" cy=3D"39" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+87.3" cy=3D"39" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+20.3" cy=3D"76.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+26.3" cy=3D"107.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+39.8" cy=3D"56.5" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+98.6" cy=3D"70" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+109.8" cy=3D"99.2" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+90.1" cy=3D"124" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+56.3" cy=3D"119" r=3D"11.2"/>
+<circle opacity=3D"0.36" fill=3D"#8E96CB" stroke=3D"#000000" stroke-miterli=
+mit=3D"10" cx=3D"71.3" cy=3D"65.5" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+78.8" cy=3D"96.5" r=3D"11.2"/>
+<circle opacity=3D"0.36" fill=3D"#C5906C" stroke=3D"#000000" stroke-miterli=
+mit=3D"10" cx=3D"116.6" cy=3D"50.2" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+71.3" cy=3D"11.8" r=3D"11.2"/>
+<g>
+	<line fill=3D"none" stroke=3D"#E81E25" stroke-width=3D"5" stroke-miterlimi=
+t=3D"10" x1=3D"1.8" y1=3D"32.9" x2=3D"21.9" y2=3D"53.1"/>
+	<line fill=3D"none" stroke=3D"#E81E25" stroke-width=3D"5" stroke-miterlimi=
+t=3D"10" x1=3D"21.9" y1=3D"32.9" x2=3D"1.8" y2=3D"53.1"/>
+</g>
+<g>
+	<line fill=3D"none" stroke=3D"#E81E25" stroke-width=3D"5" stroke-miterlimi=
+t=3D"10" x1=3D"61.8" y1=3D"55.4" x2=3D"82" y2=3D"75.6"/>
+	<line fill=3D"none" stroke=3D"#E81E25" stroke-width=3D"5" stroke-miterlimi=
+t=3D"10" x1=3D"82" y1=3D"55.4" x2=3D"61.8" y2=3D"75.6"/>
+</g>
+<g>
+	<line fill=3D"none" stroke=3D"#E81E25" stroke-width=3D"5" stroke-miterlimi=
+t=3D"10" x1=3D"107.5" y1=3D"40.2" x2=3D"127.6" y2=3D"60.3"/>
+	<line fill=3D"none" stroke=3D"#E81E25" stroke-width=3D"5" stroke-miterlimi=
+t=3D"10" x1=3D"127.6" y1=3D"40.2" x2=3D"107.5" y2=3D"60.3"/>
+</g>
+</svg>=0A
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_images/groupby.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version:=
+ 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/=
+SVG/1.1/DTD/svg11.dtd">
+<svg version=3D"1.1" id=3D"Layer_1" xmlns=3D"http://www.w3.org/2000/svg" xm=
+lns:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+	 viewBox=3D"0 0 194.5 95" enable-background=3D"new 0 0 194.5 95" xml:space=
+=3D"preserve">
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+182.8" cy=3D"49.5" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+178.2" cy=3D"21.6" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+11.8" cy=3D"27" r=3D"11.2"/>
+<circle fill=3D"#8E96CB" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+107" cy=3D"13.2" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+149.7" cy=3D"32.9" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+39.8" cy=3D"40.5" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+36.5" cy=3D"11.8" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+109.8" cy=3D"83.2" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+17.8" cy=3D"56.8" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+157.7" cy=3D"60.8" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+78.8" cy=3D"80.5" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+108" cy=3D"56.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+62.8" cy=3D"18.2" r=3D"11.2"/>
+</svg>=0A
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_images/select.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version:=
+ 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/=
+SVG/1.1/DTD/svg11.dtd">
+<svg version=3D"1.1" id=3D"Layer_1" xmlns=3D"http://www.w3.org/2000/svg" xm=
+lns:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+	 viewBox=3D"0 0 244 117.3" enable-background=3D"new 0 0 244 117.3" xml:spa=
+ce=3D"preserve">
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+133" cy=3D"70" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+102" cy=3D"67.2" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+131.2" cy=3D"43.5" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+206.2" cy=3D"49.5" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+201.7" cy=3D"21.6" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+35.2" cy=3D"27" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+173.2" cy=3D"32.9" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+63.2" cy=3D"40.5" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+60" cy=3D"11.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+41.2" cy=3D"56.8" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+181.2" cy=3D"60.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+86.2" cy=3D"18.2" r=3D"11.2"/>
+<rect y=3D"75.8" fill=3D"none" width=3D"85" height=3D"41.5"/>
+<text transform=3D"matrix(1 0 0 1 0 87.9727)" font-family=3D"'OpenSans-Bold=
+'" font-size=3D"16">count=3D5</text>
+<rect x=3D"178.7" y=3D"79.6" fill=3D"none" width=3D"65.3" height=3D"17"/>
+<text transform=3D"matrix(1 0 0 1 178.7031 91.7227)" font-family=3D"'OpenSa=
+ns-Bold'" font-size=3D"16">count=3D4</text>
+<rect x=3D"90.8" y=3D"91.1" fill=3D"none" width=3D"76.9" height=3D"14.8"/>
+<text transform=3D"matrix(1 0 0 1 90.7969 103.2227)" font-family=3D"'OpenSa=
+ns-Bold'" font-size=3D"16">count=3D3</text>
+</svg>=0A
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_images/orderby.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version:=
+ 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/=
+SVG/1.1/DTD/svg11.dtd">
+<svg version=3D"1.1" id=3D"Layer_1" xmlns=3D"http://www.w3.org/2000/svg" xm=
+lns:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+	 viewBox=3D"0 0 225.5 91.9" enable-background=3D"new 0 0 225.5 91.9" xml:s=
+pace=3D"preserve">
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+159.3" cy=3D"27" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+187.3" cy=3D"40.5" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+184" cy=3D"11.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+165.3" cy=3D"56.8" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+210.3" cy=3D"18.2" r=3D"11.2"/>
+<rect x=3D"157" y=3D"72.8" fill=3D"none" width=3D"68.5" height=3D"16.1"/>
+<text transform=3D"matrix(1 0 0 1 157.0078 84.9727)" font-family=3D"'OpenSa=
+ns-Bold'" font-size=3D"16">count=3D5</text>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+118.7" cy=3D"43.7" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+114.1" cy=3D"15.8" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+85.6" cy=3D"27.1" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+93.6" cy=3D"54.9" r=3D"11.2"/>
+<rect x=3D"79.1" y=3D"73.8" fill=3D"none" width=3D"67.6" height=3D"16.2"/>
+<text transform=3D"matrix(1 0 0 1 79.1406 85.9102)" font-family=3D"'OpenSan=
+s-Bold'" font-size=3D"16">count=3D4</text>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+42.8" cy=3D"54" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+11.8" cy=3D"51.2" r=3D"11.2"/>
+<circle fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+41" cy=3D"27.5" r=3D"11.2"/>
+<rect x=3D"0.5" y=3D"75.1" fill=3D"none" width=3D"66.6" height=3D"16.6"/>
+<text transform=3D"matrix(1 0 0 1 0.5469 87.2227)" font-family=3D"'OpenSans=
+-Bold'" font-size=3D"16">count=3D3</text>
+</svg>=0A
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_images/offset.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version:=
+ 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/=
+SVG/1.1/DTD/svg11.dtd">
+<svg version=3D"1.1" id=3D"Layer_1" xmlns=3D"http://www.w3.org/2000/svg" xm=
+lns:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+	 viewBox=3D"0 0 232.6 98.8" enable-background=3D"new 0 0 232.6 98.8" xml:s=
+pace=3D"preserve">
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+163.7" cy=3D"29.4" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+191.7" cy=3D"42.9" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+188.5" cy=3D"14.2" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+169.7" cy=3D"59.2" r=3D"11.2"/>
+<circle fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+214.7" cy=3D"20.7" r=3D"11.2"/>
+<rect x=3D"161.5" y=3D"75.2" fill=3D"none" width=3D"71.2" height=3D"15.4"/>
+<text transform=3D"matrix(1 0 0 1 161.4609 87.395)" font-family=3D"'OpenSan=
+s-Bold'" font-size=3D"16">count=3D5</text>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+123.1" cy=3D"46.1" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+118.5" cy=3D"18.2" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+90" cy=3D"29.5" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+98" cy=3D"57.4" r=3D"11.2"/>
+<rect x=3D"83.6" y=3D"76.2" fill=3D"none" width=3D"69.4" height=3D"14.5"/>
+<text transform=3D"matrix(1 0 0 1 83.5938 88.3325)" font-family=3D"'OpenSan=
+s-Bold'" font-size=3D"16">count=3D4</text>
+<circle opacity=3D"0.4" fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlim=
+it=3D"10" cx=3D"47.2" cy=3D"56.4" r=3D"11.2"/>
+<circle opacity=3D"0.4" fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlim=
+it=3D"10" cx=3D"16.2" cy=3D"53.7" r=3D"11.2"/>
+<circle opacity=3D"0.4" fill=3D"#C5906C" stroke=3D"#000000" stroke-miterlim=
+it=3D"10" cx=3D"45.5" cy=3D"29.9" r=3D"11.2"/>
+<rect y=3D"76.5" fill=3D"none" width=3D"66.5" height=3D"17.2"/>
+<text transform=3D"matrix(1 0 0 1 0 88.645)" opacity=3D"0.4" font-family=3D=
+"'OpenSans-Bold'" font-size=3D"16">count=3D3</text>
+<line fill=3D"#ED1C24" stroke=3D"#ED1C24" stroke-width=3D"2" stroke-miterli=
+mit=3D"10" x1=3D"73.2" y1=3D"0" x2=3D"73.3" y2=3D"98.8"/>
+</svg>=0A
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_images/limit.svg
+
+<?xml version=3D"1.0" encoding=3D"utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version:=
+ 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/=
+SVG/1.1/DTD/svg11.dtd">
+<svg version=3D"1.1" id=3D"Layer_1" xmlns=3D"http://www.w3.org/2000/svg" xm=
+lns:xlink=3D"http://www.w3.org/1999/xlink" x=3D"0px" y=3D"0px"
+	 viewBox=3D"0 0 169.5 98.8" enable-background=3D"new 0 0 169.5 98.8" xml:s=
+pace=3D"preserve">
+<circle opacity=3D"0.4" fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlim=
+it=3D"10" cx=3D"101.1" cy=3D"29.7" r=3D"11.2"/>
+<circle opacity=3D"0.4" fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlim=
+it=3D"10" cx=3D"129.1" cy=3D"43.2" r=3D"11.2"/>
+<circle opacity=3D"0.4" fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlim=
+it=3D"10" cx=3D"125.9" cy=3D"14.4" r=3D"11.2"/>
+<circle opacity=3D"0.4" fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlim=
+it=3D"10" cx=3D"107.1" cy=3D"59.4" r=3D"11.2"/>
+<circle opacity=3D"0.4" fill=3D"#7FC08E" stroke=3D"#000000" stroke-miterlim=
+it=3D"10" cx=3D"152.1" cy=3D"20.9" r=3D"11.2"/>
+<rect x=3D"98.9" y=3D"75.5" fill=3D"none" width=3D"70.7" height=3D"15.4"/>
+<text transform=3D"matrix(1 0 0 1 98.8672 87.645)" opacity=3D"0.4" font-fam=
+ily=3D"'OpenSans-Bold'" font-size=3D"16">count=3D5</text>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+52.5" cy=3D"46.4" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+48" cy=3D"18.5" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+19.5" cy=3D"29.7" r=3D"11.2"/>
+<circle fill=3D"#CC81A8" stroke=3D"#000000" stroke-miterlimit=3D"10" cx=3D"=
+27.5" cy=3D"57.6" r=3D"11.2"/>
+<rect y=3D"76.4" fill=3D"none" width=3D"71" height=3D"18.6"/>
+<text transform=3D"matrix(1 0 0 1 0 88.5825)" font-family=3D"'OpenSans-Bold=
+'" font-size=3D"16">count=3D4</text>
+<line fill=3D"#ED1C24" stroke=3D"#ED1C24" stroke-width=3D"2" stroke-miterli=
+mit=3D"10" x1=3D"79" y1=3D"0" x2=3D"79.1" y2=3D"98.8"/>
+</svg>=0A
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://ed.devmountain.com/materials/f9/lectures/sql-1/_images/batching.png
+
+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
+ML1mhprZm/HMdph1TSFMcZrCn1I5pducau5pnm9eY95rwbAIsSi0aLB4OVV/auLUDVMvTv1qaWeZ
+abnP8r6VklWQVaFVk9Vra1NrtnWF9U0bmo2fzRKbRptXtma2XNudtnfs6HahdivtWu2+2DvYC+1r
+7Qcc9B2SHLY7dDsqO0Y4rnG85ERw8nJa4tTs9NHZ3jnP+ajz3y7mLhkuB12eTzOaxp22b1qfq64r
+y3WPa48b0y3Jbbdbj7uOO8u90v2xh54Hx2O/xzNPE890z0OeL70svYReJ7zeezt7L/Ju8cF8/H2K
+fTp8lXxjfMt9H/np+qX61fgN+dv5L/BvCSAEBAdsCOgO1AxkB1YHDgU5BC0KagumBkcFlwc/DjEN
+EYY0haKhQaGbQh+EGYTxwxrCQXhg+KbwhxFGETkRv00nTo+YXjH9aaRV5MLIi1H0qDlRB6PeRXtF
+r4u+H2McI4ppjZWPnRlbHfs+ziduY1xP/NT4RfFXE9QTeAmNiaTE2MT9icMzfGdsmdE/025m0czb
+s4xmzZt1ebb67MzZp+bIz2HNOZZESIpLOpj0mRXOqmQNJwcmb08eYnuzt7JfcDw4mzkDXFfuRu6z
+FNeUjSnPU11TN6UOpLmnlaYN8rx55bxX6QHpu9LfZ4RnHMgYzYzLrMsiZyVlneQr8TP4bdla2fOy
+uwRmgiJBT45zzpacIWGwcH8ukjsrtzFPGR512kXGop9Evflu+RX5H+bGzj02T3Eef177fNP5q+c/
+K/Ar+GUBvoC9oHWhzsJlC3sXeS7asxhZnLy4dYnekhVL+pf6L61aRlmWsez3QsvCjYVvl8ctb1qh
+uWLpir6f/H+qKZIrEhZ1r3RZuWsVvoq3qmO1zeptq78Wc4qvlFiWlJZ8XsNec+Vnq5/Lfh5dm7K2
+Y539up3riev5629vcN9QtVFxY8HGvk2hm+o3MzcXb367Zc6Wy6W2pbu2UraKtvaUhZQ1btPftn7b
+5/K08lsVXhV12zW2r97+fgdnx/WdHjtrd2nuKtn1aTdv9509/nvqKw0rS/cS9+bvfbovdt/FXxx/
+qd6vvr9k/5cD/AM9VZFVbdUO1dUHNQ6uq0FrRDUDh2Ye6jzsc7ix1rx2Tx2jruQIOCI68uevSb/e
+Php8tPWY47Ha4wbHt5+gnyiuR+rn1w81pDX0NCY0dp0MOtna5NJ04jeL3w406zRXnFI5te405fSK
+06NnCs4MtwhaBs+mnu1rndN6/1z8uZtt09s6zgefv3TB78K5i54Xz1xyvdR82fnyySuOVxqu2l+t
+b7drP/G73e8nOuw76q85XGvsdOps6prWdfq6+/WzN3xuXLgZePPqrbBbXbdjbt/pntndc4dz5/nd
+zLuv7uXfG7m/9AHhQfFDhYeljzQeVf5h8kddj33PqV6f3vbHUY/v97H7XjzJffK5f8VT2tPSZ9rP
+qp9bP28e8Bvo/HPGn/0vBC9GBov+Uvxr+0vjl8f/9vi7fSh+qP+V8NXo6zVv1N4ceGv7tnU4YvjR
+u6x3I++LP6h9qPro+PHip7hPz0bmfiZ9Lvti8qXpa/DXB6NZo6MClpAlOQpgsKIpKQC8PgAALQGe
+HeA9jiInvX9JCiK9M0oI/BNL72iSYg/AAQ8AYpYCEALPKDthNYBMhd/i43e0B0BtbCbqWMlNsbGW
+5qLCWwzhw+joG00ASE0AfBGOjo7sGB39sg+KvQtAS4703icuRHjG360mpvZuBfBj+RfAeWs6X7bq
+QQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAZ1pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4Onht
+cG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4K
+ICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1z
+eW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAg
+ICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iPgogICAgICAgICA8
+ZXhpZjpQaXhlbFhEaW1lbnNpb24+MTA5NjwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAg
+IDxleGlmOlBpeGVsWURpbWVuc2lvbj45MDwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgIDwv
+cmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgqfFndhAABAAElEQVR4
+Ae2dCXwURfr3f5A7mUACISQhQMIhBAwRRAKKAh6guOyKii66ugqiKCq8IosHiAcqiLC4ioIoIrvC
+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
+
+------MultipartBoundary--Jc9ZForalwwVzMpz5CJwyViZGQXbXX1Fe3Pgbtzowd------

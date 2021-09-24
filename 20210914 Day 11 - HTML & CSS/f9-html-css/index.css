@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(132, 147, 232);
+}
+
+p {
+   color: purple; 
+}
+
+/* targeting the yellow-text class */
+.yellow-text {
+    color: yellow;  
+    font-weight: 100;
+}
+
+/* targeting the site-title id */
+#site-title {
+    color: cyan;
+    text-decoration: underline;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {    
+    border: solid 3px;
+    border-color: darkred;
+    display: flex; 
+    flex-direction: row;
+}
+

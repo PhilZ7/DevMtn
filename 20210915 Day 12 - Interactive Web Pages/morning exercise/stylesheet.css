@@ -1,0 +1,25 @@
+body {
+    background-color: green;
+}
+.flyer {
+    height: 800px;
+    margin-top: 0 auto;
+    margin-lef: 0 auto;
+}
+
+p {
+    color: white;
+    font-size: 40px;
+}
+
+.btn {
+    height: 280px;
+}
+
+.soap {
+    height: 150px;
+    margin-top: 1px;
+    position: relative;
+    float: right;
+}
+

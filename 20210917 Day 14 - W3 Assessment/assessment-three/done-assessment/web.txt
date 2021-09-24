@@ -1,0 +1,11 @@
+How the Web Works
+
+How does the internet work?
+The internet works by creating a web of interconnectivity (network), this network provides the capability of exchange of information through different types of communication protocols (e.g. TCP/IP).
+The internet may include not only computers, but several other types of devices, think of "smart devices" such as refrigerators, thermostats, etc., those devices also connect to the internet for sending and receiving information.
+The internet is an extremely complex environment, I suggest looking into the 'Opte Project' for a good visual representation.
+
+
+Whappens when you click on a link?
+
+When clicking on a link (or URL) generally tied to a hostname (e.g. www.website.com) a series of communication protocols will start interacting with your local computer and then subsequently with your: router, ISP, the Internet, and locate the server - through an IP address - then returning the information contained in your original request.
