@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="container" id="body">
+    <h2>Phil-ing lucky?</h2>
+
+    <button id="complimentButton">Get a compliment</button>
+
+    <button id="fortuneButton">How's your fortune?</button>
+
+    <button id="funnyButton">Feeling funny?</button>
+
+    <button id="learnButton">Learn something</button>
+
+    <br><br>
+    <h3>Click the image below</h3>
+    <button id="randomColor"> <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.howtogeek.com%2Fwp-content%2Fuploads%2F2010%2F02%2Fsshot2321.png&f=1&nofb=1"</button>
+
+    <!-- Button functions -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+
+      document.getElementById("fortuneButton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortune/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+
+      document.getElementById("funnyButton").onclick = function () {
+        axios.get("http://localhost:4000/api/funny/")
+            .then(function (response) {
+              const data = response.data;
+              window.open(data);
+            });
+      };
+
+      document.getElementById("learnButton").onclick = function () {
+        axios.get("http://localhost:4000/api/learn/")
+            .then(function (response) {
+              const data = response.data;
+              window.open(data);
+            });
+      };
+
+      document.getElementById("randomColor").onclick = function random_bg_color() {
+        // axios.get("http://localhost:4000/api/color")
+        //     .then(function (response) {
+        //       var bodyEl = document.getElementById("body");
+        //       var newColor = response.data;
+        //       bodyEl.style.backgroundColor = newColor;
+        //     }); 
+        // I TRIED...
+        var x = Math.floor(Math.random() * 256);
+        var y = Math.floor(Math.random() * 256);
+        var z = Math.floor(Math.random() * 256);
+
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+        console.log(bgColor)
+        body.style.backgroundColor = bgColor;
+        };
+    </script>
+  </body>
+</html>

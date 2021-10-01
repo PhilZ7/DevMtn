@@ -9,13 +9,15 @@ def sales_reports(log_file): #creates a function called 'sales_reports'
             print(line) #prints/returns the matching criteria on the terminal
 
 
-sales_reports(log_file) #runs the function
+# sales_reports(log_file) #runs the function
 
-# def lots_melons(log_file):
-#     for line in log_file: 
-#         line = line.rstrip() 
-#         melon = int(line[16:23]) 
-#         if melon > 10:
-#             print(line)
+def lots_melons(log_file):
+    for line in log_file: 
+        line = line.rstrip().split(' ') 
+        melon = int(line[2]) 
+        if melon > 10:
+            print(line)
 
-# lots_melons(log_file)
+lots_melons(log_file)
+
+log_file.close()

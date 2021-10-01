@@ -1,0 +1,14 @@
+What is NPM?
+NPM is a package manager for JavaScript, and the default package manager for Node.js.
+
+What is Node.js?
+Node is an open-source, back-end JavaScript runtime environment that runs on the V8 engine and executes JS code outside a web browser.
+
+What are endpoints?
+An endpoint is a remote computing device that communicates back and forth with a networks to which it is connected.
+
+What is cors?
+CORS is an HTTP-header based mechanism that allows a server to indicate any origins other than its own from which a browser should permit loading of recources.
+
+What is the .gitignore file and why is it important?
+The .gitignore file allows the possibility of choosing specific files or folders to be untracked files that Git should ignored, reasons vary, but one being the unnecessary (or bloating) of packages

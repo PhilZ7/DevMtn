@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back End 2 EOD Review</title>
+</head>
+<body>
+    <h1>REGISTER</h1>
+    <h2>Username: <input id='username'/></h2>
+    <h2>Password: <input id='password' /></h2>
+    <button id='submit'>Submit</button>
+    <button id='delete'>Delete</button>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const usernameInput = document.querySelector('#username')
+        const passwordInput = document.querySelector('#password')
+        const submitBtn = document.querySelector('#submit')
+
+        submitBtn.addEventListener('click', () => {
+            const usernameVal = usernameInput.value;
+            const password = passwordInput.value;
+
+            axios
+                .post('http://localhost:5050/api/users', { username: usernameVal, password })
+                .then(res => console.log(res.data))
+                .catch(err => console.log(err))
+        })
+    </script>
+</body>
+</html>
