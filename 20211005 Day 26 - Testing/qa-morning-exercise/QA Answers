@@ -1,0 +1,13 @@
+1- Is QA worth it?
+    - QA helps ensure a better quality of the Software, less time spent on fixing issues, and better performance. Among other things,
+    QA also improves overall team morale as it identifies risks and possible issues before they affect the project.
+2- What are the different types of SDLC and what is the V-Model?
+    - Agile (iterative), Waterfall (sequential), and V-Model. V-Model is a graphical representation of the development lifecycle, showing its layers
+    and technically sequential.
+3- What is the QA process?
+    - QA process or "test process" involves planning, testing, communicating, and following up.
+4- What is testing and what are your thoughts on documentation?
+    - Testing involves the confirmation of expectations and if they are met, procedures to identify product shortcomings (or bugs) and necessary changes
+    to be implemented.
+6- Research how much companies spend on QA from their IT budget and how much IT budget they have? (2 companies)
+    - On average, for bigger companies, 23%-35% of their IT budget goes to quality assurance. [https://www.statista.com/statistics/500641/worldwide-qa-budget-allocation-as-percent-it-spend/]
