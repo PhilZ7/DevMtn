@@ -19,5 +19,5 @@ app.put('/api/houses/:houseId', updateHouse);
 
 const SERVER_PORT = 4004;
 app.listen(SERVER_PORT, () => {
-    console.log(`House server up on ${SERVER_PORT}`)
+    console.log(`Movie server up on ${SERVER_PORT}`)
 });
